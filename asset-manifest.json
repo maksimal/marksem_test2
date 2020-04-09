@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.971c94a2.chunk.css",
-    "main.js": "/static/js/main.179f3378.chunk.js",
-    "main.js.map": "/static/js/main.179f3378.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.77c57556.js",
-    "runtime-main.js.map": "/static/js/runtime-main.77c57556.js.map",
-    "static/css/2.a33d7f97.chunk.css": "/static/css/2.a33d7f97.chunk.css",
-    "static/js/2.152034ab.chunk.js": "/static/js/2.152034ab.chunk.js",
-    "static/js/2.152034ab.chunk.js.map": "/static/js/2.152034ab.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.4b6f3f24cc4b2cc62fb4b67ba19b59a6.js": "/precache-manifest.4b6f3f24cc4b2cc62fb4b67ba19b59a6.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.a33d7f97.chunk.css.map": "/static/css/2.a33d7f97.chunk.css.map",
-    "static/css/main.971c94a2.chunk.css.map": "/static/css/main.971c94a2.chunk.css.map",
-    "static/js/2.152034ab.chunk.js.LICENSE.txt": "/static/js/2.152034ab.chunk.js.LICENSE.txt"
+    "main.css": "/marksem_test2/static/css/main.971c94a2.chunk.css",
+    "main.js": "/marksem_test2/static/js/main.e34ecd19.chunk.js",
+    "main.js.map": "/marksem_test2/static/js/main.e34ecd19.chunk.js.map",
+    "runtime-main.js": "/marksem_test2/static/js/runtime-main.5a95298b.js",
+    "runtime-main.js.map": "/marksem_test2/static/js/runtime-main.5a95298b.js.map",
+    "static/css/2.a33d7f97.chunk.css": "/marksem_test2/static/css/2.a33d7f97.chunk.css",
+    "static/js/2.152034ab.chunk.js": "/marksem_test2/static/js/2.152034ab.chunk.js",
+    "static/js/2.152034ab.chunk.js.map": "/marksem_test2/static/js/2.152034ab.chunk.js.map",
+    "index.html": "/marksem_test2/index.html",
+    "precache-manifest.d17e2dedd8d36f75e5cbfcfa1309eb30.js": "/marksem_test2/precache-manifest.d17e2dedd8d36f75e5cbfcfa1309eb30.js",
+    "service-worker.js": "/marksem_test2/service-worker.js",
+    "static/css/2.a33d7f97.chunk.css.map": "/marksem_test2/static/css/2.a33d7f97.chunk.css.map",
+    "static/css/main.971c94a2.chunk.css.map": "/marksem_test2/static/css/main.971c94a2.chunk.css.map",
+    "static/js/2.152034ab.chunk.js.LICENSE.txt": "/marksem_test2/static/js/2.152034ab.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.77c57556.js",
+    "static/js/runtime-main.5a95298b.js",
     "static/css/2.a33d7f97.chunk.css",
     "static/js/2.152034ab.chunk.js",
     "static/css/main.971c94a2.chunk.css",
-    "static/js/main.179f3378.chunk.js"
+    "static/js/main.e34ecd19.chunk.js"
   ]
 }
