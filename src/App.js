@@ -21,7 +21,7 @@ export default function App(props) {
 
   return (
     <div className="App" onScroll={isScrolled()}>
-      {/* <Header scrolled={scrolled} /> */}
+      <Header scrolled={scrolled} />
       
       <Switch>
         <Route exact
