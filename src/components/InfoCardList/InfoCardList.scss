@@ -1,0 +1,67 @@
+@import '../../variables';
+
+.InfoCardList {
+    margin-top: 160px;
+    margin-bottom: 160px;
+    position: relative;
+    .InfoCardList-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        .main-title {
+            font-size: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        .main-title-type1 {
+            text-transform: uppercase;
+        }
+        .main-title-type2 {
+            text-transform: none;
+        }
+
+        .cards-list{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 80px;
+            .card-image {
+                overflow: hidden;
+                min-height: 250px;
+                img {
+                    width: 100%;
+                    margin-bottom: -10px;
+                }
+            }
+            .card-image-type1 {
+
+            }
+            .card-image-type2 {
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.35);
+            }
+
+        }
+        .InfoCardList-background {
+            width: 1280px;
+            height: 75%;
+            background-color: $primary-background-color;
+            position: absolute;
+            bottom: 33px;
+            z-index: 0;
+ 
+        }
+
+        .InfoCardList-background-type1 {
+            transform: translate(80px);
+        }
+        .InfoCardList-background-type2 {
+            width: 100%;
+        }
+
+
+    }
+}

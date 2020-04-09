@@ -1,0 +1,24 @@
+.styled-link-container {
+  padding-left: calc(100px + 18px) ;
+}
+
+.styled-link {
+  color: #ED7161;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  justify-self: flex-end;
+  &:hover {
+    cursor: pointer;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background-color:#ED7161;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    left: -18px;
+  }
+}

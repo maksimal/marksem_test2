@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 27px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+.container {
+  width: 1280px;  
+  margin: 0 auto;
+
+  // for dev >>>
+  // border: 1px solid lightcoral;
+  // height: 100vh;
+  // for dev <<<
+}
+
+button {
+  outline: none;
+  border: none;
+}
+

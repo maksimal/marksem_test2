@@ -1,0 +1,67 @@
+@import '../../variables.scss';
+
+.company-presentation {
+    position: relative;
+    max-width: 1440px;
+    min-height: 645px;
+    padding: 0px 80px;
+    margin: 30px auto;
+
+    &__bg-layer {
+        position: absolute;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        background-color: $primary-background-color;
+        z-index: -2;
+    }
+
+    &__img-layer {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: calc(100% - 160px);
+        min-height: 500px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: right;
+        z-index: -1;
+    }
+
+    &__content {
+        position: relative;
+        padding: 80px 0;
+        width: 60%;
+    }
+
+    &__title {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 54px;
+        letter-spacing: 0.03em;
+        color: #171A27;
+        text-transform: uppercase;
+    }
+
+    &__info{
+        max-width: 540px;
+        margin: 65px 0;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        color: #171A27;
+
+        & p, & span {
+            
+            padding: 10px 0;
+        }
+    }
+
+    &__action {
+        position: absolute;
+        right: 17px;
+        bottom: -46px;
+    }
+}
