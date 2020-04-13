@@ -58,9 +58,9 @@ export default function ImageTextBlock(
             <div className="main-text">
 
               {
-                mainContent.map((p) => {
+                mainContent.map((p, i) => {
                   return (
-                    <div className="main-text__item">{p}</div>
+                    <div key={i} className="main-text__item">{p}</div>
                   )
                 })
               }
@@ -69,7 +69,7 @@ export default function ImageTextBlock(
                 actionElementType === "button" &&
                 actionElementAlign !== "image" &&
                 <div className={`action-element-container action-element-container__${actionElementAlign}`}>
-                  <Button classList="btn-main" text={actionElementText} />
+                  <Button onClick={()=>{}} classList="btn-main" text={actionElementText} />
                 </div>
               }
 

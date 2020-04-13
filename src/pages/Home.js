@@ -8,6 +8,7 @@ import InfoCard from "../components/InfoCard";
 import CompanyPresentation from "../components/CompanyPresentation/CompanyPresentation";
 import ImageTextBlock from "./../components/ImageTextBlock/ImageTextBlock";
 import GridSection from "./../components/GridSection/GridSection";
+import SubscribeBlock from "../components/SubscribeBlock/SubscribeBlock";
 
 export default function Home(props) {
   return (
@@ -137,6 +138,8 @@ export default function Home(props) {
         ]}
         btnText="GET STARTED"
       />
+
+      <SubscribeBlock type='maximal'/>
     </div>
   );
 }

@@ -38,9 +38,9 @@ export default function TeamSlider({
         <h3 className="team-section__secondary-text">{secondaryText}</h3>
         <div className="slider-container">
           <Swiper {...params} getSwiper={setSwiper}>
-            {teamMembers.map(({ imgUrl, name, role, facebookLink, linkdInLink, instagramLink }) => {
+            {teamMembers.map(({ imgUrl, name, role, facebookLink, linkdInLink, instagramLink }, i) => {
               return (
-                <div className="team-section__card-wrapper">
+                <div key={i} className="team-section__card-wrapper">
                   <div className="team-section__card">
                     <img src={imgUrl} alt="face of member" />
                     <div className="member-details">

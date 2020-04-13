@@ -4,7 +4,9 @@ import StyledList from "./../components/shared/StyledList/StyledList";
 import CompanyPresentation from "../components/CompanyPresentation/CompanyPresentation";
 import Button from "../components/shared/Button/Button";
 import ImageTextBlock from "./../components/ImageTextBlock/ImageTextBlock";
+import CvForm from './../components/CvForm/'
 import TeamSlider from './../components/TeamSlider/TeamSlider';
+import SubscribeBlock from "./../components/SubscribeBlock/SubscribeBlock";
 
 export default function WhyMarksem(props) {
   return (
@@ -83,6 +85,7 @@ export default function WhyMarksem(props) {
         ]}
       />
 
+      <CvForm />
       <TeamSlider
         title="Meet our team"
         secondaryText="We are the best team"
@@ -111,6 +114,7 @@ export default function WhyMarksem(props) {
           }
         ]}
       />
+      <SubscribeBlock type='minimal'/>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { sampleAction } from './actions/sampleAction';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Houses from './pages/Houses';
@@ -9,19 +9,12 @@ import Contacts from './pages/Contacts';
 import Home from './pages/Home';
 import Investments from './pages/Investments';
 import WhyMarksem from './pages/WhyMarksem';
+import NotFound from './pages/NotFoundPage/NotFoundPage';
 
 export default function App(props) {
-  const [scrolled, setScrolled] = useState(false)
-
-  const isScrolled = () => {
-      window.addEventListener('scroll', () => {
-        window.scrollY < 20 ? setScrolled(false) : setScrolled(true)
-      })
-  }
-
   return (
-    <div className="App" onScroll={isScrolled()}>
-      <Header scrolled={scrolled}/>
+    <div className="App">
+      <Header />
         <Switch>
           <Route exact
             path="/"
@@ -43,6 +36,11 @@ export default function App(props) {
             path="/contacts"
             component={() => <Contacts />}
           />
+          <Route 
+          path="/404"
+          component={() => <NotFound />}
+          />
+          <Redirect to="/404"/>
         </Switch>
 
       <Footer />

@@ -16,6 +16,7 @@ function CompanyPresentation({ img, title, text }) {
             {text}
           </div>
           <Button
+            onClick={()=>{}}
             classList="btn-main company-presentation__action"
             text="Learn more"
           />

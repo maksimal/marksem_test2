@@ -11,18 +11,13 @@
     z-index: 20;
 }
 
-.btn-main {
-    position: relative;
-    min-width: 281px;
-    padding: 14px 30px;
+.btn-main, .btn-secondary {
     color: #fff;
-    background-color: $primary-color;
     font-family: Montserrat;
-    // font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 42px;
-    -webkit-transition-duration: 1.5s; /* Safari */
+    -webkit-transition-duration: 1s;
     transition-duration: 1s;
 
     &:after {
@@ -30,12 +25,13 @@
         background: #f9aa9b;
         display: block;
         position: absolute;
-        padding-top: 300%;
-        padding-left: 350%;
-        margin-left: -20px!important;
-        margin-top: -120%;
+        padding-top: 20%;
+        padding-bottom: 70%;
+        padding-left: 200%;
+        margin-left: -50% !important;
+        margin-top: -50%;
         opacity: 0;
-        transition: all 1s
+        transition: all 1s;
     }
 
     &:active:after {
@@ -45,7 +41,67 @@
         transition: 0s
       }
 
+    &:hover{
+        background-color: $hover-color;
+    }
+}
+
+.btn-form-browse {
+    background-color: #E0E3F4;
+    height: 69px;
+    font-weight: 100;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 10px;
+    align-self: center;
+}
+
+.btn-pagenotfound-back {
+    position: relative;
+    min-width: 281px;
+    padding: 14px 30px;
+    color: #fff;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 42px;
+    -webkit-transition-duration: 1.5s; /* Safari */
+    transition-duration: 1s;
+    background-color: #fff;
+    color: $primary-color;
     &:hover {
         background-color: $hover-color;
     }
+}
+
+.btn-pagenotfound-home {
+    position: relative;
+    min-width: 281px;
+    padding: 14px 30px;
+    color: #fff;
+    background-color: #061229;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 42px;
+    -webkit-transition-duration: 1.5s; /* Safari */
+    transition-duration: 1s;
+    border: 1px solid #fff;
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
+.btn-main {
+    position: relative;
+    min-width: 281px;
+    padding: 14px 30px;
+    background-color: $primary-color;
+}
+
+.btn-secondary {
+    position: relative;
+    min-width: 260px;
+    padding: 10px 30px;
+    background-color: $secondary-color;
 }

@@ -33,6 +33,7 @@ export default function TabsSection({
             tabsHeadingsTexts.map((tabHeadingText, i) => {
               return (
                 <button
+                  key={i}
                   onClick={toggleTab}
                   data-tab_number={i}
                   className={i === activeTab ? "tabs-heading active" : "tabs-heading"}
@@ -47,7 +48,8 @@ export default function TabsSection({
           {
             tabsContents.map((tabContent, i) => {
               return (
-                <div
+                <div 
+                  key={i}
                   className={i === activeTab ? "tab-content active" : "tab-content"}
                   data-tab_number={i}
                 >

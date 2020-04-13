@@ -1,12 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import './Header.scss'
 
 const Header = (props) => {
-    const {scrolled} = props
+    const [scrolled, setScrolled] = useState(false)
+
+    const isScrolled = () => {
+        window.addEventListener('scroll', () => {
+          window.scrollY < 20 ? setScrolled(false) : setScrolled(true)
+        })
+    }
+
     return (
         <>
-            <header className={ scrolled ? "scrolled-header" : ""}>
+            <header onScroll={isScrolled()} className={ scrolled ? "scrolled-header" : ""}>
                 <div className="logo">
                     <Link to={'/'}>marksem.</Link>
                 </div>
