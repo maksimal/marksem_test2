@@ -14,41 +14,39 @@ export default function App(props) {
   const [scrolled, setScrolled] = useState(false)
 
   const isScrolled = () => {
-    window.addEventListener('scroll', () => {
-      window.scrollY < 20 ? setScrolled(false) : setScrolled(true)
-    })
+      window.addEventListener('scroll', () => {
+        window.scrollY < 20 ? setScrolled(false) : setScrolled(true)
+      })
   }
 
   return (
     <div className="App" onScroll={isScrolled()}>
-      <Header scrolled={scrolled} />
-      
-      <Switch>
-        <Route exact
-          path="/"
-          component={() => <Home />}
-        />
-        <Route exact
-          path="/whymarksem"
-          component={() => <WhyMarksem />}
-        />
-        <Route exact
-          path="/houses"
-          component={() => <Houses />}
-        />
-        <Route exact
-          path="/investments"
-          component={() => <Investments />}
-        />
-        <Route exact
-          path="/contacts"
-          component={() => <Contacts />}
-        />
-      </Switch>
+      <Header scrolled={scrolled}/>
+        <Switch>
+          <Route exact
+            path="/"
+            component={() => <Home />}
+          />
+          <Route exact
+            path="/whymarksem"
+            component={() => <WhyMarksem />}
+          />
+          <Route exact
+            path="/houses"
+            component={() => <Houses />}
+          />
+          <Route exact
+            path="/investments"
+            component={() => <Investments />}
+          />
+          <Route exact
+            path="/contacts"
+            component={() => <Contacts />}
+          />
+        </Switch>
 
       <Footer />
-
-
+      
     </div>
   );
 }

@@ -1,0 +1,39 @@
+@import "./../../variables.scss";
+
+.tabs-house-types {
+  margin: 100px 0;
+  .section-title {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  .tabs-headings {
+    text-align: center;
+    display: flex;
+    border: 1px solid $primary-color;
+    margin-bottom: 60px;
+    .tabs-heading {
+      background-color: transparent;
+      padding: 20px 115px;
+      flex-grow: 1;
+      &:hover{
+        cursor: pointer;
+      }
+      &:not(:last-child) {
+        border-right: 1px solid $primary-color;
+      }
+    }
+    .tabs-heading.active {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+
+  .tabs-contents {
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+  }
+}

@@ -42,6 +42,14 @@ $offset: 80px;
         left: -$offset;
         right: -$offset;
       }
+      &__style4-right {
+        left: 250px;
+        right: -$offset;
+      }
+      &__style4-left {
+        left: -$offset;
+        right: 250px;
+      }
     }
 
     .media-container {
@@ -64,11 +72,13 @@ $offset: 80px;
       overflow: hidden;
       z-index: 100;
       flex-shrink: 0;
-      &__style1-right {
+      &__style1-right,
+      &__style4-right {
         width: 700px;
         height: 400px;
       }
-      &__style1-left {
+      &__style1-left,
+      &__style4-left {
         width: 700px;
         height: 400px;
         left: 0;

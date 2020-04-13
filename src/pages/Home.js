@@ -75,17 +75,16 @@ export default function Home(props) {
         title="Opportunities and Guaranties"
         mediaType="img"
         mediaPosition="right"
-        imgUrl="img/phoenix-exterior-1.png"
+        imgUrl="./img/phoenix-exterior-1.png"
         actionElementType="link"
         actionElementText="Learn more"
         actionElementAlign="image"
         mainContent={[
           <div style={{ fontWeight: "bold" }}>
-            {" "}
             Some intro text Lorem ipsum dolor sit amet.
           </div>,
           <StyledList
-            iconUrl="/img/icons/guarantee-icon.svg"
+            iconUrl="./img/icons/guarantee-icon.svg"
             items={[
               [
                 "GUARANTEE №1",

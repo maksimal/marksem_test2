@@ -5,7 +5,7 @@ import configureStore from './store';
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter, HashRouter } from 'react-router-dom';
+import { BrowserRouter,HashRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <Provider store={configureStore()}>

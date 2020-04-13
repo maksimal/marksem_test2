@@ -1,11 +1,10 @@
 import React from "react";
-// import SectionType2 from '../components/section_type2/section_type2';
 import StyledLink from "../components/shared/StyledLink";
 import StyledList from "./../components/shared/StyledList/StyledList";
 import CompanyPresentation from "../components/CompanyPresentation/CompanyPresentation";
 import Button from "../components/shared/Button/Button";
-// import SectionType4 from '../components/SectionType4/SectionType4';
 import ImageTextBlock from "./../components/ImageTextBlock/ImageTextBlock";
+import TeamSlider from './../components/TeamSlider/TeamSlider';
 
 export default function WhyMarksem(props) {
   return (
@@ -15,10 +14,10 @@ export default function WhyMarksem(props) {
         text={
           <>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et nunc velit dictum pellentesque bibendum viverra integer viverra.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et nunc velit dictum pellentesque bibendum viverra integer viverra.
             </p>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et nunc velit dictum pellentesque bibendum viverra integer viverra.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et nunc velit dictum pellentesque bibendum viverra integer viverra.
             </p>
           </>
         }
@@ -81,6 +80,35 @@ export default function WhyMarksem(props) {
         mainContent={[
           "Lorem ipsum dolor sit Lor consectetur adipisicing elit. Nemo natus consectetur error tenetur sunt excepturi aspernatur magnam sit quis eum.",
           "Lorem ipsum dolor sit  Nemo natus consectetur error tenetur sunt excepturi aspernatur magnam sit quis eum.Loremexcepturi aspernatur magnam sit quis eum."
+        ]}
+      />
+
+      <TeamSlider
+        title="Meet our team"
+        secondaryText="We are the best team"
+        teamMembers={[
+          {
+            imgUrl: "./img/team1.png",
+            name: "Fedir Drozdov",
+            role: "Co-founder",
+            facebookLink: "#",
+            linkdInLink: "#"
+          },
+          {
+            imgUrl: "./img/team2.png",
+            name: "Fedir Drozdov",
+            role: "Co-founder",
+            facebookLink: "#",
+            linkdInLink: "#",
+            instagramLink: "#"
+          },
+          {
+            imgUrl: "./img/team3.png",
+            name: "Fedir Drozdov",
+            role: "Co-founder",
+            facebookLink: "#",
+            instagramLink: "#"
+          }
         ]}
       />
     </div>
