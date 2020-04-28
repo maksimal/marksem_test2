@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8fdf9c748e37da74940af3f3fd36727e",
+    "revision": "767ba9fe70cf8cadf9ae8749182ee536",
     "url": "/marksem_test2/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/marksem_test2/static/css/2.cc689ef9.chunk.css"
   },
   {
-    "revision": "227c980a00c9da017734",
+    "revision": "35ff101ef2d91143f53d",
     "url": "/marksem_test2/static/css/main.85d1585e.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/marksem_test2/static/js/2.cfeb289f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "227c980a00c9da017734",
-    "url": "/marksem_test2/static/js/main.83f0a2e3.chunk.js"
+    "revision": "35ff101ef2d91143f53d",
+    "url": "/marksem_test2/static/js/main.47a5bbd1.chunk.js"
   },
   {
     "revision": "331b9eeb51a0d2de668b",
