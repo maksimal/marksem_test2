@@ -1,0 +1,46 @@
+.options-with-tabs .swiper-container .swiper-button-prev::after, .options-with-tabs .swiper-container .swiper-button-next::after {
+    content: ''
+}
+
+.options-with-tabs .swiper-button-next {
+    background-image: url(./img/Arrowtotheright.png);
+}
+
+.options-with-tabs .swiper-button-prev {
+    background-image: url(./img/Arrowtotheleft.png);
+
+}
+
+
+.options-with-tabs .swiper-container .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 1px solid #3C4A64;
+    background-color: #fff;
+}
+
+.options-with-tabs .swiper-container .swiper-pagination-bullet-active {
+    width: 16px;
+    height: 16px;
+    background-color: #404F6F;
+}
+
+.options-with-tabs .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options-with-tabs .swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.options-with-tabs .swiper-wrapper {
+    height: unset;
+}
+
+.options-with-tabs .swiper-container {
+    height: 580px;
+}

@@ -5,7 +5,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Houses from './pages/Houses';
-import Contacts from './pages/Contacts';
+import Contacts from './pages/Contacts/Contacts';
 import Home from './pages/Home';
 import Investments from './pages/Investments';
 import WhyMarksem from './pages/WhyMarksem';

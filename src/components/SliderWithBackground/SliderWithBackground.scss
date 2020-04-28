@@ -1,0 +1,118 @@
+@import './../../variables.scss';
+
+.slider-with-bg {
+    margin: 100px auto;
+    position: relative;
+
+  &__bg-layer {
+    width: 314px;
+    height: 430px;
+    align-self: center;
+    position: relative;
+    background-repeat: no-repeat;
+  }
+
+  &__bg-layer:first-of-type {
+    background-position: left;
+  }
+
+  &__bg-layer:last-of-type {
+    background-size: 113% 100%;
+    background-position: center;
+  }
+
+  &__slider {
+    width: 1440px;
+    margin: 65px auto;
+    display: flex;
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 42px;
+    color: #061229; 
+  }
+
+  &__slider-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #171A27;
+  }
+
+  &__slider-text {
+    padding-top: 35px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #171A27;
+  }
+
+  &__slider-info {
+    width: 90%;
+    display: flex;
+  }
+
+  &__slider-info__col1 {
+    width: 80%;
+    display: flex;
+    align-items: center;
+  }
+
+  button {
+    background: transparent;
+    color: #fff;
+  }
+
+  .swiper-prev {
+    position: absolute;
+    top: 40%;
+    left: 75%;
+  }
+
+  & .swiper-next {
+    position: absolute;
+    top: 40%;
+    right: 75%;
+  }
+
+
+
+  //Override Swiper styles ---start
+  & .swiper-pagination-bullet-active {
+    background: $secondary-color;
+  }
+
+  & .swiper-pagination-bullets {
+    bottom: -50px !important;
+  }
+
+  & .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+  }
+
+  & .swiper-container {
+    width: 810px;
+    position: static;
+    background: #FFFFFF;
+    margin: 0;
+    box-shadow: 0px 4px 18px rgba(23, 26, 39, 0.62);
+  }
+
+  & .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 65px 55px;
+  }
+  //Override Swiper styles ---end
+}

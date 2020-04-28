@@ -3,7 +3,7 @@ import Swiper from "react-id-swiper";
 import "./TeamSlider.scss";
 import 'swiper/css/swiper.css';
 
-export default function TeamSlider({
+function TeamSlider({
   title = "Default title",
   secondaryText,
   teamMembers = []
@@ -49,16 +49,22 @@ export default function TeamSlider({
                       <div className="member-links">
                         {facebookLink &&
                           <a href={facebookLink}>
-                            <span className="social-icon" style={{ backgroundImage: "url(./img/social-icons/facebook.svg)" }}></span>
+                            <svg width={16} height={16}>
+                              <use href="/icons-sprite.svg#icon-facebook"/>
+                            </svg>
                           </a>
                         }
                         {linkdInLink &&
                           <a href={linkdInLink}>
-                            <span className="social-icon" style={{ backgroundImage: "url(./img/social-icons/linkedin.svg)" }}></span>
+                            <svg width={16} height={16}>
+                              <use href="/icons-sprite.svg#icon-linkedin"/>
+                            </svg>
                           </a>
                         }
                         {instagramLink && <a href={instagramLink}>
-                          <span className="social-icon" style={{ backgroundImage: "url(./img/social-icons/instagram.svg)" }}></span>
+                        <svg width={16} height={16}>
+                              <use href="/icons-sprite.svg#icon-instagram"/>
+                            </svg>
                         </a>
                         }
                       </div>
@@ -72,14 +78,9 @@ export default function TeamSlider({
           <button className="slider-button slider-button-prev" onClick={goPrev}></button>
           <button className="slider-button slider-button-next" onClick={goNext}></button>
         </div>
-
-
-
-
-
       </div>
-
-
     </div>
   )
 };
+
+export default TeamSlider

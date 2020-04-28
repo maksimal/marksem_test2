@@ -38,11 +38,12 @@ ul {
 .container {
   width: 1280px;  
   margin: 0 auto;
+}
 
-  // for dev >>>
-  // border: 1px solid lightcoral;
-  // height: 100vh;
-  // for dev <<<
+.default-title {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 button {

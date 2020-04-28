@@ -47,6 +47,7 @@
 
     &__info{
         max-width: 540px;
+        min-height: 160px;
         margin: 65px 0;
         font-family: Montserrat;
         font-style: normal;
@@ -62,6 +63,5 @@
     &__action {
         position: absolute;
         right: 17px;
-        bottom: -46px;
     }
 }

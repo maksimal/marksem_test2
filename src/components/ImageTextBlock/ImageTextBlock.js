@@ -1,11 +1,10 @@
 import React from 'react';
-import ReactPlayer1 from './../react_player_1/index';
 import ReactPlayer2 from '../ReactPlayer2';
 import "./ImageTextBlock.scss"
 import Button from './../shared/Button/Button';
 import StyledLink from './../shared/StyledLink/index';
 
-export default function ImageTextBlock(
+function ImageTextBlock(
   {
     style = "1",
     title = "Default title",
@@ -17,7 +16,8 @@ export default function ImageTextBlock(
     actionElementType,
     actionElementText,
     actionElementAlign = "center",
-    mainContent = ["Some content", "Some content"]
+    actionOnClick,
+    mainContent = ["Some content", "Some content"],
   }
 ) {
 
@@ -37,24 +37,22 @@ export default function ImageTextBlock(
 
               {mediaType === "img" &&
                 <img className="img" src={imgUrl} />
-              }              
+              }
             </div>
             {actionElementText &&
-                actionElementType === "link" &&
-                actionElementAlign === "image" &&
-                <div className={`action-container action-container__${mediaPosition} `}>
-                  <StyledLink linkText="Learn more" />
-                </div>
-              }
+              actionElementType === "link" &&
+              actionElementAlign === "image" &&
+              <div className={`action-container action-container__${mediaPosition} `}>
+                <StyledLink linkText={actionElementText} linkURL={actionOnClick} />
+              </div>
+            }
           </div>
 
 
           <div className={`main-text-container main-text-container__${mediaPosition}`}>
-
             <div className={`title-container title-container__${mediaPosition}`}>
               <h2 className={`title title__${mediaPosition}`}>{title}</h2>
             </div>
-
             <div className="main-text">
 
               {
@@ -68,8 +66,9 @@ export default function ImageTextBlock(
               {actionElementText &&
                 actionElementType === "button" &&
                 actionElementAlign !== "image" &&
+                actionElementAlign !== "bottom" &&
                 <div className={`action-element-container action-element-container__${actionElementAlign}`}>
-                  <Button onClick={()=>{}} classList="btn-main" text={actionElementText} />
+                  <Button onClick={actionOnClick} classList="btn-main" text={actionElementText} />
                 </div>
               }
 
@@ -77,22 +76,25 @@ export default function ImageTextBlock(
                 actionElementType === "link" &&
                 actionElementAlign !== "image" &&
                 <div className={`action-element-container action-element-container__${actionElementAlign}`}>
-                  <StyledLink linkText={actionElementText} />
+                  <StyledLink linkText={actionElementText} linkURL={actionOnClick} />
                 </div>
               }
 
             </div>
-
           </div>
+
+          {actionElementText &&
+            actionElementType === "button" &&
+            actionElementAlign === "bottom" &&
+            <div className="action-element-bottom">
+              <Button onClick={actionOnClick} classList="btn-main" text={actionElementText} />
+            </div>
+          }
+
         </div>
       </div>
     </div>
   )
 }
 
-
-/* Вопросы по компоненту:
-1. Стили этого компонента очень похожи на стили SectionType2. Куда положить общие стили? Есть ли какая-то практика и паттерн для шэрд стилей?
-
-
- */
+export default ImageTextBlock;

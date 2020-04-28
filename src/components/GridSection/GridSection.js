@@ -30,7 +30,7 @@ function GridSection({ content, title, width = '1280px', coloumnsNumber }) {
         {content.map((element, index) => (
           <GridItem
             key={index}
-            img={element.img}
+            icon={element.icon}
             title={element.title}
             text={element.text}
             flexBasis={flexBasis}

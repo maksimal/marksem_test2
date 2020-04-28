@@ -1,0 +1,50 @@
+.contact-form-formik {
+  .form-field {
+    &__input {
+      border: none;
+      border-bottom: 1px solid grey;
+      width: 100%;
+      padding: 15px 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  .form {
+    padding: 25px 75px 50px 0;
+    &-container {
+      position: relative;
+      min-height: 550px;
+      min-width: 550px;
+      margin-right: 60px;
+      box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.226);
+    }
+    &-title {
+      margin-bottom: 12px;
+    }
+    &-intro-text {
+      padding-bottom: 50px;
+    }
+    &-fields-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 70px;
+    }
+    &-field-container {
+      height: 60px;
+    }
+    &-submitted {
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      h3 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 32px;
+        margin-bottom: 15px;
+      }
+      p {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

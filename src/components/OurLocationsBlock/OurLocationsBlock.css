@@ -1,0 +1,48 @@
+.our-location-block .swiper-container .swiper-button-prev::after, .our-location-block .swiper-container .swiper-button-next::after {
+    content: ''
+}
+
+.our-location-block .swiper-button-next {
+    background-image: url(./img/Arrowtotheright.png);
+}
+
+.our-location-block .swiper-button-prev {
+    background-image: url(./img/Arrowtotheleft.png);
+
+}
+
+.our-location-block .swiper-container {
+    margin-left: 0;
+    height: 500px;
+    width: 700px;
+}
+
+
+.our-location-block .swiper-container .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 1px solid #3C4A64;
+    background-color: #fff;
+}
+
+.our-location-block .swiper-container .swiper-pagination-bullet-active {
+    width: 16px;
+    height: 16px;
+    background-color: #404F6F;
+}
+
+.our-location-block .swiper-pagination {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.our-location-block .swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.our-location-block .swiper-wrapper {
+    height: unset;
+}

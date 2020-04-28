@@ -19,10 +19,10 @@ const Header = (props) => {
                 </div>
 
                 <ul className="menu-list">
-                    <li><Link to={'/whymarksem'}>why marksem</Link></li>
-                    <li><Link to={'/houses'}>houses</Link></li>
-                    <li><Link to={'/investments'}>investments</Link></li>
-                    <li><Link to={'/contacts'}>contacts</Link></li>
+                    <li><Link to={'/whymarksem'}>Чому MARKSEM</Link></li>
+                    <li><Link to={'/houses'}>Будинки</Link></li>
+                    <li><Link to={'/investments'}>Інвестиції</Link></li>
+                    <li><Link to={'/contacts'}>Контактна інформація</Link></li>
                 </ul>
 
                 <div className="login-lang-items">

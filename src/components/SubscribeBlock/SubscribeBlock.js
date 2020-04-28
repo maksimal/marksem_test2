@@ -45,7 +45,7 @@ function SubscribeBlock({ type }) {
 }
 
 SubscribeBlock.propTypes = {
-  type: PropTypes.oneOf(['minimal', 'maxiaml'])
+  type: PropTypes.oneOf(['minimal', 'maximal'])
 }
 
 export default SubscribeBlock;

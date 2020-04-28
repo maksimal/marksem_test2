@@ -9,137 +9,176 @@ import CompanyPresentation from "../components/CompanyPresentation/CompanyPresen
 import ImageTextBlock from "./../components/ImageTextBlock/ImageTextBlock";
 import GridSection from "./../components/GridSection/GridSection";
 import SubscribeBlock from "../components/SubscribeBlock/SubscribeBlock";
+import ScrollToTop from './../components/shared/ScrollToTop'
+import ScrollAnimation from 'react-animate-on-scroll';
+import 'animate.css/animate.min.css'
 
 export default function Home(props) {
   return (
-    <div>
-      <CompanyPresentation
-        title="marksem - your new reliable investment partner"
-        text={
-          <>
-            <p style={{ fontSize: "28px", lineHeight: "36px" }}>
-              MARKSEM is a new way to invest smartly. We offer you favourable
-              terms of lending and financing.
-            </p>
-          </>
-        }
-        img="./img/houses.png"
-      />
+    <main>
+      
+      <ScrollToTop />
 
-      <ImageTextBlock
-        style="1"
-        title="What is the point?"
-        mediaType="video"
-        mediaPosition="left"
-        videoThumbnailUrl="./img/video_not_active.png"
-        videoUrl="https://www.youtube.com/watch?v=9HDEHj2yzew"
-        mainContent={[
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo natus consectetur error tenetur sunt excepturi aspernatur magnam sit quis eum.",
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo natus consectetur error tenetur sunt excepturi aspernatur magnam sit quis eum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo natus consectetur error tenetur sunt excepturi aspernatur magnam sit quis eum."
-        ]}
-      />
-
-      <GridSection
-        width="1186px"
-        coloumnsNumber={2}
-        title="The investment process is easy and looks as follows:"
-        content={[
-          {
-            img: "./img/icons/paper-icon.svg",
-            title: "choose an investment plan",
-            text:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua."
-          },
-          {
-            img: "./img/icons/location-icon.svg",
-            title: "choose location",
-            text:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua."
-          },
-          {
-            img: "./img/icons/home-icon.svg",
-            title: "select a house",
-            text:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua."
-          },
-          {
-            img: "./img/icons/currency-icon.svg",
-            title: "get your profit",
-            text:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua."
+      <ScrollAnimation
+        animateIn="fadeIn"
+        animateOut="fadeOut">
+        <CompanyPresentation
+          title="MARKSEM — ваш надійний партнер."
+          text={
+            <>
+              <p style={{ fontSize: "28px", lineHeight: "36px" }}>
+                Інвестуйте, дбайте про майбутнє та насолоджуйтесь життям вже сьогодні.
+              </p>
+              <p style={{ fontSize: "28px", lineHeight: "36px" }}>
+                Будуйте нові можливості з MARKSEM.
+              </p>
+            </>
           }
-        ]}
-      />
+          img="./img/houses.png"
+          action={true}
+        />
+      </ScrollAnimation>
 
-      <ImageTextBlock
-        style="1"
-        title="Opportunities and Guaranties"
-        mediaType="img"
-        mediaPosition="right"
-        imgUrl="./img/phoenix-exterior-1.png"
-        actionElementType="link"
-        actionElementText="Learn more"
-        actionElementAlign="image"
-        mainContent={[
-          <div style={{ fontWeight: "bold" }}>
-            Some intro text Lorem ipsum dolor sit amet.
+      <ScrollAnimation
+        animateIn="fadeIn"
+        animateOut="fadeOut">
+        <ImageTextBlock
+          style="1"
+          title="Головна ідея"
+          mediaType="video"
+          mediaPosition="left"
+          videoThumbnailUrl="./img/video_not_active.png"
+          videoUrl="https://www.youtube.com/watch?v=9HDEHj2yzew"
+          mainContent={[
+            "Ми виробляємо затишні та комфортні будинки, орієнтуючись на сучасні технології, функціональність та високу якість.",
+            "Будинки MARKSEM можуть стати для вас заміським будинком або власним бізнесом.",
+            "Розмістити такий будинок ви можете на своїй ділянці або в одному з наших парків, що мають гарні краєвиди, готельну інфраструктуру та сервіс. Таким чином, ви будете мати, куди поїхати на вихідні, де провести відпустку чи просто виїхати за місто, як тільки виникне потреба. А решту часу будинок буде працювати на вас.",
+            "Вам не потрібно турбуватись про обслуговування: усі парки MARKSEM — це комплекс сервісів високого рівня.",
+            "Ми пропонуємо вам стати не тільки власником комфортного, затишного будинку для відпочинку та життя, а й максимально ефективно використовувати його під час вашої відсутності — як бізнес оренди житла.",
+            "З великою увагою до деталей ми турбуємось про все: від обслуговування до керування.",
+            "Розуміючи переваги, які надають сучасні технології, ми розробили CRM- систему, з якою власник будинку може керувати своїм майном та коштами."
+          ]}
+        />
+      </ScrollAnimation>
+
+      <ScrollAnimation
+        animateIn="fadeIn"
+        animateOut="fadeOut">
+        <GridSection
+          width="1186px"
+          coloumnsNumber={2}
+          title="Інвестиційний процес"
+          content={[
+            {
+              icon: <svg width="62" height="64">
+                <use href="/icons-sprite.svg#paper-icon" />
+              </svg>,
+              title: "Ви обираєте зручний для вас план інвестицій.",
+              text:
+                "MARKSEM пропонує декілька планів інвестицій. Кожен з них розроблений таким чином, щоб вкладені вами кошти, незалежно від стартової суми, принесли вам максимальну ефективність у часі."
+            },
+            {
+              icon: <svg width="64" height="66">
+                <use href="/icons-sprite.svg#location-icon" />
+              </svg>,
+              title: "Обираєте місце розташування.",
+              text:
+                "Розмістити будинок ви можете в одному з наших парків MARKSEM, які мають сучасну готельну інфраструктуру, або на своїй території."
+            },
+            {
+              icon: <svg width="65" height="64">
+                <use href="/icons-sprite.svg#home-icon" />
+              </svg>,
+              title: "Обираєте будинок.",
+              text:
+                "У нашому каталозі ми пропонуємо будинки від 15м2 до 90м2, які мають різне планування і кількість кімнат. При замовленні будинку ви обираєте бажаний вам інтер’єр та екстер’єр. Також додатково можете замовити терасу. "
+            },
+            {
+              icon: <svg width="64" height="64">
+                <use href="/icons-sprite.svg#currency-icon" />
+              </svg>,
+              title: "Стаєте партнером. Отримуєте дохід. ",
+              text:
+                "Коли ви стаєте власником будинку та партнером MARKSEM, ми підключаємо вас до нашої CRM-системи, з якою ви контролюєте  бронювання та надходження коштів."
+            }
+          ]}
+        />
+      </ScrollAnimation>
+
+      <ScrollAnimation
+        animateIn="fadeIn"
+        animateOut="fadeOut">
+        <ImageTextBlock
+          style="1"
+          title="Можливості"
+          mediaType="img"
+          mediaPosition="right"
+          imgUrl="./img/phoenix-exterior-1.png"
+          actionElementType="link"
+          actionElementText="Дізнатися більше"
+          actionElementAlign="image"
+          mainContent={[
+            <div style={{ fontWeight: "bold" }}>
+              Інвестуючи у будинки та парки MARKSEM, ви матимете власний орендний бізнес, що дозволить вам збільшити ваш особистий дохід.
           </div>,
-          <StyledList
-            iconUrl="./img/icons/guarantee-icon.svg"
-            items={[
-              [
-                "GUARANTEE №1",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit dolore magna aliqua."
-              ],
-              [
-                "GUARANTEE №2",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit dolore magna aliqua."
-              ],
-              [
-                "GUARANTEE №3",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit dolore magna aliqua."
-              ]
-            ]}
-          />
-        ]}
-      />
+            <StyledList
+              iconUrl="/icons-sprite.svg#guarantee-icon"
+              items={[
+                {
+                  text: "Отримати задоволення від свого бізнесу. Ви можете приїхати у свій будинок будь-коли і насолоджуватись природою та якісним готельним сервісом."
+                },
+                {
+                  text: "Обмінюватися будинками за програмою MARKSEM Change Home, без перевезення самого будинку."
+                },
+                {
+                  text: "Запропонуйте свою локацію — і MARKSEM зробить там парк відпочинку вашої мрії."
+                }
+              ]}
+            />
+          ]}
+        />
+      </ScrollAnimation>
 
-      <InfoCardList
-        type={1}
-        mainTitle="Choose an investment plan and start earning today"
-        infoCards={[
-          <InfoCard
-            type={1}
-            img="./img/cards/1card.png"
-            title="additional income"
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
-            linkText="Watch the video"
-            linkURL="#"
-            key={Math.random() * 10}
-          />,
-          <InfoCard
-            type={1}
-            img="./img/cards/1card.png"
-            title="additional income"
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
-            linkText="Watch the video"
-            linkURL="#"
-            key={Math.random() * 10}
-          />,
-          <InfoCard
-            type={1}
-            img="./img/cards/1card.png"
-            title="additional income"
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
-            linkText="Watch the video"
-            linkURL="#"
-            key={Math.random() * 10}
-          />
-        ]}
-        btnText="GET STARTED"
-      />
+      <ScrollAnimation
+        animateIn="fadeIn"
+        animateOut="fadeOut">
+        <InfoCardList
+          type={1}
+          mainTitle="Виберіть інвестиційний план та заробляйте сьогодні"
+          infoCards={[
+            <InfoCard
+              type={1}
+              img="./img/cards/1card.png"
+              // title="additional income"
+              text="Все моє! Ви отримуєте 100% доходу від свого будинку."
+              linkText="Watch the video"
+              linkURL="#"
+              key={Math.random() * 10}
+            />,
+            <InfoCard
+              type={1}
+              img="./img/cards/1card.png"
+              // title="additional income"
+              text="70% спочатку. 50 на 50 потім. Перший внесок 70%, виплата за будинок 50% з оренди."
+              linkText="Watch the video"
+              linkURL="#"
+              key={Math.random() * 10}
+            />,
+            <InfoCard
+              type={1}
+              img="./img/cards/1card.png"
+              // title="additional income"
+              text="75% спочатку. Виплата за будинок з оренди."
+              linkText="Watch the video"
+              linkURL="#"
+              key={Math.random() * 10}
+            />
+          ]}
+          btnText="Розпочати"
+        />
+      </ScrollAnimation>
 
-      <SubscribeBlock type='maximal'/>
-    </div>
+      <SubscribeBlock type='maximal' />
+    </main>
   );
 }

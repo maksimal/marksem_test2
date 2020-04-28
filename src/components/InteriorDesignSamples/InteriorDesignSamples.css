@@ -1,0 +1,46 @@
+.interior-design-samples .swiper-container .swiper-button-prev::after, .interior-design-samples .swiper-container .swiper-button-next::after {
+    content: ''
+}
+
+.interior-design-samples .swiper-button-next {
+    background-image: url(./img/Arrowtotheright.png);
+}
+
+.interior-design-samples .swiper-button-prev {
+    background-image: url(./img/Arrowtotheleft.png);
+
+}
+
+
+.interior-design-samples .swiper-container .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 1px solid #3C4A64;
+    background-color: #fff;
+}
+
+.interior-design-samples .swiper-container .swiper-pagination-bullet-active {
+    width: 16px;
+    height: 16px;
+    background-color: #404F6F;
+}
+
+.interior-design-samples .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.interior-design-samples .swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.interior-design-samples .swiper-wrapper {
+    height: unset;
+}
+
+.interior-design-samples .swiper-container {
+    height: 550px;
+}

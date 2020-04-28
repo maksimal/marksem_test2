@@ -5,7 +5,7 @@ $offset: 80px;
   margin-top: 160px;
   margin-bottom: 160px;
 
-  .image-text-block__content {
+  &__content {
     position: relative;
     display: flex;
     &-left {
@@ -175,6 +175,14 @@ $offset: 80px;
         }
       }
     }
+  }
+
+  .action-element-bottom {
+    position: absolute;
+    z-index: 101;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-70%);
   }
 
   .title-container {

@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import './CvForm.scss'
 
+import './CvForm.scss'
 import Button from './../shared/Button/Button'
-    
+
 const CvForm = () => {
+
     const[ formState, setFormState] = useState({
         name:'',
         email:'',
@@ -22,36 +23,44 @@ const CvForm = () => {
         }
 
     const change = (e) => {
-        let newState = {...formState}
+        // let newState = {...formState}
 
-        switch(e.target.name) {
-            case 'name':
-                newState.name = e.target.value
-                setFormState(newState)
-                break;
-            case 'email':
-                newState.email = e.target.value
-                setFormState(newState)
-                break;
-            case 'phone':
-                newState.phone = e.target.value
-                setFormState(newState)
-                break;
-            case 'file':
-                console.log(e.target.value)
-                newState.file = e.target.value
-                setFormState(newState)
-                // setUploadStatusMessage('CV uploaded')
-                break;
-            case 'message':
-                newState.message = e.target.value
-                setFormState(newState)
-                break;
+        // switch(e.target.name) {
+        //     case 'name':
+        //         newState.name = e.target.value
+        //         setFormState(newState)
+        //         break;
+        //     case 'email':
+        //         newState.email = e.target.value
+        //         setFormState(newState)
+        //         break;
+        //     case 'phone':
+        //         newState.phone = e.target.value
+        //         setFormState(newState)
+        //         break;
+        //     case 'file':
+        //         console.log(e.target.value)
+        //         newState.file = e.target.value
+        //         setFormState(newState)
+        //         // setUploadStatusMessage('CV uploaded')
+        //         break;
+        //     case 'message':
+        //         newState.message = e.target.value
+        //         setFormState(newState)
+        //         break;
             
-            default:
-                console.log('nothing')
-                break;
-        }
+        //     default:
+        //         console.log('nothing')
+        //         break;
+        // }
+
+        let propertyName = e.target.name;
+        let propertyValue = e.target.value;
+
+        setFormState({
+          ...formState,
+          [propertyName]: propertyValue
+        })
     }
 
     const refill = (e) => {
@@ -76,6 +85,7 @@ const CvForm = () => {
                         <h2>want to work with us?</h2>
                         <div className="cv-form-form-wrapper">
                             
+
                             {modalIsOpen ? 
                             <div className="modal-form-wrapper">
                                 <h3>Thank you,</h3>
@@ -91,7 +101,7 @@ const CvForm = () => {
                                 <input type="text" name="name" placeholder="Name" value={formState.name} style={{ width:"30%"}} onChange={change}/>
                                 <input type="email" name="email" placeholder="E-mail" value={formState.email} style={{width:"64%"}} onChange={change}/>
                                 <input type="tel" name="phone" placeholder="+380" value={formState.phone} style={{ width:"30%", marginRight:"299px"}} onChange={change}/>
-                                <label for="file-upload" className="custom-file-upload">Browse...</label>
+                                <label htmlFor="file-upload" className="custom-file-upload">Browse...</label>
                                 <input type="file" name="file" placeholder="file" id="file-upload" style={{ width:"216px"}} onChange={change}/>
 
                                 <textarea name="message" value={formState.message} placeholder="Message" onChange={change}/>

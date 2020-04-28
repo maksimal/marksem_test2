@@ -1,0 +1,60 @@
+@import "../../variables.scss";
+
+.contacts-section {
+  display: flex;
+  position: relative;
+  margin-top: 150px;
+  margin-bottom: 120px;
+
+  .background {
+    background-color: $primary-background-color;;
+    width: 1000px;
+    height: 570px;
+    position: absolute;
+    z-index: -1;
+    top: -30px;
+    right: -60px;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      text-transform: uppercase;
+      margin-bottom: 40px;
+
+    }
+    &-list {
+      &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 23px;
+        color: $primary-color;
+        &:last-child {
+          margin-bottom: 35px;
+        }
+      }
+      &__icon {
+        display: inline-block;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 26px;
+        height: 26px;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .map {
+    position: relative;
+    min-width: 675px;
+    border: 1px solid grey;
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+  
+}

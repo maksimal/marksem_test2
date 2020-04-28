@@ -1,0 +1,63 @@
+.house-block {
+    width: 1440px;
+    margin: 0 auto 250px auto;
+    position: relative;
+
+    &__background-layer {
+        height: 500px;
+        width: 70%;
+        background-color: #EDF3F8;
+        z-index: 0;
+    }
+
+    &__title {
+        width: 45%;
+        position: absolute;
+        top: 10px;
+        right: 80px;
+        font-family: Montserrat;
+        font-weight: 600;
+        line-height: 48px;
+        text-align: right;
+        color: #171A27;
+    }
+    
+    &__img {
+        position: absolute;
+        top: 22px;
+        left: 22px;
+    }
+
+    &__key {
+        position: absolute;
+        font-family: Montserrat;
+        font-size: 24px;
+        line-height: 29px;
+        color: #171A27;
+    }
+
+    &__key1 {
+        top: 95px;
+        left: 150px;
+    }
+
+    &__key2 {
+        top: 66px;
+        left: 475px;
+    }
+
+    &__key3 {
+        bottom: -120px;
+        left: 390px;
+    }
+
+    &__key4 {
+        bottom: -114px;
+        left: 747px;
+    }
+
+    &__key5 {
+        bottom: 110px;
+        right: 170px;
+    }
+}

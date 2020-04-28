@@ -1,104 +1,277 @@
 import React from "react";
 import ImageTextBlock from "./../components/ImageTextBlock/ImageTextBlock";
-import StyledListItem from "./../components/shared/StyledList/StyledList";
+import StyledListItem from "./../components/shared/StyledListItem/StyledListItem";
 import StyledList from "./../components/shared/StyledList/StyledList";
 import GridSection from "./../components/GridSection/GridSection";
+import SliderWithBackground from "./../components/SliderWithBackground/SliderWithBackground";
+import PersentageIndicator from "./../components/shared/PersentageIndicator/PersentageIndicator";
+import CompanyPresentation from "./../components/CompanyPresentation/CompanyPresentation";
+import OurLocationsBlock from "../components/OurLocationsBlock/OurLocationsBlock";
+import ScrollToTop from './../components/shared/ScrollToTop'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 export default function Investments(props) {
   return (
     <div>
-      <ImageTextBlock
-        style="3"
-        title="Marksem CRM"
-        mediaType="img"
-        mediaPosition="right"
-        imgUrl="./img/crm.png"
-        mainContent={[
-          <p>
-            All our investors become members of MARKSEM investment community! We
-            provide you with an access to our CRM, where you will have unique
-            access to all information considering your investment!
-          </p>,
-          <p style={{ fontWeight: "bold" }}>
-            MARKSEM CRM provides you with the following features:
-          </p>,
-          <StyledList
-            iconUrl="./img/icons/box-check-icon.png"
-            items={[
-              [
-                "You have all necessary information considering your investment: revenue, capacity, ROI etc."
-              ],
-              [
-                "You are fully informed about all MARKSEM news, projects and features"
-              ],
-              [
-                "All your investments and actions are under your control: every business action is recorded"
-              ],
-              ["You have all documents and reports in one place"]
-            ]}
-          />
-        ]}
+      
+      <ScrollToTop />
+
+      <CompanyPresentation
+        title="Наша спільна ціль в бізнесі"
+        text={
+          <>
+            <StyledListItem
+              style={{ alignItems: "center" }}
+              iconUrl="/icons-sprite.svg#point_icon"
+              title={false}
+              text="Якість, швидкість, сервіс та бажання відкривати нові можливості є фундаментом нашої компанії."
+            />
+            <StyledListItem
+              style={{ alignItems: "center" }}
+              iconUrl="/icons-sprite.svg#point_icon"
+              title={false}
+              text="Ваша інвестиція з часом зростає у вартості, як і зростає попит до парку чи локації."
+            />
+            <StyledListItem
+              style={{ alignItems: "center" }}
+              iconUrl="/icons-sprite.svg#point_icon"
+              title={false}
+              text="Збільшення кількості гостей в парках та локаціях шляхом власної вдосконаленості та реагуванням на попит і зміни ринку."
+            />
+            <StyledListItem
+              style={{ alignItems: "center" }}
+              iconUrl="/icons-sprite.svg#point_icon"
+              title={false}
+              text="Диверсифікація інвестиції."
+            />
+          </>
+        }
+        img="./img/invesments-top-block.png"
       />
-      <GridSection
-        coloumnsNumber={3}
-        title="Additional hotel services"
-        content={[
-          {
-            img: "./img/icons/own-ponds-icon.svg",
-            title: "Own ponds",
-            text:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-          },
-          {
-            img: "./img/icons/playgrounds-icon.svg",
-            title: "playgrounds",
-            text:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-          },
-          {
-            img: "./img/icons/basketball-icon.svg",
-            title: "SPORTS FIELDS",
-            text:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-          },
-          {
-            img: "./img/icons/fotball-fields-icon.svg",
-            title: "football fields",
-            text:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-          },
-          {
-            img: "./img/icons/treadmills-icon.svg",
-            title: "TREADMILLS",
-            text:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-          },
-          {
-            img: "./img/icons/kindergarden-icon.svg",
-            title: "KINDERGARTENs",
-            text:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-          },
-          {
-            img: "./img/icons/delivery-icon.svg",
-            title: "Delivery",
-            text:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-          },
-          {
-            img: "./img/icons/car-washing-icon.svg",
-            title: "car washing",
-            text:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-          },
-          {
-            img: "./img/icons/gyms-icon.svg",
-            title: "gyms",
-            text:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-          },
-        ]}
-      />
+      
+      <ScrollAnimation
+        animateIn="fadeIn"
+        animateOut="fadeOut">
+        <SliderWithBackground slides={[
+          [<div key={1}>
+            <div className="slider-with-bg__slider-title">Інвестиційні плани</div>
+            <p className="slider-with-bg__slider-text">
+              Все моє! Ви отримуєте 100% доходу від свого будинку. </p>
+            <div className="slider-with-bg__slider-info">
+              <div className="slider-with-bg__slider-info__col1">
+                <StyledList
+                  iconUrl="/icons-sprite.svg#point_icon"
+                  items={[
+                    {
+                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                    },
+                    {
+                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                    },
+                    {
+                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                    }
+                  ]}
+                />
+              </div>
+              <div className="slider-with-bg__slider-info__col2">
+                <PersentageIndicator progress={90} name="INDICATOR 1" />
+                <PersentageIndicator progress={40} name="INDICATOR 2" />
+              </div>
+            </div>
+          </div>],
+          [<div key={2}>
+            <div className="slider-with-bg__slider-title">Інвестиційні плани</div>
+            <p className="slider-with-bg__slider-text">
+              70% спочатку. Перший внесок 70% від вартості вибраного вами будинку. Перевага в тому, що відсутні жодні відсотки чи штрафи, ви сплачуєте решту за будинок тоді, коли він здається по принципу 50%/50% від оренди.</p>
+            <div className="slider-with-bg__slider-info">
+              <div className="slider-with-bg__slider-info__col1">
+                <StyledList
+                  iconUrl="/icons-sprite.svg#point_icon"
+                  items={[
+                    {
+                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                    },
+                    {
+                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                    },
+                    {
+                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                    }
+                  ]}
+                />
+              </div>
+              <div className="slider-with-bg__slider-info__col2">
+                <PersentageIndicator progress={75} name="INDICATOR 1" />
+                <PersentageIndicator progress={70} name="INDICATOR 2" />
+              </div>
+            </div>
+          </div>],
+          [<div key={3}>
+            <div className="slider-with-bg__slider-title">Інвестиційні плани</div>
+            <p className="slider-with-bg__slider-text">
+              75% спочатку. Перший внесок 75% від вартості вибраного вами будинку. Перевага в тому, що відсутні жодні відсотки чи штрафи, ви сплачуєте решту за будинок тоді, коли він здається.
+        </p>
+            <div className="slider-with-bg__slider-info">
+              <div className="slider-with-bg__slider-info__col1">
+                <StyledList
+                  iconUrl="/icons-sprite.svg#point_icon"
+                  items={[
+                    {
+                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                    },
+                    {
+                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                    },
+                    {
+                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                    }
+                  ]}
+                />
+              </div>
+              <div className="slider-with-bg__slider-info__col2">
+                <PersentageIndicator progress={35} name="INDICATOR 1" />
+                <PersentageIndicator progress={100} name="INDICATOR 2" />
+              </div>
+            </div>
+          </div>]
+        ]} />
+      </ScrollAnimation>
+
+
+      <ScrollAnimation
+        animateIn="fadeIn"
+        animateOut="fadeOut">
+        <ImageTextBlock
+          style="3"
+          title="MARKSEM СRМ"
+          mediaType="img"
+          mediaPosition="right"
+          imgUrl="./img/crm.png"
+          mainContent={[
+            <p>
+              Розуміючи переваги, які надають сучасні технології, ми розробили CRM- систему, з якою власник будинку може керувати своїм майном та коштами.
+            </p>,
+            <p style={{ fontWeight: "bold" }}>
+              MARKSEM СRМ виконає для вас наступні функції:
+            </p>,
+            <StyledList
+              iconUrl="/icons-sprite.svg#box-check-icon"
+              items={[
+                {
+                  text: "Календар проживання, надходження коштів"
+                },
+                {
+                  text: "Аналітична звітність в періоді. Дохід /витрати, завантаження, рентабельність"
+                },
+                {
+                  text: "Оплата по лічильникам, сервіс, інші договірні зобов’язання"
+                },
+                {
+                  text: "Бронювання дат, замовлення послуг і товарів до вашого приїзду"
+                },
+                {
+                  text: "Індивідуальний менеджер, інформування про події, проекти та можливості"
+                },
+                {
+                  text: "Історія всіх документів, дій та операцій з вашим будинком"
+                }
+              ]}
+            />
+          ]}
+        />
+      </ScrollAnimation>
+
+
+      <ScrollAnimation
+        animateIn="fadeIn"
+        animateOut="fadeOut">
+        <OurLocationsBlock
+          mainTitle="Локації MARKSEM"
+          imgs={[
+            'OurLocationBlock.png',
+            'OurLocationBlock.png'
+          ]}
+          mainText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+          locationTitle="location №1"
+          locationText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat."
+        />
+      </ScrollAnimation>
+
+      <ScrollAnimation
+        animateIn="fadeIn"
+        animateOut="fadeOut">
+        <GridSection
+          coloumnsNumber={3}
+          title="Додатковий готельний сервіс"
+          content={[
+            {
+              icon: <svg width="62" height="64">
+                <use href="/icons-sprite.svg#own-ponds-icon" />
+              </svg>,
+              title: "Озера для відпочинку та риболовлі",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
+            },
+            {
+              icon: <svg width="62" height="64">
+                <use href="/icons-sprite.svg#playgrounds-icon" />
+              </svg>,
+              title: "Басейни ",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+            },
+            {
+              icon: <svg width="62" height="64">
+                <use href="/icons-sprite.svg#basketball-icon" />
+              </svg>,
+              title: "Спортивні та ігрові майданчики",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+            },
+            {
+              icon: <svg width="62" height="64">
+                <use href="/icons-sprite.svg#fotball-fields-icon" />
+              </svg>,
+              title: "Ігрові кімнати та дитячі клуби",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+            },
+            {
+              icon: <svg width="62" height="64">
+                <use href="/icons-sprite.svg#treadmills-icon" />
+              </svg>,
+              title: "Ресторани",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+            },
+            {
+              icon: <svg width="62" height="64">
+                <use href="/icons-sprite.svg#kindergarden-icon" />
+              </svg>,
+              title: "Конференц-зали",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+            },
+            {
+              icon: <svg width="62" height="64">
+                <use href="/icons-sprite.svg#delivery-icon" />
+              </svg>,
+              title: "Міні-зоопарки",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+            },
+            {
+              icon: <svg width="62" height="64">
+                <use href="/icons-sprite.svg#car-washing-icon" />
+              </svg>,
+              title: "Доставка товарів",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+            },
+            {
+              icon: <svg width="62" height="64">
+                <use href="/icons-sprite.svg#gyms-icon" />
+              </svg>,
+              title: "Інші сервіси",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+            },
+          ]}
+        />
+      </ScrollAnimation>
+
     </div>
-  );
+  )
 }

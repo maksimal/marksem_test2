@@ -13,7 +13,7 @@ function Button( {type, classList, onClick, text} ){
 }
 
 Button.propTypes = {
-  classList: PropTypes.string.isRequired,
+  classList: PropTypes.string,
   onClick: PropTypes.func.isRequired,
   text: PropTypes.string
 }

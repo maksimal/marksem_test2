@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./TabsSection.scss";
 
-export default function TabsSection({
+function TabsSection({
   sectionTitle = "Default Section Title",
   tabsHeadingsTexts = ["One", "Two", "Three"],
   tabsContents = []
@@ -64,3 +64,4 @@ export default function TabsSection({
   )
 }
 
+export default TabsSection

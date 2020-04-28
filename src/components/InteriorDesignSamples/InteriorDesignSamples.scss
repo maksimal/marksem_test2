@@ -1,0 +1,61 @@
+@import './../../variables';
+
+.interior-design-samples {
+    position: relative;
+    h2 {
+        width: 35%;
+        line-height: 50px;
+    }
+    .interior-design-samples-background {
+        position: absolute;
+        background-color: $primary-background-color;
+        z-index: 0;
+        top: 180px;
+        width: 1160px;
+        height: 510px;
+        transform: translateX(17%);
+        z-index: 0;
+    }
+    .interior-design-samples-content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        position: relative;
+        z-index: 10;
+        .swiper-container {
+            margin-left: 50px;
+        }
+        .interior-design-samples-text-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 80px;
+            .btn {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .interior-design-samples-text-block {
+                width: 400px;
+                display: flex;
+                margin-bottom: 50px;
+
+                .interior-design-samples-text-number { 
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 4px solid #FF9781;
+                    margin-right: 15px;
+                    font-size: 25px;
+                }
+
+                .interior-design-samples-text {
+                    font-size: 20px;
+                    display: inline;
+                }
+            }
+        }
+    }
+}
+

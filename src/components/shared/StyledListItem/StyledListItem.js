@@ -5,24 +5,18 @@ export default function StyledListItem(
   {
     iconUrl,
     iconSize = 30,
-    title = "Default title",
-    text = "Default text"
+    title,
+    text = "Default text",
+    ...props
   }
 ) {
   return (
-    <div className="styled-list-item">
+    <div className="styled-list-item" {...props}>
       <div className="styled-list-item__container">
-        <div
-          className="styled-list-item__icon"
-          style={{
-            backgroundImage: `url(${iconUrl})`,
-            backgroundPosition: "center",
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            width: iconSize + "px",
-            height: iconSize + "px",
-          }}
-        >
+        <div className="styled-list-item__icon">
+          <svg width={iconSize} height={iconSize}>
+            <use href={iconUrl}/>
+          </svg>
         </div>
       </div>
       <div className="styled-list-item__text-container">

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import AnimationOnScroll from './../../hoc/AnimationOnScroll'
 import Button from '../shared/Button/Button';
 import "./CompanyPresentation.scss";
 
-function CompanyPresentation({ img, title, text }) {
+function CompanyPresentation({ img, title, text, action }) {
 
   return (
       <section className="company-presentation">
@@ -15,11 +15,13 @@ function CompanyPresentation({ img, title, text }) {
           <div className="company-presentation__info">
             {text}
           </div>
-          <Button
+          { action &&
+            <Button
             onClick={()=>{}}
             classList="btn-main company-presentation__action"
-            text="Learn more"
+            text="Дізнатися більше"
           />
+          }
         </div>
       </section>
 
@@ -30,5 +32,5 @@ CompanyPresentation.propTypes = {
   title: PropTypes.string,
   text: PropTypes.node
 }
-
+// export default CompanyPresentation;
 export default CompanyPresentation;

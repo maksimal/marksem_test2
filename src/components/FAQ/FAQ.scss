@@ -1,0 +1,51 @@
+.faq {
+  margin: 15px 0;
+  .question {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: -2px 3px 6px 0px rgba(0, 0, 0, 0.185);
+    &__text {
+      padding: 15px 0;
+    }
+    &__icon {
+      position: relative;
+      padding: 0 25px;
+      width: 16px;
+      height: 16px;
+      &-plus::before {
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        width: 1px;
+        height: 16px;
+        background-color: rgba(0, 0, 0, 0.671);
+      }
+      &-plus::after,
+      &-minus::after {
+        content: "";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        width: 16px;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.726);
+      }
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .answer {
+    padding: 25px 60px;
+  }
+  .collapsable {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 300ms ease;
+  }
+}
