@@ -44,19 +44,19 @@ const ContactFormSection = ({
           <ul className="contacts-list">
             <li className="contacts-list__item">
               <svg className="contacts-list__icon">
-                <use href="/icons-sprite.svg#phone" />
+                <use href="./icons-sprite.svg#phone" />
               </svg>
               <span className="contacts-list__text">{phone}</span>
             </li>
             <li className="contacts-list__item">
               <svg className="contacts-list__icon">
-                <use href="/icons-sprite.svg#mail" />
+                <use href="./icons-sprite.svg#mail" />
               </svg>
               <span className="contacts-list__text">{email}</span>
             </li>
             <li className="contacts-list__item">
               <svg className="contacts-list__icon">
-                <use href="/icons-sprite.svg#pin-map" />
+                <use href="./icons-sprite.svg#pin-map" />
               </svg>
               <span className="contacts-list__text">{address}</span>
             </li>

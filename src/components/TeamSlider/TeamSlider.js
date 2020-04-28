@@ -50,20 +50,20 @@ function TeamSlider({
                         {facebookLink &&
                           <a href={facebookLink}>
                             <svg width={16} height={16}>
-                              <use href="/icons-sprite.svg#icon-facebook"/>
+                              <use href="./icons-sprite.svg#icon-facebook"/>
                             </svg>
                           </a>
                         }
                         {linkdInLink &&
                           <a href={linkdInLink}>
                             <svg width={16} height={16}>
-                              <use href="/icons-sprite.svg#icon-linkedin"/>
+                              <use href="./icons-sprite.svg#icon-linkedin"/>
                             </svg>
                           </a>
                         }
                         {instagramLink && <a href={instagramLink}>
                         <svg width={16} height={16}>
-                              <use href="/icons-sprite.svg#icon-instagram"/>
+                              <use href="./icons-sprite.svg#icon-instagram"/>
                             </svg>
                         </a>
                         }

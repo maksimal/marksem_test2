@@ -71,7 +71,7 @@ export default function WhyMarksem(props) {
           actionElementAlign="left"
           mainContent={[
             <StyledList
-              iconUrl="/icons-sprite.svg#investment-block-icon"
+              iconUrl="./icons-sprite.svg#investment-block-icon"
               iconSize={37}
               items={[
                 {

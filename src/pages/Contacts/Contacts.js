@@ -15,22 +15,22 @@ export default function Contacts(props) {
         <div className="social-links-container">
           <a href="#" className="social-link">
             <svg width={16} height={16}>
-              <use href="/icons-sprite.svg#icon-facebook" />
+              <use href="./icons-sprite.svg#icon-facebook" />
             </svg>
           </a>
           <a href="#" className="social-link">
             <svg width={16} height={16}>
-              <use href="/icons-sprite.svg#icon-twitter" />
+              <use href="./icons-sprite.svg#icon-twitter" />
             </svg>
           </a>
           <a href="#" className="social-link">
             <svg width={16} height={16}>
-              <use href="/icons-sprite.svg#icon-linkedin" />
+              <use href="./icons-sprite.svg#icon-linkedin" />
             </svg>
           </a>
           <a href="#" className="social-link">
             <svg width={16} height={16}>
-              <use href="/icons-sprite.svg#icon-instagram" />
+              <use href="./icons-sprite.svg#icon-instagram" />
             </svg>
           </a>
         </div>
@@ -68,19 +68,19 @@ export default function Contacts(props) {
               </p>,
             <StyledListItem
               style={{ textTransform: "uppercase", alignItems: "center" }}
-              iconUrl="/icons-sprite.svg#plane"
+              iconUrl="./icons-sprite.svg#plane"
               iconSize={44}
               text="Туроператори"
             />,
             <StyledListItem
               style={{ textTransform: "uppercase", alignItems: "center" }}
-              iconUrl="/icons-sprite.svg#plant"
+              iconUrl="./icons-sprite.svg#plant"
               iconSize="44"
               text="Власники земель"
             />,
             <StyledListItem
               style={{ textTransform: "uppercase", alignItems: "center" }}
-              iconUrl="/icons-sprite.svg#bell_icon"
+              iconUrl="./icons-sprite.svg#bell_icon"
               iconSize="44"
               text="Компанії з надання товарів та послуг"
             />

@@ -41,7 +41,7 @@ export default function Houses(props) {
               imgUrl="./img/houses-type-1-tabs.png"
               mainContent={[
                 <StyledList
-                  iconUrl="/icons-sprite.svg#check-mark"
+                  iconUrl="./icons-sprite.svg#check-mark"
                   iconSize={20}
                   items={[
                     {
@@ -68,7 +68,7 @@ export default function Houses(props) {
               imgUrl="./img/houses-type-1-tabs.png"
               mainContent={[
                 <StyledList
-                  iconUrl="/icons-sprite.svg#check-mark"
+                  iconUrl="./icons-sprite.svg#check-mark"
                   iconSize={20}
                   items={[
                     {
@@ -95,7 +95,7 @@ export default function Houses(props) {
               imgUrl="./img/houses-type-1-tabs.png"
               mainContent={[
                 <StyledList
-                iconUrl="/icons-sprite.svg#check-mark"
+                iconUrl="./icons-sprite.svg#check-mark"
                   iconSize={20}
                   items={[
                     {

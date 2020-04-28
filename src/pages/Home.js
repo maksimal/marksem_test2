@@ -71,7 +71,7 @@ export default function Home(props) {
           content={[
             {
               icon: <svg width="62" height="64">
-                <use href="/icons-sprite.svg#paper-icon" />
+                <use href="./icons-sprite.svg#paper-icon" />
               </svg>,
               title: "Ви обираєте зручний для вас план інвестицій.",
               text:
@@ -79,7 +79,7 @@ export default function Home(props) {
             },
             {
               icon: <svg width="64" height="66">
-                <use href="/icons-sprite.svg#location-icon" />
+                <use href="./icons-sprite.svg#location-icon" />
               </svg>,
               title: "Обираєте місце розташування.",
               text:
@@ -87,7 +87,7 @@ export default function Home(props) {
             },
             {
               icon: <svg width="65" height="64">
-                <use href="/icons-sprite.svg#home-icon" />
+                <use href="./icons-sprite.svg#home-icon" />
               </svg>,
               title: "Обираєте будинок.",
               text:
@@ -95,7 +95,7 @@ export default function Home(props) {
             },
             {
               icon: <svg width="64" height="64">
-                <use href="/icons-sprite.svg#currency-icon" />
+                <use href="./icons-sprite.svg#currency-icon" />
               </svg>,
               title: "Стаєте партнером. Отримуєте дохід. ",
               text:
@@ -122,7 +122,7 @@ export default function Home(props) {
               Інвестуючи у будинки та парки MARKSEM, ви матимете власний орендний бізнес, що дозволить вам збільшити ваш особистий дохід.
           </div>,
             <StyledList
-              iconUrl="/icons-sprite.svg#guarantee-icon"
+              iconUrl="./icons-sprite.svg#guarantee-icon"
               items={[
                 {
                   text: "Отримати задоволення від свого бізнесу. Ви можете приїхати у свій будинок будь-коли і насолоджуватись природою та якісним готельним сервісом."
