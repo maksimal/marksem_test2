@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '../shared/Button/Button'
 //import '../../variables'
 import './InfoCardList.scss'
+import './media.scss'
 import PropTypes from 'prop-types'
 
 const InfoCardList = (props) => {

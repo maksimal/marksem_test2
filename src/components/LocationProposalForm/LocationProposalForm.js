@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import "./LocationProposalForm.scss"
 import Button from './../shared/Button/Button';
 
@@ -44,10 +44,10 @@ const LocationProposalForm = ({
             <h2 className="title">Did not find a suitable location?</h2>
             <p className="intro-text">Offer your location and give your email for communication</p>
             <form action="#" className="form">
-              <div style={{ display: "flex" }}>
+              <div className="name-email-wrapper" style={{ display: "flex" }}>
                 <input
                   required
-                  style={{ width: "260px", marginRight: "20px" }}
+                  style={{ marginRight: "20px" }}
                   className="form-field"
                   type="text"
                   placeholder="Name"
@@ -89,7 +89,9 @@ const LocationProposalForm = ({
               </div>
             </form>
           </div>
-          <img className="map-img" src="./img/location-bg2.png" alt="" />
+          <div className="map-img-container">
+            <img className="map-img" src="./img/location-bg2.png" alt="" />
+          </div>
         </div>
       </div>
     </section>

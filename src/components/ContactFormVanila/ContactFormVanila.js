@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import "./ContactFormVanila.scss";
 import Button from './../shared/Button/Button';
 
@@ -102,71 +102,77 @@ const ContactFormVanila = ({
       <div className="form-container">
 
         {!state.isSubmitted &&
-          <form className="form">
+          <Fragment>
             {introText &&
               <p className="form-intro-text">{introText}</p>}
-            <div className="form-fields-container">
-              <input
-                onChange={handleChange}
-                value={state.values.name}
-                type="text"
-                name="name"
-                placeholder="Ім’я"
-                className={!state.errors.name ? "form-field" : "form-field form-field__error"}
-              />
+
+            <div className="form-wrapper">
+              <form className="form">
+
+                <div className="form-fields-container">
+                  <input
+                    onChange={handleChange}
+                    value={state.values.name}
+                    type="text"
+                    name="name"
+                    placeholder="Ім’я"
+                    className={!state.errors.name ? "form-field" : "form-field form-field__error"}
+                  />
 
 
-              <input
-                onChange={handleChange}
-                value={state.values.email}
-                type="email"
-                name="email"
-                placeholder="Email"
-                className="form-field"
-                className={!state.errors.email ? "form-field" : "form-field form-field__error"}
+                  <input
+                    onChange={handleChange}
+                    value={state.values.email}
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    className="form-field"
+                    className={!state.errors.email ? "form-field" : "form-field form-field__error"}
 
-              />
+                  />
 
-              <input
-                onChange={handleChange}
-                value={state.values.phone}
-                type="text"
-                name="phone"
-                placeholder="Телефон"
-                className="form-field"
-                className={!state.errors.phone ? "form-field" : "form-field form-field__error"}
-              />
-              <div className="field-container">
-                <textarea
-                  onChange={handleChange}
-                  value={state.values.message}
-                  type="text"
-                  name="message"
-                  placeholder="Повідомлення"
-                  className="form-field"
-                  rows="2"
-                  style={{ resize: "none" }}
-                  className={!state.errors.message ? "form-field" : "form-field form-field__error"}
-                />
-                { state.values.message.length > 50 &&
-                  <div className="characters-limit">
-                  <span className="characters-limit-text">characters left:</span>
-                  <span className="characters-limit-number">{state.charactersLeft.message}</span>
+                  <input
+                    onChange={handleChange}
+                    value={state.values.phone}
+                    type="text"
+                    name="phone"
+                    placeholder="Телефон"
+                    className="form-field"
+                    className={!state.errors.phone ? "form-field" : "form-field form-field__error"}
+                  />
+                  <div className="field-container">
+                    <textarea
+                      onChange={handleChange}
+                      value={state.values.message}
+                      type="text"
+                      name="message"
+                      placeholder="Повідомлення"
+                      className="form-field"
+                      rows="2"
+                      style={{ resize: "none" }}
+                      className={!state.errors.message ? "form-field" : "form-field form-field__error"}
+                    />
+                    {state.values.message.length > 50 &&
+                      <div className="characters-limit">
+                        <span className="characters-limit-text">characters left:</span>
+                        <span className="characters-limit-number">{state.charactersLeft.message}</span>
+                      </div>
+                    }
+                  </div>
+
                 </div>
-                }
-              </div>
 
+                <div className="form-submit-button" >
+                  <Button
+                    type="main"
+                    text="Надіслати"
+                    onClick={handleSubmit}
+                  />
+                </div>
+
+              </form>
             </div>
-
-            <div className="form-submit-button" >
-              <Button
-                type="main"
-                text="Надіслати"
-                onClick={handleSubmit}
-              />
-            </div>
-
-          </form>
+          </Fragment>
         }
 
 

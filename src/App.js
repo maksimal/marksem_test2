@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState } from 'react';
 import { connect } from 'react-redux';
 import { sampleAction } from './actions/sampleAction';
 import { Switch, Route, Redirect } from 'react-router-dom';
@@ -10,11 +10,14 @@ import Home from './pages/Home';
 import Investments from './pages/Investments';
 import WhyMarksem from './pages/WhyMarksem';
 import NotFound from './pages/NotFoundPage/NotFoundPage';
+// import './App.scss'
 
 export default function App(props) {
+
   return (
     <div className="App">
-      <Header />
+      <Header 
+      />
         <Switch>
           <Route exact
             path="/"

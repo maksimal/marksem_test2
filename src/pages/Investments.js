@@ -1,4 +1,4 @@
-import React from "react";
+import React, { userState, useState } from "react";
 import ImageTextBlock from "./../components/ImageTextBlock/ImageTextBlock";
 import StyledListItem from "./../components/shared/StyledListItem/StyledListItem";
 import StyledList from "./../components/shared/StyledList/StyledList";
@@ -11,6 +11,10 @@ import ScrollToTop from './../components/shared/ScrollToTop'
 import ScrollAnimation from 'react-animate-on-scroll'
 
 export default function Investments(props) {
+  useState( () => {
+    window.scrollTo(0, 0);
+  }, [])
+
   return (
     <div>
       
@@ -51,9 +55,12 @@ export default function Investments(props) {
       
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <SliderWithBackground slides={[
           [<div key={1}>
+            <div className="slider-with-bg__slider-img">
+              <img src="./img/1730.png" alt="slide"/>
+            </div>
             <div className="slider-with-bg__slider-title">Інвестиційні плани</div>
             <p className="slider-with-bg__slider-text">
               Все моє! Ви отримуєте 100% доходу від свого будинку. </p>
@@ -81,6 +88,9 @@ export default function Investments(props) {
             </div>
           </div>],
           [<div key={2}>
+            <div className="slider-with-bg__slider-img">
+              <img src="./img/1586.png" alt="slide"/>
+            </div>
             <div className="slider-with-bg__slider-title">Інвестиційні плани</div>
             <p className="slider-with-bg__slider-text">
               70% спочатку. Перший внесок 70% від вартості вибраного вами будинку. Перевага в тому, що відсутні жодні відсотки чи штрафи, ви сплачуєте решту за будинок тоді, коли він здається по принципу 50%/50% від оренди.</p>
@@ -108,6 +118,9 @@ export default function Investments(props) {
             </div>
           </div>],
           [<div key={3}>
+            <div className="slider-with-bg__slider-img">
+              <img src="./img/3054.png" alt="slide"/>
+            </div>
             <div className="slider-with-bg__slider-title">Інвестиційні плани</div>
             <p className="slider-with-bg__slider-text">
               75% спочатку. Перший внесок 75% від вартості вибраного вами будинку. Перевага в тому, що відсутні жодні відсотки чи штрафи, ви сплачуєте решту за будинок тоді, коли він здається.
@@ -141,7 +154,7 @@ export default function Investments(props) {
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <ImageTextBlock
           style="3"
           title="MARKSEM СRМ"
@@ -184,8 +197,8 @@ export default function Investments(props) {
 
 
       <ScrollAnimation
-        animateIn="fadeIn"
-        animateOut="fadeOut">
+         animateIn="fadeIn"
+         animateOnce={true}>
         <OurLocationsBlock
           mainTitle="Локації MARKSEM"
           imgs={[
@@ -200,69 +213,69 @@ export default function Investments(props) {
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <GridSection
-          coloumnsNumber={3}
+          size={3}
           title="Додатковий готельний сервіс"
           content={[
             {
-              icon: <svg width="62" height="64">
+              icon: <svg className="grid-icon">
                 <use href="./icons-sprite.svg#own-ponds-icon" />
               </svg>,
               title: "Озера для відпочинку та риболовлі",
               text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
             },
             {
-              icon: <svg width="62" height="64">
+              icon: <svg className="grid-icon">
                 <use href="./icons-sprite.svg#playgrounds-icon" />
               </svg>,
               title: "Басейни ",
               text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
             },
             {
-              icon: <svg width="62" height="64">
+              icon: <svg className="grid-icon">
                 <use href="./icons-sprite.svg#basketball-icon" />
               </svg>,
               title: "Спортивні та ігрові майданчики",
               text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
             },
             {
-              icon: <svg width="62" height="64">
+              icon: <svg className="grid-icon">
                 <use href="./icons-sprite.svg#fotball-fields-icon" />
               </svg>,
               title: "Ігрові кімнати та дитячі клуби",
               text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
             },
             {
-              icon: <svg width="62" height="64">
+              icon: <svg className="grid-icon">
                 <use href="./icons-sprite.svg#treadmills-icon" />
               </svg>,
               title: "Ресторани",
               text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
             },
             {
-              icon: <svg width="62" height="64">
+              icon: <svg className="grid-icon">
                 <use href="./icons-sprite.svg#kindergarden-icon" />
               </svg>,
               title: "Конференц-зали",
               text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
             },
             {
-              icon: <svg width="62" height="64">
+              icon: <svg className="grid-icon">
                 <use href="./icons-sprite.svg#delivery-icon" />
               </svg>,
               title: "Міні-зоопарки",
               text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
             },
             {
-              icon: <svg width="62" height="64">
+              icon: <svg className="grid-icon">
                 <use href="./icons-sprite.svg#car-washing-icon" />
               </svg>,
               title: "Доставка товарів",
               text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
             },
             {
-              icon: <svg width="62" height="64">
+              icon: <svg className="grid-icon">
                 <use href="./icons-sprite.svg#gyms-icon" />
               </svg>,
               title: "Інші сервіси",

@@ -108,3 +108,20 @@
     opacity: 1;
   }
 }
+
+@media only screen and (max-width: 1199px) {
+  .team-section__card {
+    width: 255px;
+    img {
+      height: 295px;
+    }
+  }
+}
+
+// @media only screen and (max-width: 979px) {
+//   .team-section__card {
+//     img {
+//       height: 420px;
+//     }
+//   }
+// }

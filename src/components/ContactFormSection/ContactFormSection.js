@@ -41,33 +41,36 @@ const ContactFormSection = ({
 
         <div className="contacts">
           <h2>{contactListTitle}</h2>
-          <ul className="contacts-list">
-            <li className="contacts-list__item">
-              <svg className="contacts-list__icon">
-                <use href="./icons-sprite.svg#phone" />
-              </svg>
-              <span className="contacts-list__text">{phone}</span>
-            </li>
-            <li className="contacts-list__item">
-              <svg className="contacts-list__icon">
-                <use href="./icons-sprite.svg#mail" />
-              </svg>
-              <span className="contacts-list__text">{email}</span>
-            </li>
-            <li className="contacts-list__item">
-              <svg className="contacts-list__icon">
-                <use href="./icons-sprite.svg#pin-map" />
-              </svg>
-              <span className="contacts-list__text">{address}</span>
-            </li>
-          </ul>
-          <div
-            className="map"
-            style={{ backgroundImage: `url(./img/map-placeholder.png)` }}
-          >
-            {/* <MyMap /> */}
+          <div className="background-wrapper">
+            <ul className="contacts-list">
+              <li className="contacts-list__item">
+                <svg className="contacts-list__icon">
+                  <use href="./icons-sprite.svg#phone" />
+                </svg>
+                <span className="contacts-list__text">{phone}</span>
+              </li>
+              <li className="contacts-list__item">
+                <svg className="contacts-list__icon">
+                  <use href="./icons-sprite.svg#mail" />
+                </svg>
+                <span className="contacts-list__text">{email}</span>
+              </li>
+              <li className="contacts-list__item">
+                <svg className="contacts-list__icon">
+                  <use href="./icons-sprite.svg#pin-map" />
+                </svg>
+                <span className="contacts-list__text">{address}</span>
+              </li>
+            </ul>
+            <div
+              className="map"
+              style={{ backgroundImage: `url(./img/map-placeholder.png)` }}
+            >
+              {/* <MyMap /> */}
+            </div>
+
           </div>
-        </div>        
+        </div>
       </div>
     </div>
   );

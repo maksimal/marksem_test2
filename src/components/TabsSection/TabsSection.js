@@ -26,8 +26,12 @@ function TabsSection({
 
   return (
     <div className="tabs-house-types">
-      <div className="container">
+
+      <div className="container section-title-container">
         <h2 className="section-title">{sectionTitle}</h2>
+      </div>
+
+      <div className="container tabs-headings-container">
         <div className="tabs-headings">
           {
             tabsHeadingsTexts.map((tabHeadingText, i) => {
@@ -44,22 +48,24 @@ function TabsSection({
             })
           }
         </div>
-        <div className="tabs-contents">
-          {
-            tabsContents.map((tabContent, i) => {
-              return (
-                <div 
-                  key={i}
-                  className={i === activeTab ? "tab-content active" : "tab-content"}
-                  data-tab_number={i}
-                >
-                  {tabContent}
-                </div>
-              )
-            })
-          }
-        </div>
       </div>
+
+      <div className="tabs-contents">
+        {
+          tabsContents.map((tabContent, i) => {
+            return (
+              <div
+                key={i}
+                className={i === activeTab ? "tab-content active" : "tab-content"}
+                data-tab_number={i}
+              >
+                {tabContent}
+              </div>
+            )
+          })
+        }
+      </div>
+
     </div>
   )
 }

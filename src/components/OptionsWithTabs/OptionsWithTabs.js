@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Swiper from 'react-id-swiper'
 import './OptionsWithTabs.css'
 import './OptionsWithTabs.scss'
+import './media.scss'
 
 const OptionsWithTabs = ({ title, activeTabNumber, tabsHeadingsTexts, tabsContent}) => {
     const [tempActiveTabNumber, setTempActiveTabNumber] = useState(null)
@@ -44,10 +45,12 @@ const OptionsWithTabs = ({ title, activeTabNumber, tabsHeadingsTexts, tabsConten
             <div className="container">
                 <div className="options-with-tabs-wrapper">
                     <h2>{title}</h2>
-                    <div className="options-with-tabs-tabs">
-                        {allTabs}
+                    <div className="options-with-tabs-distributor">
+                        <div className="options-with-tabs-tabs">
+                            {allTabs}
+                        </div>
+                        {activeContent}
                     </div>
-                    {activeContent}
                 </div>
                 <div className="options-with-tabs-background"></div>
             </div>

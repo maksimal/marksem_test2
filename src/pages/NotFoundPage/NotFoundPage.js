@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from './../../components/shared/Button/Button'
 import './NotFoundPage.scss'
 
 const NotFound = () => {
+    useState( () => {
+        window.scrollTo(0, 0);
+    })
+
     return(
         <div className="notfound-wrapper">
             <div className="container">

@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Swiper from "react-id-swiper";
 
-import StyledList from "./../shared/StyledList/StyledList";
-import PersentageIndicator from "./../shared/PersentageIndicator/PersentageIndicator";
 import "./SliderWithBackground.scss";
 
 function SliderWithBackground({ slides }) {
@@ -12,12 +10,27 @@ function SliderWithBackground({ slides }) {
   const params = {
     speed: 600,
     loop: true,
+    spaceBetween: 20,
     pagination: {
       el: ".swiper-pagination",
       type: "bullets",
       clickable: true,
     },
-    spaceBetween: 20,
+    breakpoints: {
+      1024: {
+      },
+
+      768: {
+        pagination: false,
+      },
+      640: {
+        pagination: false,
+        spaceBetween: 20
+      },
+      320: {
+        spaceBetween: 10
+      }
+    }
   };
 
   const goNext = () => {
@@ -34,9 +47,9 @@ function SliderWithBackground({ slides }) {
   const calcActiveSlide = Math.ceil(slideAmmount / 2).toString();
 
 
-
   return (
-    <section className="slider-with-bg">
+    <section 
+      className="slider-with-bg">
       <h2 className="slider-with-bg__title">
         Інвестиційні плани MARKSEM — почни заробляти сьогодні.
       </h2>

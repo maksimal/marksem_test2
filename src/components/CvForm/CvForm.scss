@@ -24,7 +24,10 @@
 
                 .cv-form-form-wrapper {
                     display: flex;
-
+                    flex-direction: row;
+                    .image-wrapper {
+                        
+                    }
                     .modal-form-wrapper {
                         display: flex;
                         flex-direction: column;
@@ -58,6 +61,7 @@
                         flex-wrap: wrap;
                         flex-direction: row;
                         justify-content: flex-end;
+                        
                         input {
                             border: 1px solid rgba(255,255,255, 1);
                             transition: all .2s ease;
@@ -78,6 +82,26 @@
                         input:valid {
                             background-color: #fff;
                         }
+
+                        .form-input-text {
+                            width: 171px;
+                            margin-right: auto;
+                        }
+
+                        .form-input-email {
+                            width: 362px;
+                        }
+
+                        .form-input-tel {
+                            width: 30%;
+                            margin-right: auto;
+                            // margin-right: 299px;
+                        }
+
+                        .form-input-file {
+                            width: 216px;
+                        }
+
 
                         textarea {
                             width: 100%;
@@ -110,11 +134,11 @@
 
                         .custom-file-upload {
                             position: relative;
-                            width: 150px;
+                            width: 130px;
                             margin-top: 10px;
                             margin-right: 10px;
                             margin-bottom: 10px;
-                            padding-top: 20px;
+                            padding-top: 22px;
                             background-color: #E0E3F4;
                             font-weight: 100;
                             text-align: center;
@@ -129,11 +153,11 @@
                             position: absolute;
                             font-size: 24px;
                             text-align: left;
-                            right: 150px;
+                            right: 130px;
                             bottom: 0;
-                            width: 268px;
-                            padding-top: 20px;
-                            padding-bottom: 20px;
+                            width: 220px;
+                            padding-top: 21px;
+                            padding-bottom: 21px;
                             padding-left: 10px;
                             background-color: #fff;
                             border: 1px solid #fff;
@@ -142,7 +166,9 @@
                         .custom-file-upload:hover:before {
                             border: 1px solid $hover-color;
                         }
-
+                        .btn {
+                            width: 380px;
+                        }
                     }
                 }
             }

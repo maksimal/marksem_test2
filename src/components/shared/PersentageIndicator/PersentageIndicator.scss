@@ -21,7 +21,6 @@
         top: -11px;
         left: -11px;
         transform: rotate(-90deg);
-        transition: stroke-dashoffset 0.35s;
         transform-origin: 50% 50%;
     }
 
@@ -30,5 +29,11 @@
         font-family: Montserrat;
         font-size: 14px;
         line-height: 17px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .indicator {
+        margin: 0;
     }
 }

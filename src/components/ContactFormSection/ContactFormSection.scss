@@ -7,7 +7,7 @@
   margin-bottom: 120px;
 
   .background {
-    background-color: $primary-background-color;;
+    background-color: $primary-background-color;
     width: 1000px;
     height: 570px;
     position: absolute;
@@ -16,13 +16,18 @@
     right: -60px;
   }
 
+  .background-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
   .contacts {
     display: flex;
     flex-direction: column;
     h2 {
       text-transform: uppercase;
       margin-bottom: 40px;
-
     }
     &-list {
       &__item {
@@ -56,5 +61,60 @@
     background-position: center;
     width: 100%;
   }
-  
 }
+
+
+
+@media only screen and (max-width: 1199px) {
+  .contacts-section {
+    flex-direction: column;
+    .form-submit-button {
+      text-align: center;
+    }
+
+    .background {
+      background-color: transparent;
+    }
+
+    .contacts {
+      margin-top: 100px;
+      h2 {
+        font-size: 22px;
+      }
+      &-list {
+        max-width: 300px;
+      }
+    }
+
+    .background-wrapper {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -5%;
+        width: 100%;
+        transform: translateX(-20%);
+        height: 110%;
+        background-color: $primary-background-color;
+      }
+    }
+
+    .map {
+      height: 450px;
+      min-width: 0;
+      margin-left: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 979px) {
+  .contacts-section {
+    .map {
+      height: 50vw;
+      min-width: 0;
+      margin-left: 20px;
+    }
+  }
+}
+

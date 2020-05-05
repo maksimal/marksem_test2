@@ -10,6 +10,19 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: baseline;
         margin: 0 auto;
+        max-width: 1280px;
+        min-width: 320px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .grid {
+        &__title {
+            margin: 32px 0;
+            font-size: 18px;
+            color: #171A27;
+        }
     }
 }

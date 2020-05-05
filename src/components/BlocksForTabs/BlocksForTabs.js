@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Swiper from 'react-id-swiper'
 import './BlocksForTabs.css'
 import './BlocksForTabs.scss'
+import './.media.scss'
 
 const OptionsWithTabs = ({ texts, imgs }) => {
 

@@ -1,5 +1,4 @@
 .subscribe-form {
-
     height: 63px;
     width: 800px;
     display: flex;
@@ -8,6 +7,23 @@
         outline: none;
         flex: 1 1 auto;
         text-indent: 20px;
-        color: rgba(0, 0, 0, 0.61);
+        color: #000;
+        font-weight: 500;
+
+        &::-webkit-input-placeholder { /* Edge */
+            color: rgba(0, 0, 0, 0.61);
+            font-weight: normal;
+        }
+          
+        &::placeholder {
+            color: rgba(0, 0, 0, 0.61);
+            font-weight: normal;
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .subscribe-form {
+        width: 90vw;
     }
 }

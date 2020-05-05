@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect} from "react";
 // import SectionType2 from '../components/section_type2/section_type2';
 import StyledLink from "../components/shared/StyledLink";
 import StyledList from "./../components/shared/StyledList/StyledList";
@@ -14,6 +14,13 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import 'animate.css/animate.min.css'
 
 export default function Home(props) {
+  useEffect( () => {
+
+    window.scrollTo(0, 0);
+
+  },[])
+
+  console.log(props.openPageTitle)
   return (
     <main>
       
@@ -21,7 +28,7 @@ export default function Home(props) {
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <CompanyPresentation
           title="MARKSEM — ваш надійний партнер."
           text={
@@ -41,12 +48,13 @@ export default function Home(props) {
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <ImageTextBlock
           style="1"
           title="Головна ідея"
           mediaType="video"
           mediaPosition="left"
+          mediaStyle={{top: "25px"}}
           videoThumbnailUrl="./img/video_not_active.png"
           videoUrl="https://www.youtube.com/watch?v=9HDEHj2yzew"
           mainContent={[
@@ -63,14 +71,14 @@ export default function Home(props) {
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <GridSection
-          width="1186px"
-          coloumnsNumber={2}
+          // width="1186px"
+          size={2}
           title="Інвестиційний процес"
           content={[
             {
-              icon: <svg width="62" height="64">
+              icon: <svg className="grid-icon">
                 <use href="./icons-sprite.svg#paper-icon" />
               </svg>,
               title: "Ви обираєте зручний для вас план інвестицій.",
@@ -78,7 +86,7 @@ export default function Home(props) {
                 "MARKSEM пропонує декілька планів інвестицій. Кожен з них розроблений таким чином, щоб вкладені вами кошти, незалежно від стартової суми, принесли вам максимальну ефективність у часі."
             },
             {
-              icon: <svg width="64" height="66">
+              icon: <svg className="grid-icon">
                 <use href="./icons-sprite.svg#location-icon" />
               </svg>,
               title: "Обираєте місце розташування.",
@@ -86,7 +94,7 @@ export default function Home(props) {
                 "Розмістити будинок ви можете в одному з наших парків MARKSEM, які мають сучасну готельну інфраструктуру, або на своїй території."
             },
             {
-              icon: <svg width="65" height="64">
+              icon: <svg className="grid-icon">
                 <use href="./icons-sprite.svg#home-icon" />
               </svg>,
               title: "Обираєте будинок.",
@@ -94,7 +102,7 @@ export default function Home(props) {
                 "У нашому каталозі ми пропонуємо будинки від 15м2 до 90м2, які мають різне планування і кількість кімнат. При замовленні будинку ви обираєте бажаний вам інтер’єр та екстер’єр. Також додатково можете замовити терасу. "
             },
             {
-              icon: <svg width="64" height="64">
+              icon: <svg className="grid-icon">
                 <use href="./icons-sprite.svg#currency-icon" />
               </svg>,
               title: "Стаєте партнером. Отримуєте дохід. ",
@@ -107,7 +115,7 @@ export default function Home(props) {
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <ImageTextBlock
           style="1"
           title="Можливості"
@@ -141,7 +149,7 @@ export default function Home(props) {
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <InfoCardList
           type={1}
           mainTitle="Виберіть інвестиційний план та заробляйте сьогодні"

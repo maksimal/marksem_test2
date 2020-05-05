@@ -6,7 +6,7 @@ const AnimationOnScroll = (AnimatedComponent ) => ({...props}) => {
     return(
         <ScrollAnimation
             animateIn="fadeIn"
-            animateOut="fadeOut">
+            animateOnce={true}>
             <AnimatedComponent {...props} />
         </ScrollAnimation>
     )

@@ -1,0 +1,25 @@
+.scroll-to-top, .scroll-to-top-hide {
+    position: fixed;
+    z-index: 100;
+    bottom: 20px;
+    right: 20px;
+    padding: 30px;
+    background-color: #0A254C;
+    background-image: url('./img/Arrowtothetop.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.scroll-to-top {
+    opacity: 0.7;
+}
+
+.scroll-to-top-hide {
+    opacity: 0;
+}
+
+.scroll-to-top:hover {
+    background-color: #143564;
+}

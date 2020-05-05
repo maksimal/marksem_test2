@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-
-import './CvForm.scss'
-import Button from './../shared/Button/Button'
+import React, { useState } from 'react';
+import './CvForm.scss';
+import './media.scss';
+import Button from './../shared/Button/Button';
 
 const CvForm = () => {
 
@@ -23,37 +23,6 @@ const CvForm = () => {
         }
 
     const change = (e) => {
-        // let newState = {...formState}
-
-        // switch(e.target.name) {
-        //     case 'name':
-        //         newState.name = e.target.value
-        //         setFormState(newState)
-        //         break;
-        //     case 'email':
-        //         newState.email = e.target.value
-        //         setFormState(newState)
-        //         break;
-        //     case 'phone':
-        //         newState.phone = e.target.value
-        //         setFormState(newState)
-        //         break;
-        //     case 'file':
-        //         console.log(e.target.value)
-        //         newState.file = e.target.value
-        //         setFormState(newState)
-        //         // setUploadStatusMessage('CV uploaded')
-        //         break;
-        //     case 'message':
-        //         newState.message = e.target.value
-        //         setFormState(newState)
-        //         break;
-            
-        //     default:
-        //         console.log('nothing')
-        //         break;
-        // }
-
         let propertyName = e.target.name;
         let propertyValue = e.target.value;
 
@@ -95,14 +64,19 @@ const CvForm = () => {
                             :
                             null
                             }
-
-                            <img src="./img/wanttoworkwithus.png" alt="join our team"/>
+                            <div className="image-wrapper">
+                                <img src="./img/wanttoworkwithus.png" alt="join our team"/>
+                            </div>
                             <form onSubmit={submit}>
-                                <input type="text" name="name" placeholder="Name" value={formState.name} style={{ width:"30%"}} onChange={change}/>
-                                <input type="email" name="email" placeholder="E-mail" value={formState.email} style={{width:"64%"}} onChange={change}/>
-                                <input type="tel" name="phone" placeholder="+380" value={formState.phone} style={{ width:"30%", marginRight:"299px"}} onChange={change}/>
+                                <input className="form-input-text" type="text" name="name" placeholder="Name" value={formState.name} onChange={change}/>
+                                {/* <input type="text" name="name" placeholder="Name" value={formState.name} style={{ width:"30%"}} onChange={change}/> */}
+                                <input className="form-input-email" type="email" name="email" placeholder="E-mail" value={formState.email} onChange={change}/>
+                                {/* <input type="email" name="email" placeholder="E-mail" value={formState.email} style={{width:"64%"}} onChange={change}/> */}
+                                <input className="form-input-tel"type="tel" name="phone" placeholder="+380" value={formState.phone} onChange={change}/>
+                                {/* <input type="tel" name="phone" placeholder="+380" value={formState.phone} style={{ width:"30%", marginRight:"299px"}} onChange={change}/> */}
                                 <label htmlFor="file-upload" className="custom-file-upload">Browse...</label>
-                                <input type="file" name="file" placeholder="file" id="file-upload" style={{ width:"216px"}} onChange={change}/>
+                                <input className="form-input-file" type="file" name="file" placeholder="file" id="file-upload" onChange={change}/>
+                                {/* <input class="form-input-file" type="file" name="file" placeholder="file" id="file-upload" style={{ width:"216px"}} onChange={change}/> */}
 
                                 <textarea name="message" value={formState.message} placeholder="Message" onChange={change}/>
                                 <Button onClick={()=>{}} type="submit" text="make an appointment" classList="btn-main" />

@@ -1,0 +1,204 @@
+@media (max-width: 1280px) {
+
+    .sampleslider {
+
+        .sampleslider-content {
+            width: 95%;
+            .sampleslider-text-content {
+                width: 95%;
+                .sampleslide-title {
+                    width: 100%;
+                    font-size: 18px;
+                }
+                .sampleslider-text {
+                    width: 100%; 
+                    font-size: 14px;
+                }
+            }
+
+            .sampleslider-text-content-type1 {
+                .sampleslide-title {
+
+                }
+                .sampleslider-text {
+
+                }
+            }
+
+            .sampleslider-text-content-type2 {
+                .sampleslide-title {
+
+                }
+                .sampleslider-text {
+
+                }
+            }
+            .sampleslider-text-content-type3 {
+                .sampleslide-title {
+
+                }
+                .sampleslider-text {
+
+                }
+            }
+            .sampleslider-button-styledlink-wrapper {
+                width: 95%;
+                .sampleslider-button-wrapper {
+
+                }
+
+                .sampleslider-styledlink-wrapper {
+                    width: 95%;
+                }
+            }
+
+            .sampleslider-button-styledlink-wrapper-type1 {
+
+            }
+
+            .sampleslider-button-styledlink-wrapper-type2 {
+
+            }
+
+            .sampleslider-button-styledlink-wrapper-type3 {
+
+            }
+        }
+
+        .sampleslider-slider-content{ 
+            .swiper-container{
+                .swiper-button-prev, .swiper-button-next {
+                    display: none;
+                }
+                .swiper-wrapper{
+                    height: 40vw;
+                    .swiper-slide{
+                        img {
+                            width: 95%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .sampleslider-slider-content-type2 > div, .sampleslider-slider-content-type3 > div{
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .sampleslider-background {
+            width: 100%;
+            transform: translateX(0);
+            margin-left: -20px;
+        }
+
+        .sampleslider-background-type1 {
+    
+        }
+
+        .sampleslider-background-type2 {
+    
+        }
+
+        .sampleslider-background-type3 {
+    
+        }
+
+    }
+}
+
+
+@media (max-width: 980px) {
+
+    .sampleslider {
+
+        .sampleslider-content {
+
+            .sampleslider-text-content {
+
+                .sampleslide-title {
+
+                }
+                .sampleslider-text {
+
+                }
+            }
+
+            .sampleslider-text-content-type1 {
+                .sampleslide-title {
+
+                }
+                .sampleslider-text {
+
+                }
+            }
+
+            .sampleslider-text-content-type2 {
+                .sampleslide-title {
+
+                }
+                .sampleslider-text {
+
+                }
+            }
+            .sampleslider-text-content-type3 {
+                .sampleslide-title {
+
+                }
+                .sampleslider-text {
+
+                }
+            }
+            .sampleslider-button-styledlink-wrapper {
+                flex-direction: column-reverse;
+                padding-top: 20px;
+                .sampleslider-button-wrapper {
+
+                }
+
+                .sampleslider-styledlink-wrapper {
+
+                }
+            }
+
+            .sampleslider-button-styledlink-wrapper-type1 {
+
+            }
+
+            .sampleslider-button-styledlink-wrapper-type2 {
+
+            }
+
+            .sampleslider-button-styledlink-wrapper-type3 {
+
+            }
+        }
+
+        .sampleslider-slider-content{ 
+            .swiper-container{
+                margin-bottom: 30px;
+                .swiper-button-prev, .swiper-button-next {
+
+                }
+                .swiper-wrapper{
+
+                    .swiper-slide{
+                        img {
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .sampleslider-slider-content-type2 > div, .sampleslider-slider-content-type3 > div{
+
+        }
+
+        .sampleslider-background {
+
+        }
+
+    }
+}

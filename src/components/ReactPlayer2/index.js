@@ -18,6 +18,7 @@ export default function ReactPlayer2({ videoUrl, videoThumbnailUrl }) {
 
   return (
     <div className="video-container">
+      
       <ReactPlayer
         url={videoUrl}
         width="100%"
@@ -27,10 +28,12 @@ export default function ReactPlayer2({ videoUrl, videoThumbnailUrl }) {
         light={videoThumbnailUrl}
         onReady={() => toggleLoader()}
         playIcon={
-          <button
+          <a
             onClick={() => toggleVideo()}
             className="play-video-button"
-          ></button>}
+          >
+            <span className="play-icon" style={{backgroundImage: "url(./img/icons/play_icon.png)"}}></span>
+          </a>}
       />
       {showLoader &&
         <div className="video-loader">

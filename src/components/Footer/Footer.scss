@@ -39,6 +39,8 @@ footer {
         .links-section {
             display: flex;
             flex-direction: column;
+            padding-left: 10px;
+            padding-right: 10px;
             a {
                 font-size: 14px;
                 color: #fff;
@@ -91,3 +93,4 @@ footer {
         }
     }
 }
+

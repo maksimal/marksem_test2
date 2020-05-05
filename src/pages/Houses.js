@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import InfoCardList from '../components/InfoCardList';
 import ImageTextBlock from './../components/ImageTextBlock/ImageTextBlock';
 import StyledList from './../components/shared/StyledList/StyledList';
@@ -15,6 +15,10 @@ import ScrollToTop from './../components/shared/ScrollToTop'
 import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function Houses(props) {
+  useEffect( () => {
+    window.scrollTo(0,0);
+  },[])
+
   return (
     <div>
 
@@ -22,13 +26,13 @@ export default function Houses(props) {
       
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <HouseWithKeysBlock />
       </ScrollAnimation>
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <TabsSection
           sectionTitle="Chose a ready-made house"
           tabsHeadingsTexts={["Mobile houses", "Module houses", "Houseboats"]}
@@ -120,7 +124,7 @@ export default function Houses(props) {
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <SampleSlider
           type="2"
           title="Marksem M-2"
@@ -139,7 +143,7 @@ export default function Houses(props) {
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <SampleSlider
           type="3"
           title="Marksem M-4"
@@ -157,7 +161,7 @@ export default function Houses(props) {
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <SampleSlider
           type="1"
           title="Marksem M-Hotel"
@@ -175,7 +179,7 @@ export default function Houses(props) {
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <OptionsWithTabs
           title="Choose an option for planning your house, well as a complete set"
           activeTabNumber={0}
@@ -208,7 +212,7 @@ export default function Houses(props) {
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <InteriorDesignSamples
           mainTitle="Review our interior design we offer for you"
           imgs={[
@@ -233,7 +237,7 @@ export default function Houses(props) {
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <InfoCardList
           type={2}
           mainTitle='We offer different locations to set up your house'

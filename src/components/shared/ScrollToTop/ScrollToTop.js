@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import './ScrollToTop.css'
+import './ScrollToTop.scss'
+import './media.scss'
 
 const ScrollToTop = (props) => {
     const [scrolled, setScrolled] = useState(false)

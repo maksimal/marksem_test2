@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import "./FAQ.scss"
 
 const FAQ = ({
@@ -21,15 +21,15 @@ const FAQ = ({
 
   return (
     <div className="faq">
-      <div className="container">
-        <button className="question" onClick={toggleAnswer}>
-          <div className={isCollapsed ? "question__icon question__icon-plus" : "question__icon question__icon-minus"}></div>
-          <span className="question__text">{queston}</span>
-        </button>
-        <div className="collapsable">
-          <p className="answer">{answer}</p>
-        </div>
+
+      <button className="question" onClick={toggleAnswer}>
+        <div className={isCollapsed ? "question__icon question__icon-plus" : "question__icon question__icon-minus"}></div>
+        <span className="question__text">{queston}</span>
+      </button>
+      <div className="collapsable">
+        {answer.map(p => <p className="answer">{p}</p>)}
       </div>
+
     </div>
   );
 }

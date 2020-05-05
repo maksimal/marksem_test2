@@ -9,6 +9,7 @@
     box-shadow: -2px 3px 6px 0px rgba(0, 0, 0, 0.185);
     &__text {
       padding: 15px 0;
+      text-align: left;
     }
     &__icon {
       position: relative;
@@ -41,11 +42,19 @@
     }
   }
   .answer {
-    padding: 25px 60px;
+    margin: 25px 60px;
   }
   .collapsable {
     overflow: hidden;
     max-height: 0;
     transition: max-height 300ms ease;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .faq {
+    .answer {
+      margin: 20px 30px;
+    }
   }
 }

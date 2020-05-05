@@ -1,0 +1,32 @@
+@media (max-width: 980px) {
+    header { 
+
+        .logo {
+            margin-left: 20px;
+        }
+        
+        .menu-list {
+            display: none;
+        } 
+        .login-lang-items {
+            display: none;
+        }
+        .burger-menu {
+            display: block;
+            margin-right: 20px;
+        }
+    }
+}
+
+@media (max-width: 1279px) { 
+    header { 
+
+        .menu-list {
+
+            li {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    }
+}

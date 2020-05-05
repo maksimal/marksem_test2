@@ -1,0 +1,106 @@
+@media (max-width: 1444px) {
+    .InfoCardList {
+
+        .InfoCardList-wrapper {
+            .main-title {
+            }
+            .main-title-type1 {
+
+            }
+            .main-title-type2 {
+
+            }
+
+            .cards-list{
+                justify-content: space-around;
+                .card-item:not(:last-child) {
+                    margin-bottom: 40px;
+                    .card-image {
+
+                        img {
+    
+                        }
+                    }
+                    .card-image-type1 {
+    
+                    }
+                    .card-image-type2 {
+                    }
+                }
+            }
+
+            .btn {
+            }
+
+            .InfoCardList-background {
+                // margin-left: -20px;
+                // margin-right: 20px;
+                width: 100vw;
+                transform: translate(0px);
+            }
+
+            .InfoCardList-background-type1 {
+
+            }
+            .InfoCardList-background-type2 {
+
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .InfoCardList {
+
+        .InfoCardList-wrapper {
+            margin-top: 0;
+            margin-bottom: 0;
+            .main-title {
+                text-align: center;
+                line-height: 28px;
+                font-size: 18px;
+                margin-bottom: 40px;
+            }
+            .main-title-type1 {
+
+            }
+            .main-title-type2 {
+
+            }
+
+            .cards-list{
+                justify-content: center;
+                margin-bottom: 0;
+                .card-item:not(:last-child) {
+                    margin-bottom: 40px;
+                    .card-image {
+
+                        img {
+    
+                        }
+                    }
+                    .card-image-type1 {
+    
+                    }
+                    .card-image-type2 {
+                    }
+                }
+            }
+
+            .btn {
+                display: none;
+            }
+
+            .InfoCardList-background {
+                display: none;
+            }
+
+            .InfoCardList-background-type1 {
+
+            }
+            .InfoCardList-background-type2 {
+
+            }
+        }
+    }
+}

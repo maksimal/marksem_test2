@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import StyledList from "./../components/shared/StyledList/StyledList";
 import CompanyPresentation from "../components/CompanyPresentation/CompanyPresentation";
 import ImageTextBlock from "./../components/ImageTextBlock/ImageTextBlock";
@@ -9,13 +9,17 @@ import ScrollToTop from './../components/shared/ScrollToTop'
 import ScrollAnimation from 'react-animate-on-scroll'
 
 export default function WhyMarksem(props) {
+  useState( () => {
+    window.scrollTo(0,0);
+  })
+
   return (
     <div>
       <ScrollToTop />
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <CompanyPresentation
           title="Ми MARKSEM"
           text={
@@ -35,7 +39,7 @@ export default function WhyMarksem(props) {
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <ImageTextBlock
           style="1"
           title="Наші цінності"
@@ -58,7 +62,7 @@ export default function WhyMarksem(props) {
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <ImageTextBlock
           style="2"
           title="Інвестиції MARKSEM"
@@ -91,7 +95,7 @@ export default function WhyMarksem(props) {
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <ImageTextBlock
           style="1"
           title="Умови співробітництва"
@@ -113,14 +117,14 @@ export default function WhyMarksem(props) {
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <CvForm />
       </ScrollAnimation>
 
 
       <ScrollAnimation
         animateIn="fadeIn"
-        animateOut="fadeOut">
+        animateOnce={true}>
         <TeamSlider
           title="Meet our team"
           secondaryText="We are the best team"

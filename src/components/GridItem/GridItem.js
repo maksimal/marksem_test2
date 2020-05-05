@@ -1,9 +1,9 @@
 import React from "react";
 import "./GridItem.scss";
 
-function GridItem({ icon, title, text, flexBasis }) {
+function GridItem({ icon, title, text, additionalClass }) {
   return (
-    <div className="grid-item" style={{flexBasis: flexBasis}}>
+    <div className={`grid-item ${additionalClass}`}>
         <div className="grid-item__img">
           {icon}
         </div>

@@ -4,6 +4,7 @@ import Button from './../shared/Button/Button'
 import StyledLink from './../shared/StyledLink/'
 import './SampleSlider.scss'
 import './SampleSlider.css'
+import './media.scss'
 
 const SamplesSlider = (props) => {
     const {type, title, text, img} = props;

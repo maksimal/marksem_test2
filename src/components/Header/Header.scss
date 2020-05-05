@@ -23,39 +23,53 @@ header {
         color: #171A27;
     }
 
-    .menu-list li {
+    .menu-list {
+        display: block;
+        li {
         display: inline;
         margin-left: 30px;
         margin-right: 30px;
-    }
+        }
 
-    .menu-list li a {
-        color: #171A27;
-        text-transform: uppercase;
-        font-size: 16px;
-        position: relative;
-    }
+        li a {
+            color: #171A27;
+            text-transform: uppercase;
+            font-size: 16px;
+            position: relative;
+        }
 
-    .menu-list li a::after {
-        content: '';
-        width: 150%;
-        height: 2px;
-        background-color: #FF9781;
-        position: absolute;
-        bottom: -10px;
-        transform: translate(-83%);
-        opacity: 0;
-        pointer-events: none;
-        transition: all .3s ease;
-    }
+        li .active:after, li a::after {
+            content: '';
+            width: 107%;
+            height: 2px;
+            background-color: #FF9781;
+            position: absolute;
+            bottom: -7px;
+            transform: translate(-96%);
+            opacity: 0;
+            pointer-events: none;
+            transition: all .3s ease;
+        }
 
-    .menu-list li:hover a::after {
-        bottom: -7px;
-        opacity: 1;
+        li .active:after {
+            opacity: 1;
+        }
+
+        li:hover a::after {
+            bottom: -7px;
+            opacity: 1;
+        }
     }
 
     .login-lang-items {
         margin-right: 100px;
+    }
+
+    .burger-menu {
+        display: none;
+        icon {
+            color: #000;
+        }
     }
 }
 

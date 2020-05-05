@@ -10,11 +10,19 @@ function TeamSlider({
 }) {
 
   const params = {
-    slidesPerView: 3,
+    slidesPerView: 1,
     speed: 800,
     initialSlide: 1,
     spaceBetween: 20,
-    centeredSlides: true
+    centeredSlides: true,
+    breakpoints: {
+        320: {
+          slidesPerView: 1
+        },
+        980: {
+          slidesPerView: 3
+        }
+      }
   };
 
   const [swiper, setSwiper] = useState(null);
