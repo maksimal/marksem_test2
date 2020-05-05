@@ -1,4 +1,7 @@
 <svg width="0" height="0" class="hidden">
+  <symbol viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg" id="menu_hamburger">
+    <path d="M16 5H1m15-4H1m15 8H1" stroke="#171A27" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
   <symbol viewBox="0 0 11 20" fill="none" 
     xmlns="http://www.w3.org/2000/svg" id="icon-facebook">
     <path d="M11 3.202H9.006c-1.563 0-1.866.677-1.866 1.67v2.19h3.728l-.001 3.429H7.14v8.799H3.251v-8.8H0V7.063h3.251v-2.53C3.251 1.599 5.22 0 8.094 0L11 .004v3.198z" fill="#fff"></path>
