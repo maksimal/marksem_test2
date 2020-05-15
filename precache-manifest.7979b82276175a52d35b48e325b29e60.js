@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "89d99f364bf31e3fc2c0027c29081dfb",
+    "revision": "48ca2664638aa78d69a2e9065ea6cbe7",
     "url": "/marksem_test2/index.html"
   },
   {
-    "revision": "148d6eedd22aab6c0ed4",
+    "revision": "a17c341bb03831e9c754",
     "url": "/marksem_test2/static/css/2.5089989d.chunk.css"
   },
   {
-    "revision": "b799f8d6605c7c2f030d",
-    "url": "/marksem_test2/static/css/main.a790bab3.chunk.css"
+    "revision": "290b9c739de45c0e2824",
+    "url": "/marksem_test2/static/css/main.af8d37a9.chunk.css"
   },
   {
-    "revision": "148d6eedd22aab6c0ed4",
-    "url": "/marksem_test2/static/js/2.56b448ef.chunk.js"
+    "revision": "a17c341bb03831e9c754",
+    "url": "/marksem_test2/static/js/2.e6b9bb15.chunk.js"
   },
   {
     "revision": "54fd6816419f7824e2804745930c9117",
-    "url": "/marksem_test2/static/js/2.56b448ef.chunk.js.LICENSE.txt"
+    "url": "/marksem_test2/static/js/2.e6b9bb15.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b799f8d6605c7c2f030d",
-    "url": "/marksem_test2/static/js/main.f341546b.chunk.js"
+    "revision": "290b9c739de45c0e2824",
+    "url": "/marksem_test2/static/js/main.f6e3de7b.chunk.js"
   },
   {
     "revision": "331b9eeb51a0d2de668b",

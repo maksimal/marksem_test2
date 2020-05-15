@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/marksem_test2/static/css/main.a790bab3.chunk.css",
-    "main.js": "/marksem_test2/static/js/main.f341546b.chunk.js",
-    "main.js.map": "/marksem_test2/static/js/main.f341546b.chunk.js.map",
+    "main.css": "/marksem_test2/static/css/main.af8d37a9.chunk.css",
+    "main.js": "/marksem_test2/static/js/main.f6e3de7b.chunk.js",
+    "main.js.map": "/marksem_test2/static/js/main.f6e3de7b.chunk.js.map",
     "runtime-main.js": "/marksem_test2/static/js/runtime-main.5a95298b.js",
     "runtime-main.js.map": "/marksem_test2/static/js/runtime-main.5a95298b.js.map",
     "static/css/2.5089989d.chunk.css": "/marksem_test2/static/css/2.5089989d.chunk.css",
-    "static/js/2.56b448ef.chunk.js": "/marksem_test2/static/js/2.56b448ef.chunk.js",
-    "static/js/2.56b448ef.chunk.js.map": "/marksem_test2/static/js/2.56b448ef.chunk.js.map",
+    "static/js/2.e6b9bb15.chunk.js": "/marksem_test2/static/js/2.e6b9bb15.chunk.js",
+    "static/js/2.e6b9bb15.chunk.js.map": "/marksem_test2/static/js/2.e6b9bb15.chunk.js.map",
     "index.html": "/marksem_test2/index.html",
-    "precache-manifest.50a347feab83b21b7a9f24cdfabacac2.js": "/marksem_test2/precache-manifest.50a347feab83b21b7a9f24cdfabacac2.js",
+    "precache-manifest.7979b82276175a52d35b48e325b29e60.js": "/marksem_test2/precache-manifest.7979b82276175a52d35b48e325b29e60.js",
     "service-worker.js": "/marksem_test2/service-worker.js",
     "static/css/2.5089989d.chunk.css.map": "/marksem_test2/static/css/2.5089989d.chunk.css.map",
-    "static/css/main.a790bab3.chunk.css.map": "/marksem_test2/static/css/main.a790bab3.chunk.css.map",
-    "static/js/2.56b448ef.chunk.js.LICENSE.txt": "/marksem_test2/static/js/2.56b448ef.chunk.js.LICENSE.txt",
+    "static/css/main.af8d37a9.chunk.css.map": "/marksem_test2/static/css/main.af8d37a9.chunk.css.map",
+    "static/js/2.e6b9bb15.chunk.js.LICENSE.txt": "/marksem_test2/static/js/2.e6b9bb15.chunk.js.LICENSE.txt",
     "static/media/OurLocationsBlock.scss": "/marksem_test2/static/media/projects-location-icon.e83845dd.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.5a95298b.js",
     "static/css/2.5089989d.chunk.css",
-    "static/js/2.56b448ef.chunk.js",
-    "static/css/main.a790bab3.chunk.css",
-    "static/js/main.f341546b.chunk.js"
+    "static/js/2.e6b9bb15.chunk.js",
+    "static/css/main.af8d37a9.chunk.css",
+    "static/js/main.f6e3de7b.chunk.js"
   ]
 }
