@@ -84,11 +84,9 @@ const CvForm = () => {
                             </form>
                         </div>
                     </div>
-
-
-                    <div className="cv-form-background"></div>
+                    </div>
                 </div>
-            </div>
+            <div className="cv-form-background"></div>
         </div>
     )
 }

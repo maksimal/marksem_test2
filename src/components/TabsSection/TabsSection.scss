@@ -40,7 +40,8 @@
     }
   }
   .image-text-block {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     .title-container {
       .title {
         text-transform: none;
@@ -49,17 +50,21 @@
   }
 }
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: $desktop-breakpoint) {
   .tabs-house-types {
+    .section-title {
+      margin-bottom: 0;
+      font-size: 22px;
+    }
     .section-title-container {
-      order: 1
+      order: 1;
     }
     .tabs-headings-container {
-      order: 3
+      order: 3;
     }
     .tabs-contents {
       order: 2;
-      margin-top: 40px;
+      margin-top: 20px;
     }
     .tabs-headings {
       border: none;
@@ -87,9 +92,6 @@
       .main-text-container {
         order: 3;
       }
-    }
-    .section-title {
-      margin-bottom: 0;;
     }
   }
 }

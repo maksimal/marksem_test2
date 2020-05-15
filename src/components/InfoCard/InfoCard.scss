@@ -1,42 +1,65 @@
+.card-item{
+    width: 350px;
+    z-index: 10;
+    position: relative;
+    padding-bottom: 20px;
+    .card-image {
+        overflow: hidden;
+        min-height: 250px;
+        img {
+            width: 100%;
+            min-height: 250px;
+            margin-bottom: -10px;
+        }
+    }
+    .card-image-type1 {
 
-            .card-item{
-                width: 350px;
-                z-index: 10;
-                .card-text-wrapper {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-end;
-                    padding: 20px;
-                    .card-title { 
-                        font-size: 20px;
-                        text-transform: uppercase;
-                        line-height: 55px;
-                    }
-                    .card-title-type1 {
-                        // text-align: left;
-                        align-self: flex-start;
-                    }
-                    .card-title-type2 {
-                        // text-align: center;
-                        align-self: center;
-                    }
-                    .card-text {
-                        font-size: 18px;
-                        margin-bottom: 15px;
-                    }
-                    .card-text-type1 {
-                        text-align: left;
-                    }
-                    .card-text-type2 {
-                        text-align: center;
-                    }
+    }
+    .card-image-type2 {
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.35);
+    }
+    .card-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 20px;
+        .card-title { 
+            font-size: 20px;
+            text-transform: uppercase;
+            line-height: 55px;
+        }
+        .card-title-type1 {
+            // text-align: left;
+            align-self: flex-start;
+   
+        }
+        .card-title-type2 {
+            // text-align: center;
+            text-transform: uppercase;
+            align-self: center;
+            //text-transform: none;
+            text-transform: uppercase;
+        }
+        .card-text {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .card-text-type1 {
+            text-align: left;
+        }
+        .card-text-type2 {
+            text-align: center;
+        }
+        .styled-link-container {
+            position: absolute;
+            bottom: 10px;
+        }
+    }
+}
+.card-item-type1 {
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+}
+.card-item-type2 {
 
-                }
-            }
-            .card-item-type1 {
-                background-color: #fff;
-                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
-            }
-            .card-item-type2 {
-
-            }
+}

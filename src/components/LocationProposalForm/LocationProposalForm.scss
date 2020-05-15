@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .location-form-section {
   position: relative;
   margin-bottom: 0;
@@ -56,13 +58,21 @@
   }
 }
 
-@media only screen and (max-width:1199px) {
+@media only screen and (max-width:$desktop-breakpoint) {
   .location-form-section {
+    padding: 30px 0;
     &__inner {
       flex-direction: column;
     }
     .form-container {
       padding-right: 0;
+      .title {
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+      .intro-text {
+        font-size: 16px;
+      }
     }
 
     .name-email-wrapper {
@@ -78,9 +88,10 @@
     }
 
     .map-img {
-      width: 100%;
-      max-width: 500px;
-      margin-top: 20px;
+      display: none;
+      // width: 100%;
+      // max-width: 500px;
+      // margin-top: 20px;
     }
   }
 }

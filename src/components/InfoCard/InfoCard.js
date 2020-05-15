@@ -1,6 +1,7 @@
 import React from 'react'
 import StyledLink from '../shared/StyledLink'
 import './InfoCard.scss'
+import './media.scss'
 
 const InfoCard = (props) => {
     const { type, img, title, text, linkText, linkURL } = props;

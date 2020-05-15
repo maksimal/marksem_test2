@@ -26,6 +26,9 @@
         z-index: 10;
         .slider{
             width: 650px;
+            position: relative;
+            display: flex;
+            align-items: center;
         }
         .swiper-container {
             margin-left: 0px;

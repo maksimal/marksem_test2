@@ -1,55 +1,33 @@
+@import "../../variables.scss";
+
+@media (max-width: $desktop-breakpoint) {
+    .InfoCardList {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+}
+
+
 @media (max-width: 1444px) {
     .InfoCardList {
 
         .InfoCardList-wrapper {
             .main-title {
+                font-size: 18px;
             }
-            .main-title-type1 {
-
-            }
-            .main-title-type2 {
-
-            }
-
             .cards-list{
                 justify-content: space-around;
-                .card-item:not(:last-child) {
-                    margin-bottom: 40px;
-                    .card-image {
-
-                        img {
-    
-                        }
-                    }
-                    .card-image-type1 {
-    
-                    }
-                    .card-image-type2 {
-                    }
-                }
             }
-
-            .btn {
-            }
-
             .InfoCardList-background {
-                // margin-left: -20px;
-                // margin-right: 20px;
-                width: 100vw;
+                width: calc(100vw - 18px);
+                // width: calc(100% - 80px + (100vw  - 100%) / 2 - 9px);
                 transform: translate(0px);
-            }
-
-            .InfoCardList-background-type1 {
-
-            }
-            .InfoCardList-background-type2 {
-
             }
         }
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1199px) {
     .InfoCardList {
 
         .InfoCardList-wrapper {
@@ -61,29 +39,16 @@
                 font-size: 18px;
                 margin-bottom: 40px;
             }
-            .main-title-type1 {
-
-            }
-            .main-title-type2 {
-
-            }
 
             .cards-list{
                 justify-content: center;
                 margin-bottom: 0;
+                .card-item {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
                 .card-item:not(:last-child) {
                     margin-bottom: 40px;
-                    .card-image {
-
-                        img {
-    
-                        }
-                    }
-                    .card-image-type1 {
-    
-                    }
-                    .card-image-type2 {
-                    }
                 }
             }
 
@@ -94,13 +59,43 @@
             .InfoCardList-background {
                 display: none;
             }
-
-            .InfoCardList-background-type1 {
-
-            }
-            .InfoCardList-background-type2 {
-
-            }
         }
     }
+
 }
+
+// @media (max-width: 640px) {
+//     .InfoCardList {
+
+//         .InfoCardList-wrapper {
+//             margin-top: 0;
+//             margin-bottom: 0;
+//             .main-title {
+//                 text-align: center;
+//                 line-height: 28px;
+//                 font-size: 18px;
+//                 margin-bottom: 40px;
+//             }
+
+//             .cards-list{
+//                 justify-content: center;
+//                 margin-bottom: 0;
+//                 .card-item {
+//                     margin-left: 10px;
+//                     margin-right: 10px;
+//                 }
+//                 .card-item:not(:last-child) {
+//                     margin-bottom: 40px;
+//                 }
+//             }
+
+//             .btn {
+//                 display: none;
+//             }
+
+//             .InfoCardList-background {
+//                 display: none;
+//             }
+//         }
+//     }
+// }

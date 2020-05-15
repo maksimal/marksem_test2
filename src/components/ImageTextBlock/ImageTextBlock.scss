@@ -1,9 +1,49 @@
 @import "./../../variables.scss";
-$offset: 80px;
+
+.background-wrapper {
+  max-width: 1440px;
+  position: relative;
+}
 
 .image-text-block {
-  margin-top: 160px;
-  margin-bottom: 160px;
+  margin: 160px auto;
+
+  .background {
+    background-color: $primary-background-color;
+
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    &__style1-right {
+      left: 0;
+      width: 85%;
+    }
+    &__style1-left {
+      width: 85%;
+      right: 0;
+    }
+    &__style2-left {
+      left: 500px;
+      right: 0;
+    }
+    &__style2-right {
+      left: 0;
+      right: 500px;
+    }
+    &__style3-right,
+    &__style3-left {
+      left: 0;
+      right: 0;
+    }
+    &__style4-right {
+      left: 300px;
+      right: 0;
+    }
+    &__style4-left {
+      left: 0;
+      right: 300px;
+    }
+  }
 
   &__content {
     position: relative;
@@ -15,46 +55,9 @@ $offset: 80px;
       flex-direction: row-reverse;
     }
 
-    .background {
-      background-color: $primary-background-color;
-
-      position: absolute;
-      bottom: 0;
-      top: 0;
-      &__style1-right {
-        left: -$offset;
-        right: $offset;
-      }
-      &__style1-left {
-        left: $offset;
-        right: -$offset;
-      }
-      &__style2-left {
-        left: 400px;
-        right: -$offset;
-      }
-      &__style2-right {
-        left: -$offset;
-        right: 400px;
-      }
-      &__style3-right,
-      &__style3-left {
-        left: -$offset;
-        right: -$offset;
-      }
-      &__style4-right {
-        left: 250px;
-        right: -$offset;
-      }
-      &__style4-left {
-        left: -$offset;
-        right: 250px;
-      }
-    }
-
     .media-container {
       position: relative;
-      top: -$offset;
+      top: -80px;
     }
 
     .media {
@@ -150,7 +153,6 @@ $offset: 80px;
 
   .title-container {
     display: flex;
-    max-width: 520px;
     align-items: center;
     position: absolute;
     z-index: 102;
@@ -167,6 +169,10 @@ $offset: 80px;
       text-align: right;
     }
 
+    &-media-sm {
+      display: none;
+    }
+
     .title {
       font-size: 32px;
       text-transform: uppercase;
@@ -176,7 +182,7 @@ $offset: 80px;
   }
 }
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: $desktop-breakpoint) {
   .image-text-block {
     margin-top: 80px;
     margin-bottom: 80px;
@@ -189,14 +195,30 @@ $offset: 80px;
       .media-container {
         position: static;
       }
+      .media  {
+        overflow: visible;
+        .img {
+          width: calc(100% + 40px);
+          margin-left: -20px;
+          margin-right: -20px;
+        }
+      }
     }
     .title-container {
       position: static;
       transform: translateY(0);
       max-width: 100%;
+
+      &-media-lg {
+        display: none;
+      }
+      &-media-sm {
+        display: flex;
+      }
       .title {
-        font-size: 22px;
+        font-size: 18px;
         text-align: left;
+        line-height: 27px;
       }
     }
 

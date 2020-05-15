@@ -12,7 +12,7 @@ const SamplesSlider = (props) => {
     let images = [...img].map( (item)=> {
         return(
             <div key={Math.random()*10}>
-                <img data-src={`./img/${item}`} className="swiper-lazy" />
+                <img data-src={`./img/${item}`} alt="Slider" className="swiper-lazy" />
                 <div className="swiper-lazy-preloader"></div>
             </div>
         )
@@ -62,15 +62,15 @@ const SamplesSlider = (props) => {
                 </div>
 
                 <div className={`sampleslider-slider-content sampleslider-slider-content-type${type}`}>
-                    
                     <Swiper {...sliderParams}>
                         {images}
                     </Swiper>
                 </div>
 
-                <div className={`sampleslider-background sampleslider-background-type${type}`}>
-                </div>
+                
             </div>
+            <div className={`sampleslider-background sampleslider-background-type${type}`}>
+                </div>
         </div>
     )
 }

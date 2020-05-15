@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Swiper from 'react-id-swiper'
 import './InteriorDesignSamples.css'
 import './InteriorDesignSamples.scss'
+// import './media.scss'
 
 
 const InteriorDesignSamples = ({ mainTitle, texts, imgs, button }) => {
@@ -9,7 +10,9 @@ const InteriorDesignSamples = ({ mainTitle, texts, imgs, button }) => {
     const images = [...imgs].map( (item)=> {
         return(
             <div key={Math.random()*10}>
-                <img src={`./img/${item}`} alt="Slider" />
+                <div className="one-picture-block">
+                    <img src={`./img/${item}`} alt="Slider" />
+                </div>
             </div>
         )
     })
@@ -28,6 +31,8 @@ const InteriorDesignSamples = ({ mainTitle, texts, imgs, button }) => {
     const sliderParams = {
         loop: true,
         centeredSlides: true,
+        updateOnWindowResize: true,
+        setWrapperSize: true,
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',

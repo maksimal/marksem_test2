@@ -12,6 +12,7 @@
   &__secondary-text {
     margin-top: 15px;
     margin-bottom: 35px;
+    font-weight: 400;
   }
 
   .slider-container {
@@ -109,19 +110,28 @@
   }
 }
 
-@media only screen and (max-width: 1199px) {
-  .team-section__card {
-    width: 255px;
-    img {
-      height: 295px;
+@media only screen and (max-width: $desktop-breakpoint) {
+  .team-section {
+    &__card {
+      width: 255px;
+      img {
+        height: 295px;
+      }
+    }
+    &__title {
+      font-size: 24px;
+    }
+    &__secondary-text {
+      font-size: 18px;
+    }
+    .member-details {
+      margin-top: 38px;
+      .member-links {
+        a {
+          width: 36px;
+          height: 36px;
+        }
+      }
     }
   }
 }
-
-// @media only screen and (max-width: 979px) {
-//   .team-section__card {
-//     img {
-//       height: 420px;
-//     }
-//   }
-// }

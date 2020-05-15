@@ -1,6 +1,6 @@
 import React, { useEffect} from "react";
 // import SectionType2 from '../components/section_type2/section_type2';
-import StyledLink from "../components/shared/StyledLink";
+// import StyledLink from "../components/shared/StyledLink";
 import StyledList from "./../components/shared/StyledList/StyledList";
 // import SectionType3 from '../components/section_type_3/section_type_3';
 import InfoCardList from "../components/InfoCardList";
@@ -30,13 +30,14 @@ export default function Home(props) {
         animateIn="fadeIn"
         animateOnce={true}>
         <CompanyPresentation
+          type={1}
           title="MARKSEM — ваш надійний партнер."
           text={
             <>
-              <p style={{ fontSize: "28px", lineHeight: "36px" }}>
+              <p>
                 Інвестуйте, дбайте про майбутнє та насолоджуйтесь життям вже сьогодні.
               </p>
-              <p style={{ fontSize: "28px", lineHeight: "36px" }}>
+              <p>
                 Будуйте нові можливості з MARKSEM.
               </p>
             </>
@@ -50,7 +51,7 @@ export default function Home(props) {
         animateIn="fadeIn"
         animateOnce={true}>
         <ImageTextBlock
-          style="1"
+          type="1"
           title="Головна ідея"
           mediaType="video"
           mediaPosition="left"
@@ -117,7 +118,7 @@ export default function Home(props) {
         animateIn="fadeIn"
         animateOnce={true}>
         <ImageTextBlock
-          style="1"
+          type="1"
           title="Можливості"
           mediaType="img"
           mediaPosition="right"

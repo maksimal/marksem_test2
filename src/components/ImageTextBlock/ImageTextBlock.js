@@ -6,7 +6,7 @@ import StyledLink from './../shared/StyledLink/index';
 
 function ImageTextBlock(
   {
-    style = "1",
+    type = "1",
     title = "Default title",
     mediaType = "img",
     mediaPosition = "right",
@@ -22,20 +22,20 @@ function ImageTextBlock(
   }
 ) {
 
-  console.log(mediaStyle);
+
 
   return (
-    <div className="image-text-block">
+    <div className="image-text-block background-wrapper">
+      <div className={`background background__style${type}-${mediaPosition}`}></div>
       <div className="container">
         <div className={`image-text-block__content image-text-block__content-${mediaPosition}`}>
-          <div className={`background background__style${style}-${mediaPosition}`}></div>
-          
-          <div className={`title-container title-container__${mediaPosition}`}>
+
+          <div className={`title-container title-container__${mediaPosition} title-container-media-sm`}>
             <h2 className={`title title__${mediaPosition}`}>{title}</h2>
           </div>
 
-          <div className="media-container" style={{...mediaStyle}}>
-            <div className={`media media__style${style}-${mediaPosition}`}>
+          <div className="media-container" style={{ ...mediaStyle }}>
+            <div className={`media media__style${type}-${mediaPosition}`}>
               {mediaType === "video" &&
                 <ReactPlayer2
                   videoUrl={videoUrl}
@@ -51,6 +51,10 @@ function ImageTextBlock(
 
 
           <div className={`main-text-container main-text-container__${mediaPosition} `}>
+
+            <div className={`title-container title-container__${mediaPosition} title-container-media-lg`}>
+              <h2 className={`title title__${mediaPosition}`}>{title}</h2>
+            </div>
 
             <div className="main-text">
 
@@ -83,12 +87,12 @@ function ImageTextBlock(
           </div>
 
           {actionElementText &&
-              actionElementType === "link" &&
-              actionElementAlign === "image" &&
-              <div className={`action-container action-container__${mediaPosition} `}>
-                <StyledLink linkText={actionElementText} linkURL={actionOnClick} />
-              </div>
-            }
+            actionElementType === "link" &&
+            actionElementAlign === "image" &&
+            <div className={`action-container action-container__${mediaPosition} `}>
+              <StyledLink linkText={actionElementText} linkURL={actionOnClick} />
+            </div>
+          }
 
           {actionElementText &&
             actionElementType === "button" &&

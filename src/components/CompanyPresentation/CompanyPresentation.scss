@@ -5,7 +5,7 @@
     max-width: 1440px;
     min-height: 645px;
     padding: 0px 80px;
-    margin: 30px auto;
+    margin: 0px auto 110px;
 
     &__bg-layer {
         position: absolute;
@@ -16,21 +16,7 @@
         z-index: -2;
     }
 
-    &__img-layer {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: calc(100% - 160px);
-        min-height: 500px;
-        background-color: transparent;
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        background-position: right;
-        z-index: -1;
-    }
-
     &__content {
-        position: relative;
         padding: 80px 0;
         width: 60%;
     }
@@ -45,6 +31,14 @@
         text-transform: uppercase;
     }
 
+    &__img {
+        position: absolute;
+        top: 50%;
+        right: 80px;
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+
     &__info{
         max-width: 540px;
         min-height: 160px;
@@ -55,13 +49,80 @@
         color: #171A27;
 
         & p, & span {
-            
+            font-size: inherit;
+            line-height: inherit;
             padding: 10px 0;
         }
     }
 
     &__action {
         position: absolute;
-        right: 17px;
+        left: 35%;
+        bottom: 80px;
+    }
+}
+
+@media only screen and (max-width: $desktop-breakpoint) {
+    .company-presentation {
+        width: 100%;
+        min-height: none;
+        padding: 0;
+        margin: 0px auto 70px;
+
+        &__content {
+            padding: 0;
+            width: 100%;
+        }
+
+        &__img {
+            width: 100%;
+            height: auto;
+            position: static;
+            transform: none;
+        }
+
+        &__info{
+            width: 100%;
+            min-width: none;
+            max-width: none;
+            min-height: 40px;
+            margin: 40px 0;
+    
+        }
+
+        &__title, &__info {
+            padding: 0 20px;
+        }
+
+        & p, & span {
+            font-size: inherit;
+            line-height: inherit;
+            padding: 10px 0;
+        }
+
+        &__action {
+            position: relative;
+            left: 20px;
+            bottom: 0;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 979px) {
+    .company-presentation {
+        &__img {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .company-presentation {
+        &__info {
+            min-height: 15px;
+            margin: 20px 0;
+        }
     }
 }

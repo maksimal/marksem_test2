@@ -1,13 +1,21 @@
+@import './../../variables';
+
+.mob-version {
+    display: none;
+}
+
 .house-block {
-    width: 1440px;
-    margin: 0 auto 250px auto;
+    max-width: 1440px;
+    margin: 0 auto 100px;
     position: relative;
 
     &__background-layer {
-        height: 500px;
-        width: 70%;
-        background-color: #EDF3F8;
-        z-index: 0;
+        min-height: 500px;
+        width: 100%;
+        background: linear-gradient(to bottom, #EDF3F8, #EDF3F8 70%, transparent 0%,   transparent 100%);
+        background-size: 70% 100%;
+        background-position: left top;
+        background-repeat: no-repeat;
     }
 
     &__title {
@@ -23,9 +31,8 @@
     }
     
     &__img {
-        position: absolute;
-        top: 22px;
-        left: 22px;
+        width: 100%;
+        height: auto;
     }
 
     &__key {
@@ -37,27 +44,114 @@
     }
 
     &__key1 {
-        top: 95px;
-        left: 150px;
+        top: 10.5%;
+        left: 10%;
     }
 
     &__key2 {
-        top: 66px;
-        left: 475px;
+        top: 6.5%;
+        left: 34%;
     }
 
     &__key3 {
-        bottom: -120px;
-        left: 390px;
+        bottom: 11%;
+        left: 27%;
     }
 
     &__key4 {
-        bottom: -114px;
-        left: 747px;
+        bottom: 12%;
+        right: 40%;
     }
 
     &__key5 {
-        bottom: 110px;
-        right: 170px;
+        bottom: 46%;
+    right: 11%;
     }
+}
+
+@media only screen and (max-width: $desktop-breakpoint) {
+    .desk-version {
+        display: none;
+    }
+
+    .mob-version {
+        display: block;
+    }
+
+    .house-block {
+        &__background-layer {
+        background: linear-gradient(to bottom, #EDF3F8, #EDF3F8 100%, transparent 0%,   transparent 100%);
+        background-size: 70% 100%;
+        background-position: left top;
+        background-repeat: no-repeat;
+        }
+
+        &__title {
+            width: 100%;
+            position: static;
+            text-align: left;
+        }
+
+        &__img {
+            top: 17px;
+            width: 100%;
+            height: auto;
+        }
+
+        &__values {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__value {
+            margin: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        &__value-number {
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+            border: 3px solid $secondary-color;
+            font-size: 24px;
+            line-height: 36px;
+            text-align: center;
+
+        }
+
+        &__value-text {
+            font-size: 18px;
+            line-height: 17px;
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .house-block {
+        margin: 0 auto 70px;
+        }
+
+        &__title {
+            width: 75%;
+            font-size: 18px;
+            line-height: 27px;
+        }
+
+        &__value {
+            min-width: 200px;
+            margin: 20px;
+        }
+
+        &__value-number {
+            border: 2px solid $secondary-color;
+            font-size: 18px;
+            line-height: 41px;
+
+        }
+
+        &__value-text {
+            font-size: 14px;
+            line-height: 17px;
+        }
 }

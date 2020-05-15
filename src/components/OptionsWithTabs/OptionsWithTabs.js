@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Swiper from 'react-id-swiper'
 import './OptionsWithTabs.css'
 import './OptionsWithTabs.scss'
 import './media.scss'

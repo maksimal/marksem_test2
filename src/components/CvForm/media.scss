@@ -1,23 +1,24 @@
+// @media (max-width: 1341px) {
+//     .cv-from {
+//         .container {
+//             .cv-form-wrapper {
+//             }
+//         }
+//     }
+// }
+
+
 @media (max-width: 1280px) {
 
     .cv-from {
-
         margin-top: 80px;
         margin-bottom: 80px;
-
         .container {
-
-
             .cv-form-wrapper {
-        
-
                 .cv-form-content-wrapper {
-   
-
                     h2 {
                         font-size: 18px;
                     }
-
                     .cv-form-form-wrapper {
                         flex-direction: column;
                         align-items: center;
@@ -26,33 +27,19 @@
                             width: 100vw;
                             max-height: 400px;
                             margin-left: -10px;
-                            margin-right: -10px;
+                            margin-right: 0px;
                             img {
                                 min-width: 100%;
                                 min-height: 100%;
                             }
                         }
-                        .modal-form-wrapper {
-                        
-                            h3 {
-                             
-                            }
-                            p {
-          
-                            }
-                            p, h3 {
-      
-                            }
-                        }
-
                         form {
+                            width: 100%;
                             flex-direction: column;
                             margin-left: 0;
-                            // margin-top: 70px;
                             margin-top: 125px;
                             align-items: center;
                             input {
-                                // width: 100%;
                                 height: 70px;
                                 margin-left: 0;
                                 margin-right: 299px;
@@ -62,33 +49,19 @@
                             .form-input-text {
                                     width: 100%;
                                 }
-                            input:hover {
-                               
-                            }
-                            input:focus {
-                                
-                            }
-                            input:valid {
-                                
-                            }
-
                             .form-input-text {
                                 width: 100%;
                             }
-
                             .form-input-email {
                                 width: 100%;
                             }
-
                             .form-input-tel {
                                 width: 100%;
                             }
-
                             .form-input-file {
                                 width: 100%;
                                 margin-left: auto;
                             }
-
                             textarea {
                                 margin-left: 0;
                                 margin-right: 0;
@@ -97,24 +70,11 @@
                                 margin-bottom: 40px;
                                 margin-right: 299px;
                             }
-
-                            textarea:hover {
-                                
-                            }
-                            textarea:focus {
-                                
-                            }
-
                             button {
                                 width: 100%;
                                 transform: translateX(-140px);
                                 font-size: 13px;
                             }
-
-                            input[type="file"] {
-
-                            }
-
                             .custom-file-upload {
                                 position: relative;
                                 left: 0;
@@ -126,107 +86,26 @@
                                 width: 20%;
                                 transform: translateX(-289px);
                             }
-                            .custom-file-upload:hover {
-                                
-                            }
                             .custom-file-upload:before {
                                 padding-bottom: 19px;
                                 padding-top: 19px;
-                                width: 446px;
+                                width: 388%;
                                 right: 100%
                             }
-                            .custom-file-upload:hover:before {
-                                
-                            }
-
-                        }
-                    }
-                }
-            }
-
-
-            .cv-form-background {
-                width: 100vw;
-                height: 690px;
-                right: 0;
-                left: -20px;
-                margin-top: 615px;
-                padding-bottom: 30px;
-                // margin-left: -10px;
-                // margin-right: -10px;
-            }
-        }
-    }
-}
-
-@media (max-width: 627px) {
-
-    .cv-from {
-
-        .container {
-
-            .cv-form-wrapper {
-        
-                .cv-form-content-wrapper {
-
-                    .cv-form-form-wrapper {
-        
-                        form {
-                            .custom-file-upload:before {
-                                width: 72vw;
-                            }
                         }
                     }
                 }
             }
         }
     }
-}
-
-@media (max-width: 450px) {
-
-    .cv-from {
-
-        .container {
-
-            .cv-form-wrapper {
-        
-                .cv-form-content-wrapper {
-
-                    .cv-form-form-wrapper {
-        
-                        form {
-                            .custom-file-upload:before {
-                                width: 70vw;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 450px) {
-
-    .cv-from {
-
-        .container {
-
-            .cv-form-wrapper {
-        
-                .cv-form-content-wrapper {
-
-                    .cv-form-form-wrapper {
-        
-                        form {
-                            .custom-file-upload:before {
-                                width: 69vw;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+    .cv-form-background {
+        width: 100%;
+        height: 690px;
+        right: 0;
+        left: 0;
+        margin-top: 615px;
+        padding-bottom: 30px;
+        // margin-left: -20px;
+        // margin-right: 20px;
     }
 }

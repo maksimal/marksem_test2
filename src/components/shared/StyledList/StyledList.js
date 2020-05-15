@@ -9,9 +9,14 @@ export default function StyledList(
     items = [
       ["First title", "First text"],
       ["Second title", "Second text"]
-    ]
+    ],
+    alignIcon = "top"
   }
 ) {
+
+  let alignItems;
+  alignIcon === "center" ?  alignItems = "center" :  alignItems = "flex-start";
+
   return (
     <div className="styled-list">
       {
@@ -19,10 +24,9 @@ export default function StyledList(
           return (
             <div key={i} className="styled-item" style={{ marginBottom: "20px" }}>
               <StyledListItem
+                style={{alignItems}}
                 iconUrl={iconUrl}
                 iconSize={iconSize}
-                // if there is only one element in array than it will be considered as text whithout title
-                // title={item.length === 2 ? item[0] : false}
                 title={title}
                 text={text}
               />

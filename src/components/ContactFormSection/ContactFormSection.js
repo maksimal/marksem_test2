@@ -29,50 +29,53 @@ const ContactFormSection = ({
   address = "address here",
 }) => {
   return (
-    <div className="container">
-      <div className="contacts-section">
-        <div className="background"></div>
 
-        <ContactFormVanila
-          title={formTitle}
-          introText={formIntroText}
-          actionOnClick={() => console.log("click")}
-        />
+    <div className="contacts-section bg-wrapper">
+      <div className="background"></div>
+      <div className="container">
+        <div className="contacts-section-inner">
 
-        <div className="contacts">
-          <h2>{contactListTitle}</h2>
-          <div className="background-wrapper">
-            <ul className="contacts-list">
-              <li className="contacts-list__item">
-                <svg className="contacts-list__icon">
-                  <use href="./icons-sprite.svg#phone" />
-                </svg>
-                <span className="contacts-list__text">{phone}</span>
-              </li>
-              <li className="contacts-list__item">
-                <svg className="contacts-list__icon">
-                  <use href="./icons-sprite.svg#mail" />
-                </svg>
-                <span className="contacts-list__text">{email}</span>
-              </li>
-              <li className="contacts-list__item">
-                <svg className="contacts-list__icon">
-                  <use href="./icons-sprite.svg#pin-map" />
-                </svg>
-                <span className="contacts-list__text">{address}</span>
-              </li>
-            </ul>
-            <div
-              className="map"
-              style={{ backgroundImage: `url(./img/map-placeholder.png)` }}
-            >
-              {/* <MyMap /> */}
+          <ContactFormVanila
+            title={formTitle}
+            introText={formIntroText}
+            actionOnClick={() => console.log("click")}
+          />
+
+          <div className="contacts">
+            <h2>{contactListTitle}</h2>
+            <div className="background-wrapper">
+              <ul className="contacts-list">
+                <li className="contacts-list__item">
+                  <svg className="contacts-list__icon">
+                    <use href="./icons-sprite.svg#phone" />
+                  </svg>
+                  <span className="contacts-list__text">{phone}</span>
+                </li>
+                <li className="contacts-list__item">
+                  <svg className="contacts-list__icon">
+                    <use href="./icons-sprite.svg#mail" />
+                  </svg>
+                  <span className="contacts-list__text">{email}</span>
+                </li>
+                <li className="contacts-list__item">
+                  <svg className="contacts-list__icon">
+                    <use href="./icons-sprite.svg#pin-map" />
+                  </svg>
+                  <span className="contacts-list__text">{address}</span>
+                </li>
+              </ul>
+              <div
+                className="map"
+                style={{ backgroundImage: `url(./img/map-placeholder.png)` }}
+              >
+                {/* <MyMap /> */}
+              </div>
             </div>
-
           </div>
         </div>
       </div>
     </div>
+
   );
 };
 

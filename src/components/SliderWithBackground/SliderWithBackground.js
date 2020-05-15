@@ -17,14 +17,7 @@ function SliderWithBackground({ slides }) {
       clickable: true,
     },
     breakpoints: {
-      1024: {
-      },
-
-      768: {
-        pagination: false,
-      },
       640: {
-        pagination: false,
         spaceBetween: 20
       },
       320: {
@@ -59,7 +52,10 @@ function SliderWithBackground({ slides }) {
           style={{ backgroundImage: 'url("./img/inactive_card_long-time_growth.png")' }}
         >
           <button className="swiper-prev" onClick={goPrev}>
-            <img src="./img/icons/arrow-left.svg" alt="next" />
+              <svg>
+                <use href="./icons-sprite.svg#arrow-left" />
+              </svg>
+            {/* <img src="./img/icons/arrow-left.svg" alt="next" /> */}
           </button>
         </div>
         <Swiper {...params} activeSlideKey={calcActiveSlide} getSwiper={setSwiper}>
@@ -70,7 +66,10 @@ function SliderWithBackground({ slides }) {
           style={{ backgroundImage: 'url("./img/inactive_card_balanced_investment.png")' }}
         >
           <button className="swiper-next" onClick={goNext}>
-            <img src="./img/icons/arrow-right.svg" alt="next" />
+              <svg>
+                <use href="./icons-sprite.svg#arrow-right" />
+              </svg>
+            {/* <img src="./img/icons/arrow-right.svg" alt="next" /> */}
           </button>
         </div>
       </div>

@@ -13,7 +13,7 @@
         top: 180px;
         width: 1160px;
         height: 510px;
-        transform: translateX(17%);
+        transform: translateX(110px);
         z-index: 0;
     }
     .interior-design-samples-content {
@@ -23,7 +23,22 @@
         position: relative;
         z-index: 10;
         .swiper-container {
+            height: auto;
+            min-width: 0;
             margin-left: 50px;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        // width: auto !important;
+                        // flex-basis: 100%;
+                        .one-picture-block {
+                            // width: 100px;
+                            img {
+                                // width: 10px;
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
         }
         .interior-design-samples-text-content{
             display: flex;
@@ -59,3 +74,58 @@
     }
 }
 
+
+
+@media (max-width: 1365px) {
+
+    .interior-design-samples {
+        .interior-design-samples-background {
+            transform: translateX(3%);
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+
+    .interior-design-samples {
+      
+        h2 {
+            width: 100%;
+            line-height: 30px;;
+            margin-bottom: 30px;
+        }
+        .interior-design-samples-background {
+            width: 100%;
+            transform: translateX(0);
+            margin-left: 0;
+            height: 58vw;
+        }
+        .interior-design-samples-content {
+     
+            .swiper-container {
+                margin-left: 0;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        width: 100%;
+                    }
+                }
+            }
+            .interior-design-samples-text-content{
+                display: none;
+                .btn {
+
+                }
+                .interior-design-samples-text-block {
+                
+                    .interior-design-samples-text-number { 
+                        
+                    }
+    
+                    .interior-design-samples-text {
+                      
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,4 @@
-import React, {useState } from 'react';
-import { connect } from 'react-redux';
-import { sampleAction } from './actions/sampleAction';
+import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Header from './components/Header'
 import Footer from './components/Footer'

@@ -1,11 +1,11 @@
 @import "../../variables.scss";
 
 .contact-form-general {
+  max-width: 546px;
   .form {
     padding: 25px 75px 50px 0;
 
-    &-container {
-      position: relative;
+    &-container {      
       min-height: 550px;
       min-width: 550px;
       margin-right: 60px;
@@ -78,8 +78,9 @@
   }
 }
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: $desktop-breakpoint) {
   .contact-form-general {
+    max-width: none;
     .form {
       position: relative;
       z-index: 101;
@@ -94,14 +95,26 @@
         position: relative;
         &::before {
           content: "";
-          width: 100%;
+          left: 10%;
+          //wierd thing but works on chrome and mozilla
+          width: calc(100% - 10% + (100vw  - 100%) / 2 - 9px);
           z-index: -2;
           height: 130%;
           top: -15%;
-          left: 10%;
           position: absolute;
           background-color: $primary-background-color;
         }
+      }
+      &-title {
+        font-size: 18px;
+      }
+      &-intro-text {
+        font-size: 14px;
+      }
+      &-field {
+        font-size: 14px;
+        padding-bottom: 10px;
+        margin-bottom: 25px;
       }
 
       &-container {
@@ -109,6 +122,13 @@
         background-color: transparent;
         margin-right: 0;
         min-width: 0;
+        .background {
+          position: absolute;
+          right: 0;
+          width: 80%;
+          height: 100%;
+          background-color: $primary-background-color;
+        }
       }
 
       &-submit-button {

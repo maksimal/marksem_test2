@@ -1,11 +1,12 @@
 @import "../../variables.scss";
 
-.contacts-section {
-  display: flex;
+.bg-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
   position: relative;
-  margin-top: 150px;
-  margin-bottom: 120px;
+}
 
+.contacts-section {
   .background {
     background-color: $primary-background-color;
     width: 1000px;
@@ -13,108 +14,117 @@
     position: absolute;
     z-index: -1;
     top: -30px;
-    right: -60px;
+    right: 0;
   }
 
-  .background-wrapper{
+  &-inner {
     display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
+    margin-top: 150px;
+    margin-bottom: 120px;
 
-  .contacts {
-    display: flex;
-    flex-direction: column;
-    h2 {
-      text-transform: uppercase;
-      margin-bottom: 40px;
-    }
-    &-list {
-      &__item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 23px;
-        color: $primary-color;
-        &:last-child {
-          margin-bottom: 35px;
-        }
-      }
-      &__icon {
-        display: inline-block;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 26px;
-        height: 26px;
-        margin-right: 20px;
-      }
-    }
-  }
-
-  .map {
-    position: relative;
-    min-width: 675px;
-    border: 1px solid grey;
-    flex-grow: 1;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-  }
-}
-
-
-
-@media only screen and (max-width: 1199px) {
-  .contacts-section {
-    flex-direction: column;
-    .form-submit-button {
-      text-align: center;
-    }
-
-    .background {
-      background-color: transparent;
+    .background-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .contacts {
-      margin-top: 100px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      margin-left: 55px;
       h2 {
-        font-size: 22px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
       }
       &-list {
-        max-width: 300px;
+        &__item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 23px;
+          color: $primary-color;
+          &:last-child {
+            margin-bottom: 35px;
+          }
+        }
+        &__icon {
+          display: inline-block;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 26px;
+          height: 26px;
+          margin-right: 20px;
+        }
       }
     }
 
-    .background-wrapper {
+    .map {
       position: relative;
-      &::after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: -5%;
-        width: 100%;
-        transform: translateX(-20%);
-        height: 110%;
-        background-color: $primary-background-color;
+      border: 1px solid grey;
+      flex-grow: 1;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: $desktop-breakpoint) {
+  .contacts-section {
+    .background {
+      display: none;
+    }
+    &-inner {
+      flex-direction: column;
+      .form-submit-button {
+        text-align: center;
+      }
+      .background {
+        display: none;
+      }
+
+      .contacts {
+        margin-left: 0;
+        margin-top: 100px;
+        h2 {
+          font-size: 18px;
+        }
+        &-list {
+          max-width: 300px;
+          &__text {
+            font-size: 14px;
+          }
+          &__icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 20px;
+          }
+        }
+      }
+
+      .background-wrapper {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          top: -5%;
+          width: 100%;
+          transform: translateX(-20%);
+          height: 110%;
+          background-color: $primary-background-color;
+        }
+      }
+
+      .map {
+        height: 50vw;
+        width: calc(100% - 20px);
+        max-height: 400px;
+        min-width: 0;
+        margin-left: 20px;
       }
     }
-
-    .map {
-      height: 450px;
-      min-width: 0;
-      margin-left: 20px;
-    }
   }
 }
-
-@media only screen and (max-width: 979px) {
-  .contacts-section {
-    .map {
-      height: 50vw;
-      min-width: 0;
-      margin-left: 20px;
-    }
-  }
-}
-

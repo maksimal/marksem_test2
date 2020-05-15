@@ -1,4 +1,4 @@
-import React, { userState, useState } from "react";
+import React, { useState } from "react";
 import ImageTextBlock from "./../components/ImageTextBlock/ImageTextBlock";
 import StyledListItem from "./../components/shared/StyledListItem/StyledListItem";
 import StyledList from "./../components/shared/StyledList/StyledList";
@@ -21,6 +21,7 @@ export default function Investments(props) {
       <ScrollToTop />
 
       <CompanyPresentation
+        type={3}
         title="Наша спільна ціль в бізнесі"
         text={
           <>
@@ -156,7 +157,7 @@ export default function Investments(props) {
         animateIn="fadeIn"
         animateOnce={true}>
         <ImageTextBlock
-          style="3"
+          type="3"
           title="MARKSEM СRМ"
           mediaType="img"
           mediaPosition="right"
@@ -203,11 +204,17 @@ export default function Investments(props) {
           mainTitle="Локації MARKSEM"
           imgs={[
             'OurLocationBlock.png',
+            'OurLocationBlock.png',
+            'OurLocationBlock.png',
             'OurLocationBlock.png'
           ]}
           mainText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-          locationTitle="location №1"
-          locationText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat."
+          locationText={[
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat.",
+            "222Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat.",
+            "333Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat.",
+            "444Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat."
+            ]}
         />
       </ScrollAnimation>
 

@@ -46,12 +46,12 @@ export default function Contacts(props) {
 
       <div className="contacts-header" style={{ backgroundImage: `url(./img/sky.png)` }}>
         <div className="container">
-          <h1 style={{ padding: "88px 0", lineHeight: "1.2em", fontSize: "42px", fontWeight: "bold" }}>Контактна інформація</h1>
+          <h1 className="contacts-main-title">Контактна <br/> інформація</h1>
         </div>
       </div>
 
       <ScrollAnimation
-        animateIn="fadeIn"
+        animateIn="fadeIn"           
         animateOnce={true}>
         <ImageTextBlock
           style="1"
@@ -112,8 +112,8 @@ export default function Contacts(props) {
         animateOnce={true}>
         <section style={{ marginBottom: "120px" }}>
           <div className="container">
-            <h2 className="default-title">Frequently Asked Questions</h2>
-            <p style={{ padding: "25px 0" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore</p>
+            <h2 className="faq-title">Frequently Asked Questions</h2>
+            <p className="faq-intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore</p>
 
             <FAQ
               queston="Що робить ваша компанія?"

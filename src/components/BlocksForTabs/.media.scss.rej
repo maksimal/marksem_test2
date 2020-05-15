@@ -1,0 +1,9 @@
+diff a/src/components/BlocksForTabs/.media.scss b/src/components/BlocksForTabs/.media.scss	(rejected hunks)
+@@ -21,6 +21,7 @@
+             max-height: 650px;
+             .swiper-container {
+                 width: 100%;
++                height: 75vw;
+                 margin-right: 0;
+                 .swiper-button-prev, .swiper-button-next {
+                     display: none;

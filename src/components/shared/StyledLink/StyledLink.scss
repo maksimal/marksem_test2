@@ -1,9 +1,11 @@
+@import "../../../variables.scss";
+
 .styled-link-container {
-  padding-left: calc(100px + 18px) ;
+  padding-left: calc(100px + 18px);
 }
 
 .styled-link {
-  color: #ED7161;
+  color: #ed7161;
   text-transform: uppercase;
   font-weight: bold;
   position: relative;
@@ -16,9 +18,23 @@
     position: absolute;
     width: 100px;
     height: 2px;
-    background-color:#ED7161;
+    background-color: #ed7161;
     top: 50%;
     transform: translate(-100%, -50%);
     left: -18px;
+  }
+}
+
+@media only screen and (max-width: $desktop-breakpoint) {
+  .styled-link-container {
+    padding-left: calc(80px + 10px);
+  }
+
+  .styled-link {
+    font-size: 14px;
+    &::before {
+      width: 80px;
+      left: -10px;
+    }
   }
 }

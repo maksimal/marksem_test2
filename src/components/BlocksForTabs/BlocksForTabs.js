@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Swiper from 'react-id-swiper'
 import './BlocksForTabs.css'
 import './BlocksForTabs.scss'

@@ -4,7 +4,7 @@
 
     margin-top: 160px;
     margin-bottom: 160px;
-
+    position: relative;
     .container {
 
 
@@ -173,18 +173,16 @@
                 }
             }
         }
-
-
-        .cv-form-background {
-            position: absolute;
-            width: 80%;
-            height: 100%;
-            top: 0;
-            right: -80px;
-            padding-bottom: 50px;
-            background-color: $primary-background-color;
-            z-index: 0;
-            box-sizing: content-box;
         }
     }
+    .cv-form-background {
+        position: absolute;
+        width: 80%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        padding-bottom: 50px;
+        background-color: $primary-background-color;
+        z-index: 0;
+        box-sizing: content-box;
 }

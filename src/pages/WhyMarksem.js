@@ -16,11 +16,12 @@ export default function WhyMarksem(props) {
   return (
     <div>
       <ScrollToTop />
-
       <ScrollAnimation
         animateIn="fadeIn"
         animateOnce={true}>
         <CompanyPresentation
+          type={2}
+          action={true}
           title="Ми MARKSEM"
           text={
             <>
@@ -41,7 +42,7 @@ export default function WhyMarksem(props) {
         animateIn="fadeIn"
         animateOnce={true}>
         <ImageTextBlock
-          style="1"
+          type="1"
           title="Наші цінності"
           mediaType="img"
           mediaPosition="left"
@@ -64,7 +65,7 @@ export default function WhyMarksem(props) {
         animateIn="fadeIn"
         animateOnce={true}>
         <ImageTextBlock
-          style="2"
+          type="2"
           title="Інвестиції MARKSEM"
           mediaType="img"
           mediaPosition="right"
@@ -77,6 +78,7 @@ export default function WhyMarksem(props) {
             <StyledList
               iconUrl="./icons-sprite.svg#investment-block-icon"
               iconSize={37}
+              alignIcon="center"
               items={[
                 {
                   text: "Доступ до раніше недосяжного ринку інвестицій"
@@ -97,7 +99,7 @@ export default function WhyMarksem(props) {
         animateIn="fadeIn"
         animateOnce={true}>
         <ImageTextBlock
-          style="1"
+          type="1"
           title="Умови співробітництва"
           mediaType="img"
           mediaPosition="left"

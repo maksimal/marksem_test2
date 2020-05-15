@@ -2,13 +2,24 @@
     content: ''
 }
 
-.our-location-block .swiper-button-next {
-    background-image: url(./img/Arrowtotheright.png);
+.our-location-block .swiper-button-prev-custom, .our-location-block .swiper-button-next-custom {
+    position: absolute;
+    width: 25px;
+    height: 32px;
+    padding: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 30;
 }
 
-.our-location-block .swiper-button-prev {
-    background-image: url(./img/Arrowtotheleft.png);
+.our-location-block .swiper-button-next-custom {
+    background-image: url(./img/Arrowtotheright.png);
+    right: 0;
+}
 
+.our-location-block .swiper-button-prev-custom {
+    background-image: url(./img/Arrowtotheleft.png);
+    left: 0;
 }
 
 .our-location-block .swiper-container {

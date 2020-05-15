@@ -1,0 +1,64 @@
+@import "../../variables.scss";
+
+@media(max-width: 1444px) {
+    .card-item{
+        position: relative;
+        margin-bottom: 40px;
+        .card-image {
+
+            img {
+
+            }
+        }
+        .card-image-type1 {
+    
+        }
+        .card-image-type2 {
+
+        }
+        .card-text-wrapper {
+
+            .card-title { 
+
+            }
+            .card-title-type1 {
+       
+            }
+            .card-title-type2 {
+
+            }
+            .card-text {
+
+            }
+            .card-text-type1 {
+
+            }
+            .card-text-type2 {
+
+            }
+            .styled-link-container {
+  
+            }
+        }
+    }
+    .card-item-type1 {
+
+    }
+    .card-item-type2 {
+    
+    }
+} 
+
+@media(max-width: $desktop-breakpoint) {
+    .card-item{
+        .card-text-wrapper {
+
+            .card-title { 
+                font-size: 16px;
+            }
+            .card-text {
+                font-size: 14px;
+            }
+        }
+    }
+}

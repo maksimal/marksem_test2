@@ -2,15 +2,15 @@
   margin: 0;
   padding: 0;
   font-size: 18px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 27px;
   box-sizing: border-box;
 }
 
-section {
-  margin: 110px 0;
+html {
+  overflow-y: scroll; 
+  overflow-x: hidden;
 }
-
 a {
   text-decoration: none;
 }
@@ -27,6 +27,14 @@ h3 {
   font-size: 20px;
 }
 
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+     -webkit-appearance: none;
+     border-radius: 0;
+}
+
 input:focus, textarea:focus, button:focus {
   outline: none;
 }
@@ -39,21 +47,15 @@ ul {
   list-style-type: none;
 }
 
-
-.default-title {
-  font-size: 32px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
 button {
   outline: none;
   border: none;
 }
 
 .container {
-  width: 1180px;  
+  width: 1180px;
   margin: 0 auto;
+  position: relative;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -62,9 +64,20 @@ button {
   }
   .container {
     width: 100%;
-    min-width: 300px;
     max-width: 900px;
     padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 22px;
+  }
+  
+  h3 {
+    font-size: 20px;
   }
 }
 
@@ -76,5 +89,16 @@ button {
   section {
     margin: 70px 0;
   }
+
+  h1 {
+    font-size: 20px;
+  }
   
+  h2 {
+    font-size: 18px;
+  }
+  
+  h3 {
+    font-size: 16px;
+  }
 }

@@ -27,7 +27,10 @@ export default function Houses(props) {
       <ScrollAnimation
         animateIn="fadeIn"
         animateOnce={true}>
-        <HouseWithKeysBlock />
+        <HouseWithKeysBlock
+          mobileDescription={["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"]}
+          desktopDescription={["Lorem", "Lorem", "Lorem", "Lorem", "Lorem"]}
+        />
       </ScrollAnimation>
 
       <ScrollAnimation
@@ -38,7 +41,7 @@ export default function Houses(props) {
           tabsHeadingsTexts={["Mobile houses", "Module houses", "Houseboats"]}
           tabsContents={[
             <ImageTextBlock
-              style="4"
+              type="4"
               title="Marksem offers you three types of mobile houses"
               mediaType="img"
               mediaPosition="left"
@@ -65,7 +68,7 @@ export default function Houses(props) {
               ]}
             />,
             <ImageTextBlock
-              style="4"
+              type="4"
               title="Module houses"
               mediaType="img"
               mediaPosition="left"
@@ -92,7 +95,7 @@ export default function Houses(props) {
               ]}
             />,
             <ImageTextBlock
-              style="4"
+              type="4"
               title="Houseboats"
               mediaType="img"
               mediaPosition="left"

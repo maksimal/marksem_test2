@@ -12,7 +12,7 @@ export default function StyledListItem(
 ) {
   return (
     <div className="styled-list-item" {...props}>
-      <div className="styled-list-item__container">
+      <div className="styled-list-item__icon-container">
         <div className="styled-list-item__icon">
           <svg width={iconSize} height={iconSize}>
             <use href={iconUrl}/>
