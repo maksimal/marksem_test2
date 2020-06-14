@@ -1,0 +1,566 @@
+{
+  "houses": [
+    {
+      "category": "Mobile houses",
+      "houseType": "Marksem M-2",
+      "code": "0100293-M",
+      "description1": "Описание для вкладки конструктора 1",
+      "description2": "Описание для вкладки конструктора 2",
+      "description3": "Описание для вкладки конструктора 3",
+      "description4": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, qui! ",
+      "description5": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, qui!",
+      "isTerraceOption": true,
+      "planning_variants": [
+        {
+          "house_area": "32.0",
+          "complectation": "classic",
+          "rooms": "2",
+          "bathrooms": "1",
+          "planning_price": "1000",
+          "image_urls": [
+            "/img/house-builder/mobile-houses/M-2/Planing/classic/1.JPG",
+            "/img/house-builder/mobile-houses/M-2/Planing/classic/1.JPG",
+            "/img/house-builder/mobile-houses/M-2/Planing/classic/1.JPG",
+            "/img/house-builder/mobile-houses/M-2/Planing/classic/1.JPG",
+            "/img/house-builder/mobile-houses/M-2/Planing/classic/1.JPG",
+            "/img/house-builder/mobile-houses/M-2/Planing/classic/1.JPG"
+          ]
+        },
+        {
+          "house_area": "45.0",
+          "complectation": "classic",
+          "rooms": "4",
+          "bathrooms": "3",
+          "planning_price": "2000",
+          "image_urls": [
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/2.png",
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "house_area": "32.0",
+          "complectation": "premium",
+          "rooms": "8",
+          "bathrooms": "2",
+          "planning_price": "3300",
+          "image_urls": [
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "house_area": "45.0",
+          "complectation": "premium",
+          "rooms": "2",
+          "bathrooms": "1",
+          "planning_price": "5000",
+          "image_urls": [
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/2.png",
+            "img/constructor-pics/1.png",
+            "img/constructor-pics/2.png",
+            "img/constructor-pics/3.png"
+          ]
+        }
+      ],
+      "exterior_variants": [
+        {
+          "exterior_material": "Металл+Дерево",
+          "exterior_material_color": "#D1B288",
+          "terrace": true,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-sand__metal-bluegrey-terrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-sand__metal-bluegrey-terrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-sand__metal-bluegrey-terrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-sand__metal-bluegrey-terrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-sand__metal-bluegrey-terrace-5.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-sand__metal-bluegrey-terrace-6.jpg"
+          ]
+        },
+        {
+          "exterior_material": "Металл+Дерево",
+          "exterior_material_color": "#D1B288",
+          "terrace": false,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-sand__metal-bluegrey-noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-sand__metal-bluegrey-noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-sand__metal-bluegrey-noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-sand__metal-bluegrey-noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-sand__metal-bluegrey-noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-sand__metal-bluegrey-noterrace-3.jpg"
+          ]
+        },
+        {
+          "exterior_material": "Металл+Дерево",
+          "exterior_material_color": "#9598A3",
+          "terrace": true,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__terrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__terrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__terrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__terrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__terrace-5.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__terrace-6.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__terrace-7.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__terrace-8.jpg"           
+          ]
+        },
+        {
+          "exterior_material": "Металл+Дерево",
+          "exterior_material_color": "#9598A3",
+          "terrace": false,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",           
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",           
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "ПВХ",
+          "exterior_material_color": "lightblue",
+          "terrace": true,
+          "exterior_price": "2000",
+          "image_urls": [
+            "/path"
+          ]
+        },
+        {
+          "exterior_material": "ПВХ",
+          "exterior_material_color": "teal",
+          "terrace": true,
+          "exterior_price": "2000",
+          "image_urls": [
+            "/path"
+          ]
+        }
+      ],
+      "interior_variants": [
+        {
+          "interior_style": "loft",
+          "furniture_color": "pink",
+          "walls_color": "violet",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/1.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/2.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/3.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/4.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/5.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/6.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/7.jpg"          
+          ]
+        },
+        {
+          "interior_style": "loft",
+          "furniture_color": "teal",
+          "walls_color": "violet",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "interior_style": "hurokko",
+          "furniture_color": "pink",
+          "walls_color": "violet",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "interior_style": "hurokko",
+          "furniture_color": "pink",
+          "walls_color": "violet",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/5.png"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Mobile houses",
+      "houseType": "Marksem M-4",
+      "code": "0100293-M",
+      "description1": "Описание для вкладки конструктора 1",
+      "description2": "Описание для вкладки конструктора 2",
+      "description3": "Описание для вкладки конструктора 3",
+      "description4": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, qui! ",
+      "description5": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, qui!",
+      "isTerraceOption": true,
+      "planning_variants": [
+        {
+          "house_area": "32.0",
+          "complectation": "classic",
+          "rooms": "2",
+          "bathrooms": "1",
+          "planning_price": "1000",
+          "image_urls": [
+            "img/sliderpic1.png",
+            "img/sliderpic1.png",
+            "img/sliderpic1.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "house_area": "45.0",
+          "complectation": "classic",
+          "rooms": "4",
+          "bathrooms": "3",
+          "planning_price": "2000",
+          "image_urls": [
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/2.png",
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "house_area": "32.0",
+          "complectation": "premium",
+          "rooms": "8",
+          "bathrooms": "2",
+          "planning_price": "3300",
+          "image_urls": [
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "house_area": "45.0",
+          "complectation": "premium",
+          "rooms": "2",
+          "bathrooms": "1",
+          "planning_price": "5000",
+          "image_urls": [
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/2.png",
+            "img/constructor-pics/1.png",
+            "img/constructor-pics/2.png",
+            "img/constructor-pics/3.png"
+          ]
+        }
+      ],
+      "exterior_variants": [
+        {
+          "exterior_material": "Металл",
+          "exterior_material_color": "grey",
+          "terrace": true,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/sliderpic1.png",
+            "img/sliderpic1.png",
+            "img/sliderpic1.png"
+          ]
+        },
+        {
+          "exterior_material": "Металл",
+          "exterior_material_color": "grey",
+          "terrace": false,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/2.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "exterior_material": "Металл",
+          "exterior_material_color": "brown",
+          "terrace": true,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/2.png",
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "exterior_material": "Металл",
+          "exterior_material_color": "#9598A3",
+          "terrace": true,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/constructor-pics/1.png",
+            "img/constructor-pics/2.png"
+          ]
+        },
+        {
+          "exterior_material": "ПВХ",
+          "exterior_material_color": "lightblue",
+          "terrace": true,
+          "exterior_price": "2000",
+          "image_urls": [
+            "/path"
+          ]
+        },
+        {
+          "exterior_material": "ПВХ",
+          "exterior_material_color": "teal",
+          "terrace": true,
+          "exterior_price": "2000",
+          "image_urls": [
+            "/path"
+          ]
+        }
+      ],
+      "interior_variants": [
+        {
+          "interior_style": "barocco",
+          "furniture_color": "pink",
+          "walls_color": "violet",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/constructor-pics/2.png",
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "interior_style": "barocco",
+          "furniture_color": "teal",
+          "walls_color": "violet",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "interior_style": "hurokko",
+          "furniture_color": "pink",
+          "walls_color": "violet",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "interior_style": "hurokko",
+          "furniture_color": "pink",
+          "walls_color": "violet",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/5.png"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Mobile houses",
+      "houseType": "Marksem M-Hotel",
+      "code": "0100293-M",
+      "description1": "Описание для вкладки конструктора 1",
+      "description2": "Описание для вкладки конструктора 2",
+      "description3": "Описание для вкладки конструктора 3",
+      "description4": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, qui! ",
+      "description5": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, qui!",
+      "isTerraceOption": true,
+      "planning_variants": [
+        {
+          "house_area": "33.0",
+          "complectation": "classic",
+          "rooms": "2",
+          "bathrooms": "1",
+          "planning_price": "1000",
+          "image_urls": [
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/2.png",
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "house_area": "45.0",
+          "complectation": "classic",
+          "rooms": "4",
+          "bathrooms": "3",
+          "planning_price": "2000",
+          "image_urls": [
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/2.png",
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "house_area": "32.0",
+          "complectation": "premium",
+          "rooms": "8",
+          "bathrooms": "2",
+          "planning_price": "3300",
+          "image_urls": [
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "house_area": "45.0",
+          "complectation": "premium",
+          "rooms": "2",
+          "bathrooms": "1",
+          "planning_price": "5000",
+          "image_urls": [
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/2.png",
+            "img/constructor-pics/1.png",
+            "img/constructor-pics/2.png",
+            "img/constructor-pics/3.png"
+          ]
+        }
+      ],
+      "exterior_variants": [
+        {
+          "exterior_material": "Металл",
+          "exterior_material_color": "grey",
+          "terrace": true,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/sliderpic3.png",
+            "img/sliderpic3.png",
+            "img/sliderpic3.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "exterior_material": "Металл",
+          "exterior_material_color": "grey",
+          "terrace": false,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/2.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "exterior_material": "Металл",
+          "exterior_material_color": "brown",
+          "terrace": true,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/2.png",
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "exterior_material": "Металл",
+          "exterior_material_color": "#9598A3",
+          "terrace": true,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/constructor-pics/1.png",
+            "img/constructor-pics/2.png"
+          ]
+        },
+        {
+          "exterior_material": "ПВХ",
+          "exterior_material_color": "lightblue",
+          "terrace": true,
+          "exterior_price": "2000",
+          "image_urls": [
+            "/path"
+          ]
+        },
+        {
+          "exterior_material": "ПВХ",
+          "exterior_material_color": "teal",
+          "terrace": true,
+          "exterior_price": "2000",
+          "image_urls": [
+            "/path"
+          ]
+        }
+      ],
+      "interior_variants": [
+        {
+          "interior_style": "barocco",
+          "furniture_color": "pink",
+          "walls_color": "violet",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/constructor-pics/2.png",
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/4.png",
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "interior_style": "barocco",
+          "furniture_color": "teal",
+          "walls_color": "violet",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "interior_style": "hurokko",
+          "furniture_color": "pink",
+          "walls_color": "violet",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "interior_style": "hurokko",
+          "furniture_color": "pink",
+          "walls_color": "violet",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/5.png"
+          ]
+        }
+      ]
+    }   
+  ]
+}
