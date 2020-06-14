@@ -29,6 +29,9 @@
     right: 25px;
   }
   .social-link {
+    svg {
+      fill: white
+    }
     background-color: $primary-color;
     border-radius: 50%;
     width: 46px;

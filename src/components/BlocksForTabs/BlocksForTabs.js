@@ -45,7 +45,7 @@ const OptionsWithTabs = ({ texts, imgs }) => {
                 <Swiper {...sliderParams}>
                         {images}
                 </Swiper>
-                <div className="blocks-for-tabs-text-content">                   
+                <div className="blocks-for-tabs-text-content">      
                     {textes}
                 </div>
             </div>

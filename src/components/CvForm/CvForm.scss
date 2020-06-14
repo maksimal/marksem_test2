@@ -84,7 +84,7 @@
                         }
 
                         .form-input-text {
-                            width: 171px;
+                            width: 255px;
                             margin-right: auto;
                         }
 
@@ -93,7 +93,7 @@
                         }
 
                         .form-input-tel {
-                            width: 30%;
+                            width: 255px;
                             margin-right: auto;
                             // margin-right: 299px;
                         }
@@ -177,12 +177,13 @@
     }
     .cv-form-background {
         position: absolute;
-        width: 80%;
+        width: 100%;
         height: 100%;
         top: 0;
         right: 0;
         padding-bottom: 50px;
-        background-color: $primary-background-color;
+        // background-color: $primary-background-color;
+        background: linear-gradient(180deg, rgba(90, 180, 255, 0.2) 0%, rgba(90, 180, 255, 0) 100%);
         z-index: 0;
         box-sizing: content-box;
 }

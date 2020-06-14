@@ -9,8 +9,8 @@ import ScrollToTop from './../components/shared/ScrollToTop'
 import ScrollAnimation from 'react-animate-on-scroll'
 
 export default function WhyMarksem(props) {
-  useState( () => {
-    window.scrollTo(0,0);
+  useState(() => {
+    window.scrollTo(0, 0);
   })
 
   return (
@@ -20,18 +20,19 @@ export default function WhyMarksem(props) {
         animateIn="fadeIn"
         animateOnce={true}>
         <CompanyPresentation
-          type={2}
           action={true}
-          title="Ми MARKSEM"
-          text={
-            <>
-              <p>
+          title={
+            <h1 className="company-presentation__title title--under">Ми MARKSEM</h1>
+          }
+          info={
+            <div className="company-presentation__info" style={{maxWidth: "530px"}}>
+              <p className="f21" style={{fontWeight: "500"}}>
                 Ми команда досвідчених фахівців з амбіціями, які об’єднались задля нашої спільної мрії, яка є ціллю — заробляти відпочиваючи!
-                </p>
-              <p>
+              </p>
+              <p style={{fontWeight: "normal", lineHeight: "27px", paddingTop: "24px"}}>
                 Ми прагнемо, щоб наші парки були бажаним місцем відпочинку для багатьох людей. Ми працюємо над технологією будівництва повністю автономних будинків. Ми робимо все, щоб ви мали кращі місця для життя та відпочинку, і в той же час — прибутковий бізнес.
-                </p>
-            </>
+              </p>
+            </div>
           }
           img="./img/why-marksem-top.png"
         />
@@ -45,19 +46,19 @@ export default function WhyMarksem(props) {
           type="1"
           title="Наші цінності"
           mediaType="img"
+          isBackground={true}
           mediaPosition="left"
           imgUrl="./img/our_values.png"
           actionOnClick={() => console.log("click")}
           actionElementType="link"
           actionElementText="Watch the video about us"
           actionElementAlign="right"
-          mainContent={[
-            "Професійність. Ми експерти своєї справи. Ми будуємо системну роботу, ефективну комунікацію та застосовуємо індивідуальний підхід до кожного клієнта.",
-            "Інновації. Ми прагнемо запропонувати те, що не можуть запропонувати інші. Ми завжди відкриті для нових ідей та технологій.",
-            "Репутація. Чітке виконання договірних зобов’язань, прозорість, чесність і надійність.",
-            "Якість. Ми контролюємо кожен етап процесу виробництва будинку, будівництва парку чи надання послуг. Всі процеси відповідають міжнародним стандартам і регламентовані письмовими інструкціями. Ми виконуємо свою роботу згідно з існуючими системами якості."
-          ]}
-        />
+        >
+          <p>Професійність. Ми експерти своєї справи. Ми будуємо системну роботу, ефективну комунікацію та застосовуємо індивідуальний підхід до кожного клієнта.</p>
+          <p>Інновації. Ми прагнемо запропонувати те, що не можуть запропонувати інші. Ми завжди відкриті для нових ідей та технологій.</p>
+          <p>Репутація. Чітке виконання договірних зобов’язань, прозорість, чесність і надійність.</p>
+          <p>Якість. Ми контролюємо кожен етап процесу виробництва будинку, будівництва парку чи надання послуг. Всі процеси відповідають міжнародним стандартам і регламентовані письмовими інструкціями. Ми виконуємо свою роботу згідно з існуючими системами якості.</p>
+        </ImageTextBlock>
       </ScrollAnimation>
 
 
@@ -74,25 +75,24 @@ export default function WhyMarksem(props) {
           actionElementType="button"
           actionElementText="Invest now"
           actionElementAlign="left"
-          mainContent={[
-            <StyledList
-              iconUrl="./icons-sprite.svg#investment-block-icon"
-              iconSize={37}
-              alignIcon="center"
-              items={[
-                {
-                  text: "Доступ до раніше недосяжного ринку інвестицій"
-                },
-                {
-                  text: "Продуктивність краща віддача завдяки чудовій моделі"
-                },
-                {
-                  text: "Експертний менеджмент команда досвідчених фахівців"
-                }
-              ]}
-            />
-          ]}
-        />
+        >
+          <StyledList
+            iconUrl="./icons-sprite.svg#investment-block-icon"
+            iconSize={37}
+            alignIcon="center"
+            items={[
+              {
+                text: "Доступ до раніше недосяжного ринку інвестицій"
+              },
+              {
+                text: "Продуктивність краща віддача завдяки чудовій моделі"
+              },
+              {
+                text: "Експертний менеджмент команда досвідчених фахівців"
+              }
+            ]}
+          />
+        </ImageTextBlock>
       </ScrollAnimation>
 
       <ScrollAnimation
@@ -108,21 +108,12 @@ export default function WhyMarksem(props) {
           actionElementType="button"
           actionElementText="Contact us"
           actionElementAlign="center"
-          mainContent={[
-            "Ми ретельно вивчаємо кожен пункт при інвестуванні в локації і надаємо  вам прогнози дохідності.",
-            "Повний сервіс обслуговування та контролю будинку від MARKSEM.",
-            "Аналітичні звіти зі статистикою дохідності.",
-            "Стабільне партнерство, виповнення договірних зобов’язань."
-          ]}
-        />
+        >
+          <p>Ми ретельно вивчаємо кожен пункт при інвестуванні в локації і надаємо  вам прогнози дохідності.</p>
+          <p>Повний сервіс обслуговування та контролю будинку від MARKSEM.</p>
+          <p>Стабільне партнерство, виповнення договірних зобов’язань.</p>
+        </ImageTextBlock>
       </ScrollAnimation>
-
-      <ScrollAnimation
-        animateIn="fadeIn"
-        animateOnce={true}>
-        <CvForm />
-      </ScrollAnimation>
-
 
       <ScrollAnimation
         animateIn="fadeIn"
@@ -155,6 +146,13 @@ export default function WhyMarksem(props) {
             }
           ]}
         />
+      </ScrollAnimation>
+
+
+      <ScrollAnimation
+        animateIn="fadeIn"
+        animateOnce={true}>
+        <CvForm />
       </ScrollAnimation>
 
       <SubscribeBlock type='minimal' />

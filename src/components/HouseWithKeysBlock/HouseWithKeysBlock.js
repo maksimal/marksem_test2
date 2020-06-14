@@ -15,8 +15,8 @@ function HouseBlock({
           <img className="house-block__img desk-version" src={"./img/keysHouseDesk.png"} alt="house" />
           <img className="house-block__img mob-version" src={"./img/keysHouseMob.png"} alt="house" />
           {
-            desktopDescription.map((deskription, i) => 
-            <span key={i} className={`house-block__key house-block__key${++i} desk-version`}>{deskription}</span>
+            desktopDescription.map((description, i) => 
+            <span key={i} className={`house-block__key house-block__key${++i} desk-version`}>{description}</span>
             )}
             <div className="house-block__values mob-version">
             {

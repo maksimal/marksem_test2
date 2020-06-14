@@ -7,16 +7,6 @@
 }
 
 .contacts-section {
-  .background {
-    background-color: $primary-background-color;
-    width: 1000px;
-    height: 570px;
-    position: absolute;
-    z-index: -1;
-    top: -30px;
-    right: 0;
-  }
-
   &-inner {
     display: flex;
     margin-top: 150px;
@@ -73,9 +63,7 @@
 
 @media only screen and (max-width: $desktop-breakpoint) {
   .contacts-section {
-    .background {
-      display: none;
-    }
+    
     &-inner {
       flex-direction: column;
       .form-submit-button {
@@ -102,21 +90,7 @@
             margin-right: 20px;
           }
         }
-      }
-
-      .background-wrapper {
-        position: relative;
-        &::after {
-          content: "";
-          position: absolute;
-          z-index: -1;
-          top: -5%;
-          width: 100%;
-          transform: translateX(-20%);
-          height: 110%;
-          background-color: $primary-background-color;
-        }
-      }
+      }      
 
       .map {
         height: 50vw;

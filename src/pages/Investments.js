@@ -9,58 +9,60 @@ import CompanyPresentation from "./../components/CompanyPresentation/CompanyPres
 import OurLocationsBlock from "../components/OurLocationsBlock/OurLocationsBlock";
 import ScrollToTop from './../components/shared/ScrollToTop'
 import ScrollAnimation from 'react-animate-on-scroll'
+import ProfitCalc from "../components/ProfitCalc";
 
 export default function Investments(props) {
-  useState( () => {
+  useState(() => {
     window.scrollTo(0, 0);
   }, [])
 
   return (
     <div>
-      
+
       <ScrollToTop />
 
       <CompanyPresentation
-        type={3}
-        title="Наша спільна ціль в бізнесі"
-        text={
-          <>
+        title={
+          <h1 className="company-presentation__title title--align">Наша спільна ціль в бізнесі</h1>
+        }
+        info={
+          <div className="company-presentation__info">
             <StyledListItem
-              style={{ alignItems: "center" }}
+              style={{ alignItems: "center", marginTop: "20px"}}
               iconUrl="./icons-sprite.svg#point_icon"
               title={false}
               text="Якість, швидкість, сервіс та бажання відкривати нові можливості є фундаментом нашої компанії."
             />
             <StyledListItem
-              style={{ alignItems: "center" }}
+              style={{ alignItems: "center", marginTop: "20px" }}
               iconUrl="./icons-sprite.svg#point_icon"
               title={false}
               text="Ваша інвестиція з часом зростає у вартості, як і зростає попит до парку чи локації."
             />
             <StyledListItem
-              style={{ alignItems: "center" }}
+              style={{ alignItems: "center", marginTop: "20px" }}
               iconUrl="./icons-sprite.svg#point_icon"
               title={false}
               text="Збільшення кількості гостей в парках та локаціях шляхом власної вдосконаленості та реагуванням на попит і зміни ринку."
             />
             <StyledListItem
-              style={{ alignItems: "center" }}
+              style={{ alignItems: "center", marginTop: "20px" }}
               iconUrl="./icons-sprite.svg#point_icon"
               title={false}
               text="Диверсифікація інвестиції."
             />
-          </>
+          </div>
         }
         img="./img/invesments-top-block.png"
       />
-      
+
       <ScrollAnimation
         animateIn="fadeIn"
         animateOnce={true}>
         <SliderWithBackground slides={[
           [<div key={1}>
             <div className="slider-with-bg__slider-img">
-              <img src="./img/1730.png" alt="slide"/>
+              <img src="./img/1730.png" alt="slide" />
             </div>
             <div className="slider-with-bg__slider-title">Інвестиційні плани</div>
             <p className="slider-with-bg__slider-text">
@@ -90,7 +92,7 @@ export default function Investments(props) {
           </div>],
           [<div key={2}>
             <div className="slider-with-bg__slider-img">
-              <img src="./img/1586.png" alt="slide"/>
+              <img src="./img/1586.png" alt="slide" />
             </div>
             <div className="slider-with-bg__slider-title">Інвестиційні плани</div>
             <p className="slider-with-bg__slider-text">
@@ -120,7 +122,7 @@ export default function Investments(props) {
           </div>],
           [<div key={3}>
             <div className="slider-with-bg__slider-img">
-              <img src="./img/3054.png" alt="slide"/>
+              <img src="./img/3054.png" alt="slide" />
             </div>
             <div className="slider-with-bg__slider-title">Інвестиційні плани</div>
             <p className="slider-with-bg__slider-text">
@@ -152,6 +154,12 @@ export default function Investments(props) {
         ]} />
       </ScrollAnimation>
 
+      <ScrollAnimation
+        animateIn="fadeIn"
+        animateOnce={true}>
+          <ProfitCalc currency="€"/>
+      </ScrollAnimation>
+
 
       <ScrollAnimation
         animateIn="fadeIn"
@@ -162,44 +170,43 @@ export default function Investments(props) {
           mediaType="img"
           mediaPosition="right"
           imgUrl="./img/crm.png"
-          mainContent={[
-            <p>
-              Розуміючи переваги, які надають сучасні технології, ми розробили CRM- систему, з якою власник будинку може керувати своїм майном та коштами.
-            </p>,
-            <p style={{ fontWeight: "bold" }}>
-              MARKSEM СRМ виконає для вас наступні функції:
-            </p>,
-            <StyledList
-              iconUrl="./icons-sprite.svg#box-check-icon"
-              items={[
-                {
-                  text: "Календар проживання, надходження коштів"
-                },
-                {
-                  text: "Аналітична звітність в періоді. Дохід /витрати, завантаження, рентабельність"
-                },
-                {
-                  text: "Оплата по лічильникам, сервіс, інші договірні зобов’язання"
-                },
-                {
-                  text: "Бронювання дат, замовлення послуг і товарів до вашого приїзду"
-                },
-                {
-                  text: "Індивідуальний менеджер, інформування про події, проекти та можливості"
-                },
-                {
-                  text: "Історія всіх документів, дій та операцій з вашим будинком"
-                }
-              ]}
-            />
-          ]}
-        />
+        >
+          <p>
+            Розуміючи переваги, які надають сучасні технології, ми розробили CRM- систему, з якою власник будинку може керувати своїм майном та коштами.
+            </p>
+          <p style={{ fontWeight: "bold" }}>
+            MARKSEM СRМ виконає для вас наступні функції:
+            </p>
+          <StyledList
+            iconUrl="./icons-sprite.svg#box-check-icon"
+            items={[
+              {
+                text: "Календар проживання, надходження коштів"
+              },
+              {
+                text: "Аналітична звітність в періоді. Дохід /витрати, завантаження, рентабельність"
+              },
+              {
+                text: "Оплата по лічильникам, сервіс, інші договірні зобов’язання"
+              },
+              {
+                text: "Бронювання дат, замовлення послуг і товарів до вашого приїзду"
+              },
+              {
+                text: "Індивідуальний менеджер, інформування про події, проекти та можливості"
+              },
+              {
+                text: "Історія всіх документів, дій та операцій з вашим будинком"
+              }
+            ]}
+          />
+        </ImageTextBlock>
       </ScrollAnimation>
 
 
       <ScrollAnimation
-         animateIn="fadeIn"
-         animateOnce={true}>
+        animateIn="fadeIn"
+        animateOnce={true}>
         <OurLocationsBlock
           mainTitle="Локації MARKSEM"
           imgs={[
@@ -214,7 +221,7 @@ export default function Investments(props) {
             "222Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat.",
             "333Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat.",
             "444Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat."
-            ]}
+          ]}
         />
       </ScrollAnimation>
 

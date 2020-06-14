@@ -1,0 +1,36 @@
+.checkbox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+  .label-text {
+    padding-right: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  &-container {
+    position: relative;
+
+    input {
+      display: none;
+    }
+    .custom-checkbox {
+      position: relative;
+      display: block;
+      border: 2px solid rgba(0, 0, 0, 0.808);
+      border-radius: 5px;
+    }
+    .checkmark-icon {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    input:checked ~ .checkmark-icon {
+      display: block;
+    }
+  }
+}

@@ -159,12 +159,11 @@ const ContactFormVanila = ({
                       </div>
                     }
                   </div>
-
                 </div>
 
                 <div className="form-submit-button" >
                   <Button
-                    type="main"
+                    classList="btn-main"
                     text="Надіслати"
                     onClick={handleSubmit}
                   />

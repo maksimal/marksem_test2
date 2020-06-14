@@ -39,57 +39,55 @@ export default function Contacts(props) {
         </a>
       </div>
 
-
-
-
       <ScrollToTop />
 
       <div className="contacts-header" style={{ backgroundImage: `url(./img/sky.png)` }}>
         <div className="container">
-          <h1 className="contacts-main-title">Контактна <br/> інформація</h1>
+          <h1 className="contacts-main-title">Контактна <br /> інформація</h1>
         </div>
       </div>
 
       <ScrollAnimation
-        animateIn="fadeIn"           
+        animateIn="fadeIn"
         animateOnce={true}>
         <ImageTextBlock
           style="1"
           title="Зацікавлені в співпраці з нами?"
           mediaType="img"
+          isBackground={true}
           mediaPosition="right"
           imgUrl="./img/contacts1.png"
           actionOnClick={() => console.log("click")}
           actionElementType="button"
           actionElementText="Contact us"
           actionElementAlign="bottom"
-          mainContent={[
+        >
+          <p style={{ fontWeight: "bold", textTransform: "uppercase" }}>
+            Ми відкриті до пропозицій та раді співпраці з іншими компаніями.
+              </p>
             <p style={{ fontWeight: "bold", textTransform: "uppercase" }}>
-              Ми відкриті до пропозицій та раді співпраці з іншими компаніями.
-              </p>,
-            <p style={{ fontWeight: "bold", textTransform: "uppercase" }}>
-              Пропонуємо вигідні умови компаніям з таких галузей:
-              </p>,
+            Пропонуємо вигідні умови компаніям з таких галузей:
+              </p>
             <StyledListItem
-              style={{ textTransform: "uppercase", alignItems: "center" }}
-              iconUrl="./icons-sprite.svg#plane"
-              iconSize={44}
-              text="Туроператори"
-            />,
+            style={{ textTransform: "uppercase", alignItems: "center" }}
+            iconUrl="./icons-sprite.svg#plane"
+            iconSize={44}
+            text="Туроператори"
+          />
             <StyledListItem
-              style={{ textTransform: "uppercase", alignItems: "center" }}
-              iconUrl="./icons-sprite.svg#plant"
-              iconSize="44"
-              text="Власники земель"
-            />,
+            style={{ textTransform: "uppercase", alignItems: "center" }}
+            iconUrl="./icons-sprite.svg#plant"
+            iconSize="44"
+            text="Власники земель"
+          />
             <StyledListItem
-              style={{ textTransform: "uppercase", alignItems: "center" }}
-              iconUrl="./icons-sprite.svg#bell_icon"
-              iconSize="44"
-              text="Компанії з надання товарів та послуг"
-            />
-          ]}
-        />
+            style={{ textTransform: "uppercase", alignItems: "center" }}
+            // iconUrl="./img/icons/bell_icon.png"
+            iconPNGUrl="./img/icons/bell_icon.png"
+            iconSize="44"
+            text="Компанії з надання товарів та послуг"
+          />
+        </ImageTextBlock>
       </ScrollAnimation>
 
 
@@ -188,11 +186,11 @@ export default function Contacts(props) {
               answer={[
                 "MARKSEM СRМ виконає для вас наступні функції:",
                 <p>
-                  - календар проживання, надходження коштів; <br/>
-                  -	аналітична звітність: дохід/витрати, завантаження, рентабельність; <br/>
-                  -	оплата по лічильникам, сервіс, інші договірні зобов’язання; <br/>
-                  - бронювання дат, замовлення послуг і товарів до вашого приїзду; <br/>
-                  - індивідуальний менеджер, інформування про події, проекти та можливості; <br/>
+                  - календар проживання, надходження коштів; <br />
+                  -	аналітична звітність: дохід/витрати, завантаження, рентабельність; <br />
+                  -	оплата по лічильникам, сервіс, інші договірні зобов’язання; <br />
+                  - бронювання дат, замовлення послуг і товарів до вашого приїзду; <br />
+                  - індивідуальний менеджер, інформування про події, проекти та можливості; <br />
                   -	історія всіх документів, дій та операцій з вашим будинком.
                 </p>
               ]}
@@ -282,12 +280,12 @@ export default function Contacts(props) {
               queston="Що входить у комплекс послуг по догляду за будинком?"
               answer={[
                 <p>
-                  - прибирання будинку та прилеглої території; <br/>
-                  -	необхідні ремонтні роботи; <br/>
-                  -	поновлення всіх витратних матеріалів та засобів гігієни;  <br/>
-                  -	прання постільної білизни, рушників, тощо;  <br/>
-                  - індивідуальний менеджер, інформування про події, проекти та можливості; <br/>
-                  -	інші послуги за індивідуальним запитом. 
+                  - прибирання будинку та прилеглої території; <br />
+                  -	необхідні ремонтні роботи; <br />
+                  -	поновлення всіх витратних матеріалів та засобів гігієни;  <br />
+                  -	прання постільної білизни, рушників, тощо;  <br />
+                  - індивідуальний менеджер, інформування про події, проекти та можливості; <br />
+                  -	інші послуги за індивідуальним запитом.
                 </p>
               ]}
             />

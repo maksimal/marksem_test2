@@ -1,7 +1,7 @@
 footer {
     min-height: 100px;
-    color: #fff;
-    background-color: #061229;
+    color: #171A27;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,12 +15,13 @@ footer {
             font-size: 16px;
             font-weight: 700;
             text-transform: uppercase;
-            color: #fff;
+            color: #171A27;
             margin-bottom: 35px;
         }
         .description {
             font-size: 14px;
             margin-top: 12px;
+            font-weight: 500;
         }
     }
 
@@ -43,8 +44,9 @@ footer {
             padding-right: 10px;
             a {
                 font-size: 14px;
-                color: #fff;
+                color: #171A27;
                 line-height: 35px;
+                font-weight: 500;
             }
             .title-links {
                 font-size: 16px;
@@ -69,12 +71,13 @@ footer {
         .credentials-text {
             font-size: 14px;
             line-height: 30px;
+            font-weight: 500;
         }
         .credentials-links {
             display: flex;
             justify-content: center;
             a {
-                color: #fff;
+                color: #171A27;
                 font-size: 14px;
                 font-weight: bold;
                 text-decoration: underline;
@@ -83,7 +86,7 @@ footer {
             }
 
             .separator {
-                background-color: #fff;
+                background-color: #171A27;
                 width: 1px;
                 height: 20px;
                 transform: (translate(0, 5px));

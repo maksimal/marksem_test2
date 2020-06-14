@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import Button from './../shared/Button/Button'
 import Swiper from 'react-id-swiper'
 import './OurLocationsBlock.css'
@@ -6,7 +6,6 @@ import './OurLocationsBlock.scss'
 import './media.scss'
 
 const OurLocationsBlock = ({ mainTitle, imgs, mainText, locationText }) => {
-    
     const [swiperLocation, setSwiperLocation] = useState(null)
     const [textDisplayed, setTextDisplayed] = useState(0)
 
@@ -17,7 +16,7 @@ const OurLocationsBlock = ({ mainTitle, imgs, mainText, locationText }) => {
             </div>
         )
     })
-   
+
     const sliderParams = {
         loop: false,
         centeredSlides: true,
@@ -27,31 +26,21 @@ const OurLocationsBlock = ({ mainTitle, imgs, mainText, locationText }) => {
             el: '.swiper-pagination',
             type: 'bullets',
             clickable: true
-        },
-        // navigation: {
-        //     nextEl: '.swiper-button-next',
-        //     prevEl: '.swiper-button-prev'
-        // }
+        }
     }
 
     const goNext = () => {
-        console.log('pushed')
-        if(swiperLocation !== null) {
-            if(textDisplayed < locationText.length-1) {
-                swiperLocation.slideNext();
-                setTextDisplayed(textDisplayed + 1)
-            }
-        }
+        swiperLocation.slideNext();
+        setTimeout(()=> {
+            setTextDisplayed(swiperLocation.activeIndex)
+        },200)
     }
 
     const goPrev = () => {
-        console.log('pushed')
-        if(swiperLocation !== null) {
-            if(textDisplayed > 0) {
-                swiperLocation.slidePrev();
-                setTextDisplayed(textDisplayed - 1)
-            }
-        }
+        swiperLocation.slidePrev();
+        setTimeout(()=>{
+            setTextDisplayed(swiperLocation.activeIndex)
+        },200)
     }
 
     return(
@@ -63,7 +52,7 @@ const OurLocationsBlock = ({ mainTitle, imgs, mainText, locationText }) => {
                 <div className="our-location-block-content">
                     <div className="slider">         
                         <div onClick={goPrev} className="swiper-button-prev-custom"></div>            
-                        <Swiper {...sliderParams} getSwiper={setSwiperLocation}>
+                        <Swiper {...sliderParams} getSwiper={setSwiperLocation} >
                                 {images}
                         </Swiper>
                         <div onClick={goNext} className="swiper-button-next-custom"></div>

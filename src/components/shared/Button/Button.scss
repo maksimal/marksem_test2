@@ -4,8 +4,8 @@
     min-width: 281px;
     padding: 14px 30px;
     font-weight: 500;
-    font-size: 24px;
-    line-height: 42px;
+    font-size: 21px;
+    line-height: 26px;
 }
 
 @mixin button-medium {
@@ -85,6 +85,20 @@
     padding-right: 15px;
     margin-left: 10px;
     align-self: center;
+}
+
+.btn-simple {
+    width: 140px;
+    height: 40px;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid $primary-color;
+    font-weight: 500;
+}
+
+.btn-simple.active {
+    color: #fff;
+    background-color: $primary-color;
 }
 
 .btn-pagenotfound-back, .btn-pagenotfound-home {

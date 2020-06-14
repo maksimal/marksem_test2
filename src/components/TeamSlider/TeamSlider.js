@@ -16,13 +16,13 @@ function TeamSlider({
     spaceBetween: 20,
     centeredSlides: true,
     breakpoints: {
-        320: {
-          slidesPerView: 1
-        },
-        980: {
-          slidesPerView: 3
-        }
+      320: {
+        slidesPerView: 1
+      },
+      980: {
+        slidesPerView: 3
       }
+    }
   };
 
   const [swiper, setSwiper] = useState(null);
@@ -56,24 +56,25 @@ function TeamSlider({
                       <p className="member-role">{role}</p>
                       <div className="member-links">
                         {facebookLink &&
-                          <a href={facebookLink}>
+                          <a href={facebookLink} className="member-links-icon">
                             <svg width={16} height={16}>
-                              <use href="./icons-sprite.svg#icon-facebook"/>
+                              <use href="./icons-sprite.svg#icon-facebook" />
                             </svg>
                           </a>
                         }
                         {linkdInLink &&
-                          <a href={linkdInLink}>
+                          <a href={linkdInLink} className="member-links-icon">
                             <svg width={16} height={16}>
-                              <use href="./icons-sprite.svg#icon-linkedin"/>
+                              <use href="./icons-sprite.svg#icon-linkedin" />
                             </svg>
                           </a>
                         }
-                        {instagramLink && <a href={instagramLink}>
-                        <svg width={16} height={16}>
-                              <use href="./icons-sprite.svg#icon-instagram"/>
+                        {instagramLink &&
+                          <a href={instagramLink} className="member-links-icon">
+                            <svg width={16} height={16}>
+                              <use href="./icons-sprite.svg#icon-instagram" />
                             </svg>
-                        </a>
+                          </a>
                         }
                       </div>
                     </div>

@@ -7,8 +7,13 @@
   box-sizing: border-box;
 }
 
+// Удали меня
+// * {
+//   border: 1px solid rgba(0, 0, 0, 0.089);
+// }
+
 html {
-  overflow-y: scroll; 
+  overflow-y: scroll;
   overflow-x: hidden;
 }
 a {
@@ -31,11 +36,13 @@ textarea,
 input[type="text"],
 input[type="button"],
 input[type="submit"] {
-     -webkit-appearance: none;
-     border-radius: 0;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
-input:focus, textarea:focus, button:focus {
+input:focus,
+textarea:focus,
+button:focus {
   outline: none;
 }
 
@@ -53,7 +60,7 @@ button {
 }
 
 .container {
-  width: 1180px;
+  width: 1280px;
   margin: 0 auto;
   position: relative;
 }
@@ -71,11 +78,11 @@ button {
   h1 {
     font-size: 24px;
   }
-  
+
   h2 {
     font-size: 22px;
   }
-  
+
   h3 {
     font-size: 20px;
   }
@@ -93,12 +100,13 @@ button {
   h1 {
     font-size: 20px;
   }
-  
+
   h2 {
     font-size: 18px;
   }
-  
+
   h3 {
     font-size: 16px;
   }
 }
+

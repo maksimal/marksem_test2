@@ -42,8 +42,7 @@ const ContactFormSection = ({
           />
 
           <div className="contacts">
-            <h2>{contactListTitle}</h2>
-            <div className="background-wrapper">
+            <h2>{contactListTitle}</h2>            
               <ul className="contacts-list">
                 <li className="contacts-list__item">
                   <svg className="contacts-list__icon">
@@ -70,7 +69,6 @@ const ContactFormSection = ({
               >
                 {/* <MyMap /> */}
               </div>
-            </div>
           </div>
         </div>
       </div>

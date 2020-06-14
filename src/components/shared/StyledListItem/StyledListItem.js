@@ -3,6 +3,7 @@ import "./StyledListItem.scss";
 
 export default function StyledListItem(
   {
+    iconPNGUrl,
     iconUrl,
     iconSize = 30,
     title,
@@ -14,9 +15,13 @@ export default function StyledListItem(
     <div className="styled-list-item" {...props}>
       <div className="styled-list-item__icon-container">
         <div className="styled-list-item__icon">
-          <svg width={iconSize} height={iconSize}>
-            <use href={iconUrl}/>
-          </svg>
+          {/* Костыл! Решить проблему с этой svg иконкой и убрать */}
+          {iconPNGUrl && <img src={iconPNGUrl} />}
+          {!iconPNGUrl &&
+            <svg width={iconSize} height={iconSize}>
+              <use href={iconUrl} />
+            </svg>
+          }
         </div>
       </div>
       <div className="styled-list-item__text-container">

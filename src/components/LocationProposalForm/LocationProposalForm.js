@@ -83,7 +83,7 @@ const LocationProposalForm = ({
               <div style={{ textAlign: "right" }}>
                 <Button
                   text="Send"
-                  type="secondary"
+                  classList="btn btn-secondary"
                   onClick={handleSubmit}
                 />
               </div>

@@ -13,18 +13,18 @@ const InfoCardList = (props) => {
     }
 
     return(
-        <div className="container">
-            <div className="InfoCardList">
-
+        <div className="InfoCardList">
+            <div className="container">
                 <div className="InfoCardList-wrapper">
                     <h2 className={`main-title ${ type === 1 ? "main-title-type1" : "main-title-type2"}`}>{mainTitle}</h2>
                     <div className="cards-list">
                         {[...infoCards]}
                     </div>
                     <Button classList={'btn-main'} text={btnText} onClick={editMe}/>
-                    <div className={`InfoCardList-background ${ type === 1 ? "InfoCardList-background-type1" : "InfoCardList-background-type2"}`}></div>
+                    {/* <div className={`InfoCardList-background ${ type === 1 ? "InfoCardList-background-type1" : "InfoCardList-background-type2"}`}></div> */}
                 </div>
             </div>
+            <div className={`InfoCardList-background ${ type === 1 ? "InfoCardList-background-type1" : "InfoCardList-background-type2"}`}></div>
         </div>
     )
 }

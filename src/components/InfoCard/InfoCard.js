@@ -8,15 +8,15 @@ const InfoCard = (props) => {
 
     return(
         <div className={`card-item card-item-type${type}`}>
-        <div className={`card-image card-image-type${type}`}>
-            <img src={img} alt="card"></img>
+            <div className={`card-image card-image-type${type}`}>
+                <img src={img} alt="card"></img>
+            </div>
+            <div className="card-text-wrapper">
+                <p className={`card-title card-title-type${type}`}>{title}</p>
+                <p className={`card-text card-text-type${type}`}>{text}</p>
+                {linkText ? <StyledLink linkText={linkText} linkURL={linkURL} /> : null}
+            </div>
         </div>
-        <div className="card-text-wrapper">
-            <p className={`card-title card-title-type${type}`}>{title}</p>
-            <p className={`card-text card-text-type${type}`}>{text}</p>
-            {linkText ? <StyledLink linkText={linkText} linkURL={linkURL} /> : null}
-        </div>
-    </div>
     )
 }
 

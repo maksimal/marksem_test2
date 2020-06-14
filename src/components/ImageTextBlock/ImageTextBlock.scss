@@ -8,41 +8,8 @@
 .image-text-block {
   margin: 160px auto;
 
-  .background {
-    background-color: $primary-background-color;
-
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    &__style1-right {
-      left: 0;
-      width: 85%;
-    }
-    &__style1-left {
-      width: 85%;
-      right: 0;
-    }
-    &__style2-left {
-      left: 500px;
-      right: 0;
-    }
-    &__style2-right {
-      left: 0;
-      right: 500px;
-    }
-    &__style3-right,
-    &__style3-left {
-      left: 0;
-      right: 0;
-    }
-    &__style4-right {
-      left: 300px;
-      right: 0;
-    }
-    &__style4-left {
-      left: 0;
-      right: 300px;
-    }
+  &_background {
+    background: linear-gradient(to bottom, #E2F2FF, transparent);
   }
 
   &__content {

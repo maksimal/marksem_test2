@@ -21,7 +21,7 @@ function SubscribeForm({placeholder, btnText}) {
       <Button
         type="secondary"
         text={btnText}
-        classList="subscribe-form__submit"
+        classList="btn btn-secondary subscribe-form__submit"
         onClick={_handlerSubmit}
       />
     </form>

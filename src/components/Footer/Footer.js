@@ -56,7 +56,6 @@ const Footer = () => {
               <svg width="11" height="20">
                 <use href="./icons-sprite.svg#icon-facebook" />
               </svg>
-              {/* <img src="./img/social-icons/facebook.svg" alt="facebook social"></img> */}
             </a>
           </li>
           <li>
@@ -64,7 +63,6 @@ const Footer = () => {
               <svg width="19" height="20">
                 <use href="./icons-sprite.svg#icon-linkedin" />
               </svg>
-              {/* <img src="./img/social-icons/linkedin.svg" alt="facebook social"></img> */}
             </a>
           </li>
           <li>
@@ -72,7 +70,6 @@ const Footer = () => {
               <svg width="20" height="17">
                 <use href="./icons-sprite.svg#icon-twitter" />
               </svg>
-              {/* <img src="./img/social-icons/twitter.svg" alt="facebook social"></img> */}
             </a>
           </li>
           <li>
@@ -80,7 +77,6 @@ const Footer = () => {
               <svg width="23" height="17">
                 <use href="./icons-sprite.svg#icon-youtube" />
               </svg>
-              {/* <img src="./img/social-icons/youtube.svg" alt="facebook social"></img> */}
             </a>
           </li>
         </ul>

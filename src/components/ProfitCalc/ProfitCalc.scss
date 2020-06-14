@@ -1,0 +1,144 @@
+@import '../../variables.scss';
+
+.profit-calc {
+    margin-top: 150px;
+    margin-bottom: 100px;
+    position: relative;
+    font-size: 18px;
+    color: #000;
+
+    &__tabs {
+        display: flex;
+        justify-content: center;
+        margin: 40px 0 28px 0;
+    }
+
+    &__tab {
+        width: 240px;
+        height: 50px;
+        border: 1px solid $primary-color;
+        text-transform: uppercase;
+        color: #000;
+        text-align: center;
+        line-height: 50px;
+        font-weight: 500;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    &__tab.active {
+        color: #fff;
+        background-color: $primary-color;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 42px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #171A27;
+    }
+
+    &__info {
+        text-align: center;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin: 45px 0;
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 20px;
+    }
+
+    &__block>div {
+        width: 581px;
+    }
+
+    &__type-var {
+        color: $primary-color;
+        font-weight: 600;
+        text-decoration: underline;
+        padding-left: 20px;
+    }
+
+    &__title {
+        line-height: 42px;
+    }
+
+    &__rent-land {
+        & span {
+            padding: 6px 26px;
+            border: 1px solid #000;
+            line-height: 42px;
+        }
+    }
+
+    &__style {
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+    }
+
+    &__result-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);;
+    }
+
+    &__result {
+        width: 721px;
+        height: 497px;
+        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        background: #FFFFFF;
+        text-align: center;
+
+        .btn-close {
+            padding: 20px;
+            background: transparent;
+            cursor: pointer;
+            align-self: flex-end;
+
+            &:hover {
+                font-weight: bold;
+            }
+        }
+
+        .result-action {
+            align-self: center;
+        }
+    }
+
+    &__info {
+        height: 60%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &__month-result, &__year-result {
+        font-size: 24px;
+        text-transform: uppercase;
+
+        & strong {
+            font-size: 27px;
+        }
+    }
+
+    .calc-action {
+        margin: 70px auto 0;
+    }
+}
