@@ -18,12 +18,12 @@
           "bathrooms": "1",
           "planning_price": "1000",
           "image_urls": [
-            "/img/house-builder/mobile-houses/M-2/Planing/classic/1.JPG",
-            "/img/house-builder/mobile-houses/M-2/Planing/classic/1.JPG",
-            "/img/house-builder/mobile-houses/M-2/Planing/classic/1.JPG",
-            "/img/house-builder/mobile-houses/M-2/Planing/classic/1.JPG",
-            "/img/house-builder/mobile-houses/M-2/Planing/classic/1.JPG",
-            "/img/house-builder/mobile-houses/M-2/Planing/classic/1.JPG"
+            "img/house-builder/mobile-houses/M-2/Planing/classic/1.JPG",
+            "img/house-builder/mobile-houses/M-2/Planing/classic/1.JPG",
+            "img/house-builder/mobile-houses/M-2/Planing/classic/1.JPG",
+            "img/house-builder/mobile-houses/M-2/Planing/classic/1.JPG",
+            "img/house-builder/mobile-houses/M-2/Planing/classic/1.JPG",
+            "img/house-builder/mobile-houses/M-2/Planing/classic/1.JPG"
           ]
         },
         {
