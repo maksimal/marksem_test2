@@ -1,0 +1,10 @@
+.tip-modal {
+  text-align: center;
+  padding: 75px 30px;
+  &-icon {
+    margin: 0 5px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

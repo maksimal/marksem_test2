@@ -1,74 +1,64 @@
 import React, { useState } from 'react';
 import Swiper from 'react-id-swiper'
 import './PhotoForConstructor.scss';
-import { useSelector } from 'react-redux';
+import Modal from './../Modal/Modal';
+import { useEffect } from 'react';
 
 const PhotoForConstructor = ({
-  images,
+  images=[],
   title
 }) => {
   const [mainPictureNumber, setMainPictureNumber] = useState(0);
   const [showPopup, setShowPopup] = useState(false);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
-  const sliderThumbsParams = { 
-    spaceBetween: 10,
-    slidesPerView: 8,
-    loop: true,
-    freeMode: true,
-    loopedSlides: 5, //looped slides should be the same
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-    onInit: (swiper) => {
-      console.log('SWIPER' + swiper)
-      setThumbsSwiper(swiper)
-    }
-  }
+  const [topSwiper, setTopSwiper] = useState(null);
 
   const sliderTopParams = {
+    getSwiper: setTopSwiper,
     loop: true,
-    centeredSlides: true,
+    loopedSlides: 8,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
-    },
-    thumbs: {
-      swiper: thumbsSwiper,
     }
+  };
+
+  const sliderThumbsParams = {
+    getSwiper: setThumbsSwiper,
+    spaceBetween: 10,
+    centeredSlides: true,
+    slidesPerView: 8,
+    loop: true,
+    loopedSlides: 8,
+    touchRatio: 0.2,
+    slideToClickedSlide: true
   }
 
-  console.log("thumbs " + thumbsSwiper)
-  // const sliderTopParams = {
-  //   loop: true,
-  //   centeredSlides: true,
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     type: 'bullets',
-  //     clickable: true
-  //   },
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev'
-  //   },
-  //   thumbs: {
-  //     swiper: sliderThumbsParams,
-  //   }
-  // }
 
-
+  useEffect(() => {
+    if (
+      topSwiper !== null &&
+      topSwiper.controller &&
+      thumbsSwiper !== null &&
+      thumbsSwiper.controller
+    ) {
+      topSwiper.controller.control = thumbsSwiper;
+      thumbsSwiper.controller.control = topSwiper;
+    }
+  }, [topSwiper, thumbsSwiper]);
 
   const mainImageHandler = (index) => {
     setMainPictureNumber(index)
   }
 
   const popupHandler = () => {
-    setShowPopup( !showPopup)
+    setShowPopup(!showPopup)
   }
 
   const imageBlocks = images.map((item, index) => {
     if (index < 4) {
       return (
-        <div key={index} onClick={mainImageHandler.bind(null, index)} className="photoForConstructor-photo-list-one-photo">
+        <div key={index} onClick={(mainImageHandler.bind(null, index))} className="photoForConstructor-photo-list-one-photo">
           <img src={item} alt="Secondary constructor image" />
         </div>
       )
@@ -83,7 +73,6 @@ const PhotoForConstructor = ({
     )
   })
 
-
   return (
     <>
       <div className="photoForConstructor">
@@ -97,30 +86,30 @@ const PhotoForConstructor = ({
           <p>{`+${images.length - 4}`}</p>
         </div> : null}
       </div>
-      {showPopup ? <div className="photoForConstructor-preview-photo">
-        <div className="photoForConstructor-preview-photo-wrapper">
-          <div className="photoForConstructor-preview-photo-wrapper-info">
-            <p className="photoForConstructor-preview-photo-wrapper-info-header">
-              {title}
-            </p>
-            <div onClick={popupHandler} className="photoForConstructor-preview-photo-info-wrapper-close-btn">
-              <svg width="16" height="16">
-                <use href="./icons-sprite.svg#constructor-modal-close-icon" />
-              </svg>
+      {
+        showPopup &&
+        <Modal
+          width="90%"
+          onClose={popupHandler}
+        >
+          <div className="photoForConstructor-preview-photo-wrapper">
+            <div className="photoForConstructor-preview-photo-wrapper-info">
+              <p className="photoForConstructor-preview-photo-wrapper-info-header">
+                {title}
+              </p>
             </div>
+
+            <Swiper {...sliderTopParams}>
+              {sliderImageBlocks}
+            </Swiper>
+
+            <Swiper {...sliderThumbsParams}>
+              {sliderImageBlocks}
+            </Swiper>
           </div>
-
-          <Swiper {...sliderTopParams}>
-            {sliderImageBlocks}
-          </Swiper>
-
-          <Swiper {...sliderThumbsParams} getSwiper={setThumbsSwiper}>
-            {sliderImageBlocks}
-          </Swiper>
-        </div>
-      </div> :
-        null
+        </Modal>
       }
+
     </>
   )
 }

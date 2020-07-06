@@ -1,5 +1,4 @@
 .constructor {
-  max-height: 1000px;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   &-hidden {
@@ -8,6 +7,8 @@
 }
 .selected-house-data {
   display: flex;
+  flex: 0 0 630px;
+  margin-right: 60px;
   flex-direction: column;
   .selected-house-values {
     .house-type {
@@ -53,6 +54,7 @@
   justify-content: space-between;
   .colorgroup-wrapper {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
 }
@@ -69,5 +71,67 @@
     font-weight: bold;
     margin-bottom: 15px;
     margin-top: 25px;
+  }
+}
+
+.house-main-props {
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: space-around;
+  &-icon {
+    width: 80px;
+    height: 80px;
+    border: 5px solid #ff9781;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    &-number {
+      width: 15px;
+      font-size: 27px;
+      margin-right: 3px;
+    }
+  }
+}
+
+.confirm-house-modal {
+  padding: 30px 60px;
+  &__title {
+    color: #254A93;
+    font-size: 27px;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+  &__main-data {
+    display: flex;
+  }
+  &__description {
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__selected-options {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__option {
+    padding-bottom: 20px;
+  }
+  &__option-value {
+    color: #254A93;
+    text-transform: uppercase;
+    font-weight: bold;
+
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__price {
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 27px;
+    background-color: #EDF3F8;
   }
 }

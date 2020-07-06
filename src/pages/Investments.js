@@ -10,6 +10,7 @@ import OurLocationsBlock from "../components/OurLocationsBlock/OurLocationsBlock
 import ScrollToTop from './../components/shared/ScrollToTop'
 import ScrollAnimation from 'react-animate-on-scroll'
 import ProfitCalc from "../components/ProfitCalc";
+import HexagonBadge from "../components/shared/HexagonBadge/HexagonBadge";
 
 export default function Investments(props) {
   useState(() => {
@@ -65,92 +66,55 @@ export default function Investments(props) {
               <img src="./img/1730.png" alt="slide" />
             </div>
             <div className="slider-with-bg__slider-title">Інвестиційні плани</div>
-            <p className="slider-with-bg__slider-text">
-              Все моє! Ви отримуєте 100% доходу від свого будинку. </p>
             <div className="slider-with-bg__slider-info">
-              <div className="slider-with-bg__slider-info__col1">
-                <StyledList
-                  iconUrl="./icons-sprite.svg#point_icon"
-                  items={[
-                    {
-                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-                    },
-                    {
-                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-                    },
-                    {
-                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-                    }
-                  ]}
-                />
-              </div>
-              <div className="slider-with-bg__slider-info__col2">
-                <PersentageIndicator progress={90} name="INDICATOR 1" />
-                <PersentageIndicator progress={40} name="INDICATOR 2" />
-              </div>
+              <PersentageIndicator progress={75}/>
+                <img className="slider-with-bg__img" src="./img/3690.png" alt="slide"/>
+                <div className="slider-with-bg__badge-container">
+                  <HexagonBadge style={{top: "30px", left: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
+                  <HexagonBadge style={{top: "30px", right: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
+                  <HexagonBadge style={{top: "142px", left: "-10px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
+                  <HexagonBadge style={{top: "142px", right: "-10px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
+                  <HexagonBadge style={{top: "250px", left: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
+                  <HexagonBadge style={{top: "250px", right: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
+                </div>
             </div>
           </div>],
           [<div key={2}>
             <div className="slider-with-bg__slider-img">
-              <img src="./img/1586.png" alt="slide" />
+              <img src="./img/1730.png" alt="slide" />
             </div>
             <div className="slider-with-bg__slider-title">Інвестиційні плани</div>
-            <p className="slider-with-bg__slider-text">
-              70% спочатку. Перший внесок 70% від вартості вибраного вами будинку. Перевага в тому, що відсутні жодні відсотки чи штрафи, ви сплачуєте решту за будинок тоді, коли він здається по принципу 50%/50% від оренди.</p>
             <div className="slider-with-bg__slider-info">
-              <div className="slider-with-bg__slider-info__col1">
-                <StyledList
-                  iconUrl="./icons-sprite.svg#point_icon"
-                  items={[
-                    {
-                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-                    },
-                    {
-                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-                    },
-                    {
-                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-                    }
-                  ]}
-                />
-              </div>
-              <div className="slider-with-bg__slider-info__col2">
-                <PersentageIndicator progress={75} name="INDICATOR 1" />
-                <PersentageIndicator progress={70} name="INDICATOR 2" />
-              </div>
+              <PersentageIndicator progress={70}/>
+                <img className="slider-with-bg__img" src="./img/3690.png" alt="slide"/>
+                <div className="slider-with-bg__badge-container">
+                  <HexagonBadge style={{top: "30px", left: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
+                  <HexagonBadge style={{top: "30px", right: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
+                  <HexagonBadge style={{top: "142px", left: "-10px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
+                  <HexagonBadge style={{top: "142px", right: "-10px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
+                  <HexagonBadge style={{top: "250px", left: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
+                  <HexagonBadge style={{top: "250px", right: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
+                </div>
             </div>
           </div>],
           [<div key={3}>
             <div className="slider-with-bg__slider-img">
-              <img src="./img/3054.png" alt="slide" />
+              <img src="./img/1730.png" alt="slide" />
             </div>
             <div className="slider-with-bg__slider-title">Інвестиційні плани</div>
-            <p className="slider-with-bg__slider-text">
-              75% спочатку. Перший внесок 75% від вартості вибраного вами будинку. Перевага в тому, що відсутні жодні відсотки чи штрафи, ви сплачуєте решту за будинок тоді, коли він здається.
-        </p>
             <div className="slider-with-bg__slider-info">
-              <div className="slider-with-bg__slider-info__col1">
-                <StyledList
-                  iconUrl="./icons-sprite.svg#point_icon"
-                  items={[
-                    {
-                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-                    },
-                    {
-                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-                    },
-                    {
-                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-                    }
-                  ]}
-                />
-              </div>
-              <div className="slider-with-bg__slider-info__col2">
-                <PersentageIndicator progress={35} name="INDICATOR 1" />
-                <PersentageIndicator progress={100} name="INDICATOR 2" />
-              </div>
+              <PersentageIndicator progress={100}/>
+                <img className="slider-with-bg__img" src="./img/3690.png" alt="slide"/>
+                <div className="slider-with-bg__badge-container">
+                  <HexagonBadge style={{top: "30px", left: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
+                  <HexagonBadge style={{top: "30px", right: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
+                  <HexagonBadge style={{top: "142px", left: "-10px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
+                  <HexagonBadge style={{top: "142px", right: "-10px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
+                  <HexagonBadge style={{top: "250px", left: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
+                  <HexagonBadge style={{top: "250px", right: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
+                </div>
             </div>
-          </div>]
+          </div>],
         ]} />
       </ScrollAnimation>
 

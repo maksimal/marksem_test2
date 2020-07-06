@@ -1,0 +1,55 @@
+.modal {
+  display: flex;
+  overflow-y: hidden;
+  width: 100%;
+  position: fixed;
+  top:0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  animation-name: modalFade;
+  animation-duration: 0.3s;
+  z-index: 2001;
+  &-backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2001;
+  }
+  &-inner {
+    max-width: 1280px;
+    z-index: 2001;
+    position: relative;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    .close-button {
+      position: absolute;
+      background-color: transparent;
+      top: 20px;
+      right: 20px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-open {
+  height: 100vh;
+  overflow-y: hidden;
+}

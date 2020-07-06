@@ -1,0 +1,20 @@
+.sticker {
+  position: relative;
+  width: 383px;
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 50px 30px;
+  }
+  .title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .text {
+    font-size: 18px;
+    text-align: left;
+  }
+}

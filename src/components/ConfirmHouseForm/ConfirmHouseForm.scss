@@ -1,0 +1,13 @@
+.confirm-house-form {
+  .form {
+    display: flex;
+    justify-content: space-between;
+  }
+  .form-field {
+    padding: 12px;
+    border: 1px solid grey;
+    &__error {
+      border: 1px solid red;
+    }
+  }
+}

@@ -12,6 +12,8 @@ const ColorsGroup = ({
   colors,
   className,
   houseType,
+  selectDefaultColor,
+  isGroupActive=true,
   ...attrs
 }) => {
 
@@ -19,7 +21,7 @@ const ColorsGroup = ({
   const activeHouseType = useSelector(({ selectedOptions }) => selectedOptions[houseType]);
 
   useEffect(() => {
-    dispatch(setOption(houseType, optionName, colors[0]))
+    selectDefaultColor && dispatch(setOption(houseType, optionName, colors[0]))
   }, []);
 
   const classes = clsx(
@@ -28,7 +30,7 @@ const ColorsGroup = ({
   )
 
   function getActiveOptionValue() {
-    activeHouseType && console.log(activeHouseType[optionName])
+    // activeHouseType && console.log(activeHouseType[optionName])
     return activeHouseType && activeHouseType[optionName]
   }
 
@@ -40,7 +42,7 @@ const ColorsGroup = ({
           <Color
             color={color}
             key={i}
-            isActive={color === getActiveOptionValue()}
+            isActive={color === getActiveOptionValue() && isGroupActive}
             onClick={() => dispatch(setOption(houseType, optionName, color))}
           />
         )}

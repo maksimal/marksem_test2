@@ -21,6 +21,15 @@ export default function Home(props) {
   }, [])
 
   console.log(props.openPageTitle)
+
+  function renderMainIdeaSection() {
+    return (
+      <div></div>
+    )
+  }
+
+
+
   return (
     <main>
 
@@ -47,15 +56,19 @@ export default function Home(props) {
         />
       </ScrollAnimation>
 
+
+
       <ScrollAnimation
         animateIn="fadeIn"
         animateOnce={true}>
         <ImageTextBlock
           type="1"
           title="Головна ідея"
+          enableFolding
+          enableMediaWrap
+          mainContentStyle={{display: "block"}}
           mediaType="video"
           mediaPosition="left"
-          mediaStyle={{ top: "25px" }}
           videoThumbnailUrl="./img/video_not_active.png"
           videoUrl="https://www.youtube.com/watch?v=9HDEHj2yzew"
         >

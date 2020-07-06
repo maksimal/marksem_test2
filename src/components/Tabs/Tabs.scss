@@ -10,7 +10,7 @@
 
 .tabs-nav {
   padding: 14px 50px;
-  border: 1px solid #0A254C;
+  border: 1px solid #254A93;
   text-align: center;
   flex-grow: 1;
   &:not(:last-child) {
@@ -23,7 +23,7 @@
     cursor: pointer;
   }
   &-active {
-    background-color: #0A254C;
+    background-color: #254A93;
     color: white;
   }
 }

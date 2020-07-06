@@ -1,0 +1,88 @@
+@import "../../../variables.scss";
+
+.hexagon-badge {
+    width: 206px;
+    height: 71px;
+    position: absolute;
+    padding: 5px 0;
+    background: #FFFFFF;
+    font-size: 18px;
+    line-height: 27px;
+    color: #373737;
+    text-align: center;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: -21px;
+      width: 41px;
+      height: 41px;
+      background: #FFFFFF;
+      transform: rotate(45deg) skew(12deg, 12deg);
+      box-shadow:0px 1px 8px rgba(0, 0, 0, 0.25);
+      z-index: -1;
+
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      right: -21px;
+      width: 41px;
+      height: 41px;
+      background: #FFFFFF;
+      transform: rotate(-45deg) skew(-12deg, -12deg);
+      box-shadow:0px 1px 8px rgba(0, 0, 0, 0.25);
+      z-index: -1;
+    }
+
+    &__bg-layer {
+        width: 206px;
+        height: 71px;
+        z-index: -2;
+        -webkit-clip-path: polygon(11% 0, 89% 0, 100% 50%, 89% 100%, 11% 100%, 0% 50%);
+        clip-path: polygon(11% 0, 89% 0, 100% 50%, 89% 100%, 11% 100%, 0% 50%);
+        background-color: $primary-color;
+    }
+
+    &__bg-layer--right {
+        position: absolute;
+        bottom: -16px;
+        right: -26px;
+    }
+
+    &__bg-layer--left {
+        position: absolute;
+        bottom: -16px;
+        left: -26px;
+    }
+
+    &__bsh-layer {
+        position: relative;
+
+        &:before {
+            content: "";
+            width: 203px;
+            height: 1px;
+            position: absolute;
+            top: -5px;
+            left: 0px;
+            z-index: -1;
+            box-shadow: 3px 0px 6px 1px rgba(0, 0, 0, 0.25);
+        }
+
+        &:after {
+            content: "";
+            width: 203px;
+            height: 1px;
+            position: absolute;
+            bottom: -66px;
+            left: 0px;
+            z-index: -1;
+            box-shadow: 3px 1px 8px 1px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+}

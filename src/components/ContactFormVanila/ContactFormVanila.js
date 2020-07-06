@@ -119,7 +119,6 @@ const ContactFormVanila = ({
                     className={!state.errors.name ? "form-field" : "form-field form-field__error"}
                   />
 
-
                   <input
                     onChange={handleChange}
                     value={state.values.email}
@@ -128,7 +127,6 @@ const ContactFormVanila = ({
                     placeholder="Email"
                     className="form-field"
                     className={!state.errors.email ? "form-field" : "form-field form-field__error"}
-
                   />
 
                   <input

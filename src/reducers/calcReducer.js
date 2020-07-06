@@ -1,6 +1,8 @@
 const defaultState = {
+  type: "Marksem M-2",
+  code: "01111",
   typePrice: 40000,
-  style: 'start',
+  style: "start",
   rentPrice: 90,
   useDays: 5,
   counterPrice: 7,
@@ -10,6 +12,16 @@ const defaultState = {
 
 export default function calculation(state = defaultState, action) {
   switch (action.type) {
+    case 'SET_TYPE':
+      return {
+        ...state,
+        type: action.payload
+      };
+      case 'SET_CODE':
+        return {
+          ...state,
+          code: action.payload
+        };
     case 'SET_TYPE_PTICE':
       return {
         ...state,

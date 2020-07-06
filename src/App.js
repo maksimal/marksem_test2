@@ -8,14 +8,21 @@ import Home from './pages/Home';
 import Investments from './pages/Investments';
 import WhyMarksem from './pages/WhyMarksem';
 import NotFound from './pages/NotFoundPage/NotFoundPage';
+import { setHousesData } from './actions/housesActions';
 // import './App.scss'
 
 //удали меня
 import Sandbox from "./pages/Sandbox"
 import { useDispatch, useSelector } from 'react-redux';
-import { setHousesData } from './actions/housesActions';
+
 
 export default function App(props) {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setHousesData());
+  }, [])
 
   return (
     <div className="App">

@@ -12,6 +12,7 @@ import Button from './../components/shared/Button/Button';
 import clsx from 'clsx';
 import { useState } from 'react';
 import  ToggleHouseBuilderButton  from './../components/ToggleHouseBuilderButton/ToggleHouseBuilderButton';
+import Modal from './../components/Modal/Modal';
 
 const Sandbox = () => {
 
@@ -20,13 +21,19 @@ const Sandbox = () => {
   useEffect(() => {
     dispatch(setHousesData())
   }, [])
+
+  const [modalOpen, setModalOpen] = useState(false)
   
   return (
-    <div className="container">
-      <div style={{ width: "100%", height: "300px", backgroundColor: "grey", position: "relative" }}>
-        <ToggleHouseBuilderButton text="Choose" buttonType="main" houseType="Marksem M-2" style={{ position: "absolute", bottom: "0", right: "0" }}/>
-      </div>
-      <Constructor houseType="Marksem M-2" />
+    <div >
+      <button onClick={()=>setModalOpen(true)} >Open modal</button>
+      <Modal
+        isOpen={modalOpen}
+        onClose={()=>setModalOpen(false)}
+        width="50%"
+      >
+        <p style={{padding: "20px", width: "50%"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla sint pariatur perferendis aliquam rem voluptas molestias? Commodi possimus repudiandae fugit!</p>
+      </Modal>
     </div>
   );
 }

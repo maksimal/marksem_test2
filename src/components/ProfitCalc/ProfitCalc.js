@@ -1,21 +1,90 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./ProfitCalc.scss";
 import Range from "../shared/Range";
 import Button from "../shared/Button/Button";
 import * as action from "../../actions/calcActions";
+import { setHousesData } from "../../actions/housesActions";
+import Modal from "../Modal/Modal";
 
-function ProfitCalc({currency}) {
+function ProfitCalc({ currency }) {
+  let tempType = useRef();
   const [tab, setTab] = useState("shared");
   const [profit, setProfit] = useState(null);
   const [showResult, setShowResult] = useState(false);
 
   const dispatch = useDispatch();
   const data = useSelector((state) => state.calculation);
+  const { houses: dataHouse } = useSelector((state) => state.housesData);
+
+  const dataPrice = dataHouse.map((house) => {
+    return {
+      type: house.houseType,
+      price: house.priceRange,
+    };
+  });
+
+  const getPriceRange = useCallback(() => {
+    const priceRange = dataPrice.map((house) => {
+      let min;
+      let max;
+
+      house.price.forEach((item) => {
+        if (item.type === "start") {
+          min = item.price;
+        }
+
+        if (item.type === "premium") {
+          max = item.price;
+        }
+      });
+
+      return { type: house.type, range: [min, max] };
+    });
+
+    return priceRange;
+  }, [dataPrice]);
+
+  const getHouseInRange = useCallback(value => {
+    let result;
+
+    try {
+      result = getPriceRange()
+        .find(item => value >= item.range[0] && value <= item.range[1])
+        .type;
+
+    } catch (error) {
+      console.info("No house in this range");
+    }
+
+    return result;
+
+  }, [getPriceRange]);
+
+  const setHouseInRange = useCallback(() => {
+    // debugger;
+    const price = getHouseInRange(data.typePrice);
+    dispatch(action.setType(price));
+    if(price){
+      tempType.current = price;
+    }
+    
+  }, [data.typePrice]);
 
   const togglePopup = () => {
     setShowResult(!showResult);
-  }
+  };
+
+  const handlePriceTypeClick = (type) => {
+    dispatch(action.setStyle(type));
+    dataPrice.forEach((item) => {
+      if (item.type === data.type) {
+        const typeOpts = item.price.find((element) => element.type === type);
+        dispatch(action.setPrice(typeOpts.price));
+        dispatch(action.setCode(typeOpts.code));
+      }
+    });
+  };
 
   const calculate = useCallback(() => {
     let income, exps;
@@ -25,50 +94,51 @@ function ProfitCalc({currency}) {
       useDays,
       rentLandPrice,
       rentPrice,
-      servicePrice
+      servicePrice,
     } = data;
 
     income = rentPrice * useDays;
 
-    if(tab === "shared") {
+    if (tab === "shared") {
       exps = (counterPrice + servicePrice) * 31 + rentLandPrice;
     }
 
-    if(tab === "own") {
+    if (tab === "own") {
       exps = (counterPrice + servicePrice) * 31;
     }
 
-    return income - exps; 
+    return income - exps;
   }, [data, tab]);
 
   useEffect(() => {
     const result = calculate();
-    setProfit(result); 
- 
+    setProfit(result);
   }, [calculate]);
+
+  useEffect(() => {
+    setHouseInRange();
+  }, [data.typePrice]);
 
   return (
     <section className="profit-calc">
       <div className="container">
         <h2 className="profit-calc__title">калькулятор дохідності</h2>
         <div className="profit-calc__tabs">
-          <div 
-            className={ tab === "shared"
-                ? "profit-calc__tab active"
-                : "profit-calc__tab"
+          <div
+            className={
+              tab === "shared" ? "profit-calc__tab active" : "profit-calc__tab"
             }
             onClick={() => setTab("shared")}
-            >
-              в парку marksem
+          >
+            в парку marksem
           </div>
-          <div 
-            className={ tab === "own"
-                    ? "profit-calc__tab active"
-                    : "profit-calc__tab"
-                  }
+          <div
+            className={
+              tab === "own" ? "profit-calc__tab active" : "profit-calc__tab"
+            }
             onClick={() => setTab("own")}
-            >
-              на своїй землі
+          >
+            на своїй землі
           </div>
         </div>
         <div className="profit-calc__info">
@@ -80,11 +150,11 @@ function ProfitCalc({currency}) {
               <div className="profit-calc__block-title">
                 Будинок та комплектація:
                 <span className="profit-calc__type-var">
-                  MARKSEM M-2 mobile house 01111
+                  {data.type || tempType.current} mobile house {data.code}
                 </span>
               </div>
               <Range
-                min={30000}
+                min={10000}
                 max={100000}
                 defaultValue={data.typePrice}
                 showRange={false}
@@ -94,7 +164,7 @@ function ProfitCalc({currency}) {
             </div>
             <div className="profit-calc__style">
               <Button
-                onClick={() => dispatch(action.setStyle("start"))}
+                onClick={() => handlePriceTypeClick("start")}
                 classList={
                   data.style === "start"
                     ? "btn btn-simple active"
@@ -103,7 +173,7 @@ function ProfitCalc({currency}) {
                 text="start"
               />
               <Button
-                onClick={() => dispatch(action.setStyle("classic"))}
+                onClick={() => handlePriceTypeClick("classic")}
                 classList={
                   data.style === "classic"
                     ? "btn btn-simple active"
@@ -112,7 +182,7 @@ function ProfitCalc({currency}) {
                 text="classic"
               />
               <Button
-                onClick={() => dispatch(action.setStyle("comfort"))}
+                onClick={() => handlePriceTypeClick("comfort")}
                 classList={
                   data.style === "comfort"
                     ? "btn btn-simple active"
@@ -121,7 +191,7 @@ function ProfitCalc({currency}) {
                 text="comfort"
               />
               <Button
-                onClick={() => dispatch(action.setStyle("premium"))}
+                onClick={() => handlePriceTypeClick("premium")}
                 classList={
                   data.style === "premium"
                     ? "btn btn-simple active"
@@ -186,14 +256,17 @@ function ProfitCalc({currency}) {
               />
             </div>
           </div>
-          { tab === "shared" &&
-          <div className="profit-calc__block">
-            <div className="profit-calc__rent-land">
-              Вартість оренди землі за місяць:
-              <span style={{marginLeft: "17px"}}>{data.rentLandPrice}{currency}</span>
+          {tab === "shared" && (
+            <div className="profit-calc__block">
+              <div className="profit-calc__rent-land">
+                Вартість оренди землі за місяць:
+                <span style={{ marginLeft: "17px" }}>
+                  {data.rentPrice}
+                  {currency}
+                </span>
+              </div>
             </div>
-          </div>
-          }
+          )}
           <Button
             classList="btn btn-main calc-action"
             onClick={togglePopup}
@@ -201,28 +274,50 @@ function ProfitCalc({currency}) {
           />
         </div>
       </div>
-      { showResult &&
-        <div className="profit-calc__result-wrap">
-          <div className="profit-calc__result">
-            <button className="btn-close" onClick={togglePopup}>X</button>
-            { profit > 0 &&
-              <>
-                <div className="profit-calc__info">
-                  <div className="profit-calc__month-result">прибуток в місяць<br/><strong>{currency}{profit}+</strong></div>
-                  <div className="profit-calc__year-result">прибуток в рік<br/><strong>{currency}{profit * 12}+</strong></div>
+      {showResult &&
+        <Modal
+          width="721px"
+          onClose={() => setShowResult(false)}>
+            <div className="profit-calc__result">
+              {/* <button className="btn-close" onClick={togglePopup}>
+                <svg width="16" height="16px">
+                  <use href="icons-sprite.svg#constructor-modal-close-icon"></use>
+                </svg>
+              </button> */}
+              {profit > 0 && (
+                <>
+                  <div className="profit-calc__info">
+                    <div className="profit-calc__month-result">
+                      дохід в місяць
+                    <br />
+                      <strong>
+                        {currency}
+                        {profit}+
+                    </strong>
+                    </div>
+                    <div className="profit-calc__year-result">
+                      дохід в рік
+                    <br />
+                      <strong>
+                        {currency}
+                        {profit * 12}+
+                    </strong>
+                    </div>
+                  </div>
+                  <Button
+                    classList="btn btn-main result-action"
+                    onClick={togglePopup}
+                    text="інвестувати"
+                  />
+                </>
+              )}
+              {profit <= 0 && (
+                <div className="profit-calc__notify">
+                  * за поточних умов дохід не передбачено
                 </div>
-                <Button
-                  classList="btn btn-main result-action"
-                  onClick={togglePopup}
-                  text="інвестувати"
-                />
-              </>
-            }
-            { profit <= 0 &&
-                <div className="profit-calc__notify">* за поточних умов прибуток не передбачено</div>
-            }
+              )}
           </div>
-        </div>
+      </Modal>
       }
     </section>
   );

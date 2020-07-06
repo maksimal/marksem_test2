@@ -7,6 +7,8 @@ import TeamSlider from './../components/TeamSlider/TeamSlider';
 import SubscribeBlock from "./../components/SubscribeBlock/SubscribeBlock";
 import ScrollToTop from './../components/shared/ScrollToTop'
 import ScrollAnimation from 'react-animate-on-scroll'
+import Sticker from './../components/Sticker/Sticker';
+import StickerSlider from './../components/StickerSlider/StickerSlider';
 
 export default function WhyMarksem(props) {
   useState(() => {
@@ -25,11 +27,11 @@ export default function WhyMarksem(props) {
             <h1 className="company-presentation__title title--under">Ми MARKSEM</h1>
           }
           info={
-            <div className="company-presentation__info" style={{maxWidth: "530px"}}>
-              <p className="f21" style={{fontWeight: "500"}}>
+            <div className="company-presentation__info" style={{ maxWidth: "530px" }}>
+              <p className="f21" style={{ fontWeight: "500" }}>
                 Ми команда досвідчених фахівців з амбіціями, які об’єднались задля нашої спільної мрії, яка є ціллю — заробляти відпочиваючи!
               </p>
-              <p style={{fontWeight: "normal", lineHeight: "27px", paddingTop: "24px"}}>
+              <p style={{ fontWeight: "normal", lineHeight: "27px", paddingTop: "24px" }}>
                 Ми прагнемо, щоб наші парки були бажаним місцем відпочинку для багатьох людей. Ми працюємо над технологією будівництва повністю автономних будинків. Ми робимо все, щоб ви мали кращі місця для життя та відпочинку, і в той же час — прибутковий бізнес.
               </p>
             </div>
@@ -54,10 +56,24 @@ export default function WhyMarksem(props) {
           actionElementText="Watch the video about us"
           actionElementAlign="right"
         >
-          <p>Професійність. Ми експерти своєї справи. Ми будуємо системну роботу, ефективну комунікацію та застосовуємо індивідуальний підхід до кожного клієнта.</p>
-          <p>Інновації. Ми прагнемо запропонувати те, що не можуть запропонувати інші. Ми завжди відкриті для нових ідей та технологій.</p>
-          <p>Репутація. Чітке виконання договірних зобов’язань, прозорість, чесність і надійність.</p>
-          <p>Якість. Ми контролюємо кожен етап процесу виробництва будинку, будівництва парку чи надання послуг. Всі процеси відповідають міжнародним стандартам і регламентовані письмовими інструкціями. Ми виконуємо свою роботу згідно з існуючими системами якості.</p>
+          <StickerSlider>
+            <Sticker
+              title="Професійність"
+              text="Ми експерти своєї справи. Ми будуємо системну роботу, ефективну комунікацію та застосовуємо індивідуальний підхід до кожного клієнта."
+            />
+            <Sticker
+              title="Інновації"
+              text="Ми прагнемо запропонувати те, що не можуть запропонувати інші. Ми завжди відкриті для нових ідей та технологій."
+            />
+            <Sticker
+              title="Репутація"
+              text="Чітке виконання договірних зобов’язань, прозорість, чесність і надійність."
+            />
+            <Sticker
+              title="Якість"
+              text="Ми контролюємо кожен етап процесу виробництва будинку, будівництва парку чи надання послуг. Всі процеси відповідають міжнародним стандартам і регламентовані письмовими інструкціями. Ми виконуємо свою роботу згідно з існуючими системами якості."
+            />
+          </StickerSlider>
         </ImageTextBlock>
       </ScrollAnimation>
 

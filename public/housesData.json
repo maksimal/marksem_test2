@@ -1,14 +1,143 @@
 {
   "houses": [
     {
-      "category": "Mobile houses",
-      "houseType": "Marksem M-2",
-      "code": "0100293-M",
+      "category": "Houseboats",
+      "houseType": "Houseboat 1",
+      "code": "01001001-M",
       "description1": "Описание для вкладки конструктора 1",
       "description2": "Описание для вкладки конструктора 2",
       "description3": "Описание для вкладки конструктора 3",
       "description4": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, qui! ",
       "description5": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, qui!",
+      "priceRange": [
+        {
+          "type": "start",
+          "price": 10000,
+          "code": "01111"
+        },
+        {
+          "type": "classic",
+          "price": 11000,
+          "code": "01112"
+        },
+        {
+          "type": "comfort",
+          "price": 12000,
+          "code": "01113"
+        },
+        {
+          "type": "premium",
+          "price": 13000,
+          "code": "01114"
+        }
+      ],
+      "isTerraceOption": true,
+      "planning_variants": [
+        {
+          "house_area": "32.0",
+          "complectation": "classic",
+          "rooms": "2",
+          "bathrooms": "1",
+          "planning_price": "1000",
+          "image_urls": [
+            "img/house-builder/houseboats/Planing/1.JPG"
+          ]
+        }
+      ],
+      "exterior_variants": [
+        {
+          "exterior_material": "Дерево",
+          "exterior_material_color": "#F6ECEC",
+          "terrace": false,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/house-builder/houseboats/Exterior/1.JPG",
+            "img/house-builder/houseboats/Exterior/2.JPG",
+            "img/house-builder/houseboats/Exterior/3.JPG",
+            "img/house-builder/houseboats/Exterior/4.JPG"
+          ]
+        }
+      ],
+      "interior_variants": [
+        {
+          "interior_style": "Loft",
+          "furniture_color": "#F7ECEC",
+          "walls_color": "#F7ECEC",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/1.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/2.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/3.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/4.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/5.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/6.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/7.jpg"
+          ]
+        },
+        {
+          "interior_style": "Loft",
+          "furniture_color": "teal",
+          "walls_color": "#F7ECEC",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/3.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "interior_style": "Barokko",
+          "furniture_color": "pink",
+          "walls_color": "#F7ECEC",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/5.png"
+          ]
+        },
+        {
+          "interior_style": "Barokko",
+          "furniture_color": "pink",
+          "walls_color": "#F7ECEC",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/constructor-pics/5.png",
+            "img/constructor-pics/5.png"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Mobile houses",
+      "houseType": "Marksem M-2",
+      "code": "01001001-M",
+      "description1": "Описание для вкладки конструктора 1",
+      "description2": "Описание для вкладки конструктора 2",
+      "description3": "Описание для вкладки конструктора 3",
+      "description4": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, qui! ",
+      "description5": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, qui!",
+      "priceRange": [
+        {
+          "type": "start",
+          "price": 10000,
+          "code": "01111"
+        },
+        {
+          "type": "classic",
+          "price": 15000,
+          "code": "01112"
+        },
+        {
+          "type": "comfort",
+          "price": 20000,
+          "code": "01113"
+        },
+        {
+          "type": "premium",
+          "price": 25000,
+          "code": "01114"
+        }
+      ],
       "isTerraceOption": true,
       "planning_variants": [
         {
@@ -71,8 +200,8 @@
       ],
       "exterior_variants": [
         {
-          "exterior_material": "Металл+Дерево",
-          "exterior_material_color": "#D1B288",
+          "exterior_material": "Дерево",
+          "exterior_material_color": "#F6ECEC",
           "terrace": true,
           "exterior_price": "2000",
           "image_urls": [
@@ -85,10 +214,10 @@
           ]
         },
         {
-          "exterior_material": "Металл+Дерево",
-          "exterior_material_color": "#D1B288",
+          "exterior_material": "Дерево",
+          "exterior_material_color": "#F6ECEC",
           "terrace": false,
-          "exterior_price": "2000",
+          "exterior_price": "3000",
           "image_urls": [
             "img/house-builder/mobile-houses/M-2/Exterior/wood-sand__metal-bluegrey-noterrace-1.jpg",
             "img/house-builder/mobile-houses/M-2/Exterior/wood-sand__metal-bluegrey-noterrace-2.jpg",
@@ -99,8 +228,8 @@
           ]
         },
         {
-          "exterior_material": "Металл+Дерево",
-          "exterior_material_color": "#9598A3",
+          "exterior_material": "Дерево",
+          "exterior_material_color": "#A5A19E",
           "terrace": true,
           "exterior_price": "2000",
           "image_urls": [
@@ -111,47 +240,323 @@
             "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__terrace-5.jpg",
             "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__terrace-6.jpg",
             "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__terrace-7.jpg",
-            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__terrace-8.jpg"           
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__terrace-8.jpg"
           ]
         },
         {
-          "exterior_material": "Металл+Дерево",
-          "exterior_material_color": "#9598A3",
+          "exterior_material": "Дерево",
+          "exterior_material_color": "#A5A19E",
           "terrace": false,
           "exterior_price": "2000",
           "image_urls": [
             "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
             "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
             "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
-            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",           
-            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",           
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "Дерево",
+          "exterior_material_color": "#526175",
+          "terrace": true,
+          "exterior_price": "3000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "Дерево",
+          "exterior_material_color": "#526175",
+          "terrace": false,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "Дерево",
+          "exterior_material_color": "#F1F9C4",
+          "terrace": true,
+          "exterior_price": "3000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "Дерево",
+          "exterior_material_color": "#F1F9C4",
+          "terrace": false,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "Метал + Дерево",
+          "exterior_material_color": "#F6ECEC",
+          "terrace": true,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "Метал + Дерево",
+          "exterior_material_color": "#F6ECEC",
+          "terrace": false,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "Метал + Дерево",
+          "exterior_material_color": "#A5A19E",
+          "terrace": true,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "Метал + Дерево",
+          "exterior_material_color": "#A5A19E",
+          "terrace": false,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "Метал + Дерево",
+          "exterior_material_color": "#526175",
+          "terrace": true,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "Метал + Дерево",
+          "exterior_material_color": "#526175",
+          "terrace": false,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "Метал + Дерево",
+          "exterior_material_color": "#F1F9C4",
+          "terrace": true,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "Метал + Дерево",
+          "exterior_material_color": "#F1F9C4",
+          "terrace": false,
+          "exterior_price": "2000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
             "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
           ]
         },
         {
           "exterior_material": "ПВХ",
-          "exterior_material_color": "lightblue",
+          "exterior_material_color": "#F6ECEC",
           "terrace": true,
-          "exterior_price": "2000",
+          "exterior_price": "1500",
           "image_urls": [
-            "/path"
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
           ]
         },
         {
           "exterior_material": "ПВХ",
-          "exterior_material_color": "teal",
-          "terrace": true,
-          "exterior_price": "2000",
+          "exterior_material_color": "#F6ECEC",
+          "terrace": false,
+          "exterior_price": "1000",
           "image_urls": [
-            "/path"
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "ПВХ",
+          "exterior_material_color": "#A5A19E",
+          "terrace": true,
+          "exterior_price": "1000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "ПВХ",
+          "exterior_material_color": "#A5A19E",
+          "terrace": false,
+          "exterior_price": "1000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "ПВХ",
+          "exterior_material_color": "#526175",
+          "terrace": true,
+          "exterior_price": "1000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "ПВХ",
+          "exterior_material_color": "#526175",
+          "terrace": false,
+          "exterior_price": "1000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "Дерево",
+          "exterior_material_color": "#B3E1F0",
+          "terrace": false,
+          "exterior_price": "1000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "Дерево",
+          "exterior_material_color": "#F9C4CA",
+          "terrace": false,
+          "exterior_price": "1000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
+          ]
+        },
+        {
+          "exterior_material": "Дерево",
+          "exterior_material_color": "#75AEF0",
+          "terrace": false,
+          "exterior_price": "1000",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-1.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-2.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-3.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg",
+            "img/house-builder/mobile-houses/M-2/Exterior/wood-white__metal-bluegrey__noterrace-4.jpg"
           ]
         }
       ],
       "interior_variants": [
         {
-          "interior_style": "loft",
-          "furniture_color": "pink",
-          "walls_color": "violet",
+          "interior_style": "Loft",
+          "furniture_color": "#F7ECEC",
+          "walls_color": "#F7ECEC",
           "interior_price": "1500",
           "image_urls": [
             "img/house-builder/mobile-houses/M-2/Interior/Loft/1.jpg",
@@ -160,13 +565,73 @@
             "img/house-builder/mobile-houses/M-2/Interior/Loft/4.jpg",
             "img/house-builder/mobile-houses/M-2/Interior/Loft/5.jpg",
             "img/house-builder/mobile-houses/M-2/Interior/Loft/6.jpg",
-            "img/house-builder/mobile-houses/M-2/Interior/Loft/7.jpg"          
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/7.jpg"
           ]
         },
         {
-          "interior_style": "loft",
+          "interior_style": "Loft",
+          "furniture_color": "#A5A19E",
+          "walls_color": "#A5A19E",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/1.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/2.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/3.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/4.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/5.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/6.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/7.jpg"
+          ]
+        },
+        {
+          "interior_style": "Loft",
+          "furniture_color": "#526175",
+          "walls_color": "#526175",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/1.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/2.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/3.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/4.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/5.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/6.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/7.jpg"
+          ]
+        },
+        {
+          "interior_style": "Loft",
+          "furniture_color": "#F1F9C4",
+          "walls_color": "#F1F9C4",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/1.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/2.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/3.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/4.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/5.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/6.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/7.jpg"
+          ]
+        },
+        {
+          "interior_style": "Loft",
+          "furniture_color": "#75AEF0",
+          "walls_color": "#75AEF0",
+          "interior_price": "1500",
+          "image_urls": [
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/1.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/2.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/3.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/4.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/5.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/6.jpg",
+            "img/house-builder/mobile-houses/M-2/Interior/Loft/7.jpg"
+          ]
+        },
+        {
+          "interior_style": "Loft",
           "furniture_color": "teal",
-          "walls_color": "violet",
+          "walls_color": "teal",
           "interior_price": "1500",
           "image_urls": [
             "img/constructor-pics/5.png",
@@ -175,7 +640,7 @@
           ]
         },
         {
-          "interior_style": "hurokko",
+          "interior_style": "Barokko",
           "furniture_color": "pink",
           "walls_color": "violet",
           "interior_price": "1500",
@@ -185,7 +650,7 @@
           ]
         },
         {
-          "interior_style": "hurokko",
+          "interior_style": "Barokko",
           "furniture_color": "pink",
           "walls_color": "violet",
           "interior_price": "1500",
@@ -205,6 +670,28 @@
       "description3": "Описание для вкладки конструктора 3",
       "description4": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, qui! ",
       "description5": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, qui!",
+      "priceRange": [
+        {
+          "type":"start",
+          "price": 26000,
+          "code": "01121"
+        },
+        {
+          "type":"classic",
+          "price": 31000,
+          "code": "01122"
+        },
+        {
+          "type":"comfort",
+          "price": 40000,
+          "code": "01123"
+        },
+        {
+          "type":"premium",
+          "price": 45000,
+          "code": "01124"
+        }
+      ],
       "isTerraceOption": true,
       "planning_variants": [
         {
@@ -387,6 +874,28 @@
       "description3": "Описание для вкладки конструктора 3",
       "description4": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, qui! ",
       "description5": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, qui!",
+      "priceRange": [
+        {
+          "type":"start",
+          "price": 50000,
+          "code": "01131"
+        },
+        {
+          "type":"classic",
+          "price": 60000,
+          "code": "01132"
+        },
+        {
+          "type":"comfort",
+          "price": 70000,
+          "code": "01133"
+        },
+        {
+          "type":"premium",
+          "price": 90000,
+          "code": "01134"
+        }
+      ],
       "isTerraceOption": true,
       "planning_variants": [
         {
@@ -561,6 +1070,6 @@
           ]
         }
       ]
-    }   
+    }
   ]
 }

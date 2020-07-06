@@ -1,0 +1,39 @@
+.sticker-slider__controls {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 65px;
+  right: 40px;
+  z-index: 2;
+  font-weight: bold;
+  &__numbers {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+  }
+  &__active-slide {
+    font-size: 27px;
+    display: inline-block;
+    width: 20px;
+  }
+  &__next {
+    transform: rotate(45deg);
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    width: 15px;
+    height: 15px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__prev {
+    transform: rotate(-135deg);
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    width: 15px;
+    height: 15px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

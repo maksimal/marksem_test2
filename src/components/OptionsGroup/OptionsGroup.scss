@@ -14,7 +14,7 @@
 
 .constructor-option {
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid #254A93;
   padding: 14px 27px;
   margin-right: 15px;
   margin-bottom: 15px;
@@ -22,7 +22,7 @@
     cursor: pointer;
   }
   &.active-option {
-    background-color: #0A254C;
+    background-color: #254A93;
     color: white;
   }
 }

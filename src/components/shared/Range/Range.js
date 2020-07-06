@@ -17,11 +17,17 @@ function Range({
   const [tooltipPosition, setTooltipPosition] = useState(null);
   const [sliderWidth, setSliderWidth] = useState(null);
   const [valueFontSize, setValueFontSize] = useState(null);
+  
+  
 
   const slider = useRef(null);
   const sliderValue = useRef(null);
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    setCurrentValue(defaultValue);
+  }, [defaultValue]);
 
   useEffect(() => {
     /*
@@ -35,6 +41,7 @@ function Range({
     ));
 
     setSliderWidth(slider.current.clientWidth);
+    
   }, []);
 
   useEffect(() => {
@@ -43,6 +50,7 @@ function Range({
       */
      const range = max - min;
      const absValue = currentValue - min;
+    //  const absValue = defaultValue - min;
      const percent = absValue / range;
 
      /*
@@ -53,7 +61,6 @@ function Range({
 
       setProgress(`${percent * 100}%`);
       setTooltipPosition({left: `${left}px`})
-      
   }, [min, max, currentValue, slider, sliderValue, sliderWidth, valueFontSize]);
 
   const handleCurrentPrice = (e) => {
@@ -63,6 +70,8 @@ function Range({
       payload: parseInt(e.target.value) 
     })
   };
+
+
 
   return (
     <div className="custom-range">
@@ -83,7 +92,7 @@ function Range({
           min={min}
           max={max}
           step={step}
-          defaultValue={currentValue}
+          value={currentValue}
           ref={slider}
           onChange={handleCurrentPrice}
         />

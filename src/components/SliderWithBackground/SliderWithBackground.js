@@ -5,7 +5,7 @@ import "./SliderWithBackground.scss";
 
 function SliderWithBackground({ slides }) {
   const [swiper, setSwiper] = useState(null);
-  const [slideAmmount, setSlideAmmount] = useState(slides.length + 1);
+  const slideAmmount = slides.length + 1;
 
   const params = {
     speed: 600,

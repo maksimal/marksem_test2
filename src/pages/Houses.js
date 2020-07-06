@@ -19,11 +19,11 @@ import Constructor from './../components/Constructor/Constructor';
 import { Tabs, TabsItem } from './../components/Tabs/Tabs';
 
 import { setActiveHouseCategoryTab } from "./../actions/activeHouseCategoryTabActions";
-import { setHousesData } from './../actions/housesActions';
+// import { setHousesData } from './../actions/housesActions';
 
 export default function Houses(props) {
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const { houses } = useSelector(state => state.housesData);
   const activeHouseCategoryTab = useSelector(state => state.activeHouseCategoryTab);
 
@@ -31,49 +31,22 @@ export default function Houses(props) {
     window.scrollTo(0, 0);
   }, []);
 
-  useEffect(() => {
-    dispatch(setHousesData())
-  }, [])
+  // useEffect(() => {
+  //   dispatch(setHousesData())
+  // }, [])
 
-  const renderHouses = () => {
-
-    const housesInCategory = houses
-      .filter(({ category }) => category === activeHouseCategoryTab);
-
-    return (
-      <div className="houses-in-category-list">
-        {housesInCategory.map(house => {
-          return (
-            <ScrollAnimation
-              animateIn="fadeIn"
-              animateOnce={true}>
-              <SampleSlider
-                type="2"
-                title={house.houseType}
-                houseType={house.houseType}
-                text={house.description4}
-                img={house.exterior_variants[0].image_urls}
-              />
-              <div className="container">
-                <Constructor houseType={house.houseType} />
-              </div>
-            </ScrollAnimation>
-          )
-        })}
-      </div>
-    )
-  }
-
-  const renderHousesNU = () => {
+  const renderHousesNU = (houses) => {
 
     const housesInCategory = houses
       .filter(({ category }) => category === activeHouseCategoryTab);
 
     return (
       <div className="houses-in-category-list">
-        {housesInCategory.map(house => {
+        {housesInCategory.map((house, i) => {
+
           return (
             <ScrollAnimation
+              key={i}
               animateIn="fadeIn"
               animateOnce={true}>
               <SampleSliderNu
@@ -84,7 +57,7 @@ export default function Houses(props) {
                 img={house.exterior_variants[0].image_urls}
               />
               <div className="container">
-                <Constructor houseType={house.houseType} />
+                <Constructor house = {house} />
               </div>
             </ScrollAnimation>
           )
@@ -176,7 +149,7 @@ export default function Houses(props) {
               title="Houseboats"
               mediaType="img"
               mediaPosition="left"
-              imgUrl="https://via.placeholder.com/660x400.png?text=Houseboats"
+              imgUrl="./img/house-builder/houseboats/exterior/1.jpg"
             >
               <StyledList
                 iconUrl="./icons-sprite.svg#check-mark"
@@ -203,70 +176,9 @@ export default function Houses(props) {
 
       </ScrollAnimation>
 
-
-      {/* {
-        renderHouses()
-      } */}
-
       {
-        renderHousesNU()
+        renderHousesNU(houses)
       }
-
-      {/* <ScrollAnimation
-        animateIn="fadeIn"
-        animateOnce={true}>
-        <OptionsWithTabs
-          title="Choose an option for planning your house, well as a complete set"
-          activeTabNumber={0}
-          tabsHeadingsTexts={["Standart", "Premium"]}
-          tabsContent={[
-            <BlocksForTabs
-              imgs={[
-                'tabsslider.png',
-                'tabsslider2.png'
-              ]}
-              texts={[
-                '111Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-                '111Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
-              ]}
-            />,
-            <BlocksForTabs
-              imgs={[
-                'tabsslider.png',
-                'tabsslider2.png'
-              ]}
-              texts={[
-                '222Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-                '222Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
-              ]}
-            />
-          ]}
-        />
-      </ScrollAnimation> */}
-
-      {/* <ScrollAnimation
-        animateIn="fadeIn"
-        animateOnce={true}>
-        <InteriorDesignSamples
-          mainTitle="Review our interior design we offer for you"
-          imgs={[
-            'interior.png',
-            'interior.png'
-          ]}
-          texts={[
-            'Interior Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-            'Interior Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-            'Interior Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-            'Interior Lorem ipsum dolor sit amet, consectetur adipiscing elit'
-          ]}
-          button={
-            <Button
-              classList="btn btn-main"
-              text="SELECT"
-            />
-          }
-        />
-      </ScrollAnimation> */}
 
       <ScrollAnimation
         animateIn="fadeIn"

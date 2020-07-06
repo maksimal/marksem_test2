@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import clsx from 'clsx';
+import { Link } from 'react-router-dom'
 
 import "./Constructor.scss";
 import ColorsGroup from '../ColorsGroup/ColorsGroup';
@@ -15,93 +16,85 @@ import * as fromHousesData from "../../reducers/housesData";
 import { setOption } from '../../actions/housesActions';
 import ToggleHouseBuilderButton from './../ToggleHouseBuilderButton/ToggleHouseBuilderButton';
 import * as tabsActionsRedux from './../../actions/constructorTabsActions';
+import ColorsFamily from './../ColorsFamily/ColorsFamily';
+import { useState } from 'react';
+import Modal from './../Modal/Modal';
+import ConfirmHouseForm from './../ConfirmHouseForm/ConfirmHouseForm';
+import TipModal from './../TipModal/TipModal';
 
-const Constructor = ({ houseType }) => {
+const Constructor = ({ house }) => {
 
   const dispatch = useDispatch();
+  const [showConfirmHouseModal, setShowConfirmHouseModal] = useState(false);
+  const [showConfirmedHouseModal, setShowConfirmedHouseModal] = useState(false);
 
-  const house = useSelector(({ housesData }) => housesData.houses.find(house => house.houseType === houseType));
+  // >>>> Get selected (active values)
   const { selectedTab, selectedOptions } = useSelector(state => state);
-  const selectedHouseType = selectedOptions[houseType] || {};
-  const { house_area, complectation, walls_color, furniture_color, interior_style, isTerrace } = selectedHouseType;
+  const selectedHouseType = selectedOptions[house.houseType] || {};
+  const {
+    house_area,
+    complectation,
+    walls_color,
+    furniture_color,
+    interior_style,
+    exterior_material,
+    exterior_material_color,
+    isTerrace
+  } = selectedHouseType;
   const { houseToShow } = useSelector(({ houseBuilder }) => houseBuilder);
+  // <<<< Get selected (active values)
 
-  const constructorClasses = clsx(
-    "constructor",
-    houseToShow !== houseType && "constructor-hidden"
-  );
+  // Get matching variants from json based on selected options:
+  const planningVariant = getSelectedPlanningVariant();
+  const exteriorVariant = getSelectedExteriorVariant();
+  const interiorVariant = getSelectedInteriorVariant();
 
   function getHousePrice() {
-    //можно было бы эти константы получать один раз вне функций,
-    //но проблема с тем, что house при первом рендере пустой, поэтому
-    //эти функции запускаются уже внутри return блока этого компонента,
-    //когда есть гарантия что в house уже есть данные (в рендере есть проверка: house && ...);
-    const planningVariant = getSelectedPlanningVariant();
-    const exteriorVariant = getSelectedExteriorVariant();
-    const interiorVariant = getSelectedInteriorVariant();
-
-    const planningPrice = planningVariant ? planningVariant.planning_price : "0";
-    const exteriorPrice = exteriorVariant ? exteriorVariant.exterior_price : "0";
-    const interiorPrice = interiorVariant ? interiorVariant.interior_price : "0";
-
-    return +planningPrice + +exteriorPrice + +interiorPrice
-  }
-
-  function getBathroomsNumber() {
-    const planningVariant = getSelectedPlanningVariant();
-    const bathroomsNumber = planningVariant ? planningVariant.bathrooms : "0";
-
-    return bathroomsNumber
-  }
-
-  function getRoomsNumber() {
-    const planningVariant = getSelectedPlanningVariant();
-    const roomsNumber = planningVariant ? planningVariant.rooms : "0";
-    return roomsNumber
+    return (
+      +planningVariant.planning_price +
+      +exteriorVariant.exterior_price +
+      +interiorVariant.interior_price
+    ).toString();
   }
 
   function getImages() {
     switch (selectedTab) {
       case "Planning":
-        const planningVariant = getSelectedPlanningVariant();
-
         try {
           return planningVariant.image_urls
         } catch (e) {
-          alert("no such combination in json");
+          console.log("no such combination in json");
           console.log(e)
         }
 
-        return planningVariant ? planningVariant.image_urls : []
+        return planningVariant.image_urls
 
       case "Exterior":
-        const exteriorVariant = getSelectedExteriorVariant();
-
         try {
           return exteriorVariant.image_urls
         } catch (e) {
-          alert("no such combination in json");
+          console.log("no such combination in json");
           console.log(e)
         }
 
-        return exteriorVariant ? exteriorVariant.image_urls : []
+        return exteriorVariant.image_urls
 
       case "Interior":
-        const interiorVariant = getSelectedInteriorVariant();
-
         try {
           return interiorVariant.image_urls
         } catch (e) {
-          alert("no such combination in json");
+          console.log("no such combination in json");
           console.log(e)
         }
 
-        return interiorVariant ? interiorVariant.image_urls : []
+        return interiorVariant.image_urls
 
       default:
         return []
     }
   }
+
+  //>>>>>> Functions that find matching data from JSON based on selected options:
 
   function getSelectedPlanningVariant() {
     const planningVariant = house.planning_variants
@@ -110,18 +103,18 @@ const Constructor = ({ houseType }) => {
         variant.complectation === complectation
       )
 
-    return planningVariant;
+    return planningVariant || {};
   }
 
   function getSelectedExteriorVariant() {
     const exteriorVariant = house.exterior_variants
       .find(variant =>
-        Object.keys(selectedHouseType).find(key => key === variant.exterior_material) &&
-        variant.exterior_material_color === selectedHouseType[variant.exterior_material] &&
+        variant.exterior_material === exterior_material &&
+        variant.exterior_material_color === exterior_material_color &&
         variant.terrace === selectedHouseType.isTerraceOption
       );
 
-    return exteriorVariant;
+    return exteriorVariant || {};
   }
 
   function getSelectedInteriorVariant() {
@@ -132,16 +125,57 @@ const Constructor = ({ houseType }) => {
         variant.interior_style === interior_style
       )
 
-    return interiorVariant;
+    return interiorVariant || {};
   }
 
+  //<<<<<<< Functions that find matching data from JSON based on selected options:
 
+
+
+  const constructorClasses = clsx(
+    "constructor",
+    houseToShow !== house.houseType && "constructor-hidden"
+  );
 
   if (!house) return <div className={constructorClasses}>...Loading</div>
   return (
     <div className={constructorClasses}>
+      <div className="house-main-props">
+        <div className="house-main-props-icon">
+          <img src="./img/persons-in-house.png" alt="persons-in-house" />
+        </div>
+        <div className="house-main-props-icon">
+          <span >
+            {
+              planningVariant.house_area
+            }
+            m
+            <sup style={{ fontSize: "12px" }}>2</sup>
+          </span>
+        </div>
+        <div className="house-main-props-icon">
+          <span className="house-main-props-icon-number">
+            {
+              planningVariant.bathrooms
+            }
+          </span>
+          <svg width="30px" height="30px" className="extra-info-icon">
+            <use href="./icons-sprite.svg#bathroom" />
+          </svg>
+        </div>
+        <div className="house-main-props-icon">
+          <span className="house-main-props-icon-number">
+            {
+              planningVariant.rooms
+            }
+          </span>
+          <svg width="30px" height="30px" className="extra-info-icon">
+            <use href="./icons-sprite.svg#bedroom" />
+          </svg>
+        </div>
+      </div>
       <div style={{ display: "flex" }}>
-        <div className="selected-house-data" style={{ width: "50%", marginRight: "60px" }}>
+        <div className="selected-house-data">
           <PhotoForConstructor
             images={getImages()}
             title={house.houseType}
@@ -149,12 +183,25 @@ const Constructor = ({ houseType }) => {
           <div className="selected-house-values">
             <div className="selected-house-values-1">
               <div className="house-type">
-                <div className="house-type-name">{house.houseType}</div>
-                <div className="house-type-code">{house.code}</div>
+                <div className="house-type-name">
+                  {
+                    house.houseType
+                  }
+                </div>
+                <div className="house-type-code">
+                  {
+                    house.code
+                  }
+                </div>
               </div>
               <div className="price">
                 <span className="price-text">Price:</span>
-                <span className="price-value">{getHousePrice()}</span>
+                <span className="price-value">
+                  {
+                    getHousePrice()
+                  }
+                  &euro;
+                </span>
               </div>
             </div>
             <div className="selected-house-values-2">
@@ -163,14 +210,22 @@ const Constructor = ({ houseType }) => {
                 <svg width="24px" height="24px" className="extra-info-icon">
                   <use href="./icons-sprite.svg#bathroom" />
                 </svg>
-                <span>{getBathroomsNumber()}</span>
+                <span>
+                  {
+                    planningVariant.bathrooms
+                  }
+                </span>
               </div>
               <div className="extra-info">
                 <span>Bedrooms:</span>
                 <svg width="24px" height="24px" className="extra-info-icon">
                   <use href="./icons-sprite.svg#bedroom" />
                 </svg>
-                <span>{getRoomsNumber()}</span>
+                <span>
+                  {
+                    planningVariant.rooms
+                  }
+                </span>
               </div>
             </div>
           </div>
@@ -180,19 +235,32 @@ const Constructor = ({ houseType }) => {
           <Tabs onChangeTabAction={tabsActionsRedux.setActiveTab}>
 
             <TabsItem label="Exterior">
-              <div className="tabs-item-description">{fromHousesData.getHouseDescription(house, "2")}</div>
-              <div className="colorgroup-wrapper">
+              <div className="tabs-item-description" style={{ display: "inline-block" }}>
                 {
-                  fromHousesData.getExteriorColors(house)
-                    .map(({ material, colors }, i) =>
-                      <ColorsGroup
-                        key={i}
-                        title={material}
-                        optionName={material}
-                        houseType={house.houseType}
-                        colors={colors}
-                      />)
+                  fromHousesData.getHouseDescription(house, "2")
                 }
+
+                {/* <Tip iconUrl="./img/icons/info-icon.png" position="bottom">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, aperiam.
+                </Tip> */}
+
+                <TipModal>
+                  <p>Оберіть з даного конструктора деталі для обраного будинку. </p>
+                  <p>У <span style={{ color: "#254A93" }}>ПЛАНУВАННІ</span>- оберіть комплектацію будинку та його площу.</p>
+                  <p>Розділ <span style={{ color: "#254A93" }}>ЕКСТЕР'ЄР</span> допоможе Вам обрати матеріал фасаду, та його колір. </p>
+                  <p>У розділі <span style={{ color: "#254A93" }}>ІНТЕР'ЄР</span> обирайте стиль у будинку та колір меблів </p>
+                  <br />
+
+                  <sup style={{ color: "grey", fontWeight: "12px" }}>*</sup>
+                  <span style={{ color: "grey", fontWeight: "12px" }}>Залежить від обраної комплектації. В комплектації START Ви обираєте лише будинок, без внутрішнього додатку ( меблів, тощо).</span>
+                </TipModal>
+
+              </div>
+              <div className="colorgroup-wrapper">
+                <ColorsFamily
+                  colorsGroupArray={fromHousesData.getExteriorColors(house)}
+                  house={house}
+                />
               </div>
 
               {fromHousesData.getIsTerraceOption(house) &&
@@ -202,15 +270,33 @@ const Constructor = ({ houseType }) => {
                     checked={isTerrace}
                     onClick={(optionValue) => dispatch(setOption(house.houseType, "isTerraceOption", optionValue))}
                   />
-                  <Tip iconUrl="./img/icons/info-icon.png" position="bottom">
+
+                  {/* <Tip iconUrl="./img/icons/info-icon.png" position="bottom">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, aperiam.
-                </Tip>
+                </Tip> */}
+
+                  <TipModal>
+                    <p>Оберіть будинок з терасою або без. </p>
+                    <br />
+                    <p>Обираючи будинок з терасою менеджер зв'яжеться с Вами та допоможе обрати терасу з каталогу, що буде гармонійно вписуватись у дизайн та додавати затишку у майбутній дім</p>
+
+                    <br />
+
+                    <sup style={{ color: "grey", fontWeight: "12px" }}>*</sup>
+                    <span style={{ color: "grey", fontWeight: "12px" }}>Ціна може змінюватись, залежно від обраного стилю тераси. На сайті ціна враховується з терасою “ВІДКРИТОГО” типу.</span>
+                  </TipModal>
+
+
                 </div>
               }
             </TabsItem>
 
             <TabsItem label="Planning">
-              <div className="tabs-item-description">{fromHousesData.getHouseDescription(house, "1")}</div>
+              <div className="tabs-item-description">
+                {
+                  fromHousesData.getHouseDescription(house, "1")
+                }
+              </div>
               <OptionsGroup
                 title="Площа будинку"
                 optionName="house_area"
@@ -226,7 +312,11 @@ const Constructor = ({ houseType }) => {
             </TabsItem>
 
             <TabsItem label="Interior">
-              <div className="tabs-item-description">{fromHousesData.getHouseDescription(house, "3")}</div>
+              <div className="tabs-item-description">
+                {
+                  fromHousesData.getHouseDescription(house, "3")
+                }
+              </div>
               <OptionsGroup
                 title="Стиль интерьера"
                 optionName="interior_style"
@@ -236,14 +326,16 @@ const Constructor = ({ houseType }) => {
 
               <div className="colorgroup-wrapper">
                 <ColorsGroup
-                  title="Колір стін"
+                  title="Колір фасаду стін"
                   optionName="walls_color"
+                  selectDefaultColor
                   houseType={house.houseType}
                   colors={fromHousesData.getInteriorOptionsList(house, "walls_color")}
                 />
                 <ColorsGroup
-                  title="Колір меблів"
+                  title="Колір меблів та текстилю"
                   optionName="furniture_color"
+                  selectDefaultColor
                   houseType={house.houseType}
                   colors={fromHousesData.getInteriorOptionsList(house, "furniture_color")}
                 />
@@ -254,7 +346,7 @@ const Constructor = ({ houseType }) => {
 
           <div className="actions-block">
             <Button
-              onClick={() => { }}
+              onClick={() => setShowConfirmHouseModal(true)}
               text="Купить"
               classList="btn-main" />
             <Button
@@ -268,9 +360,17 @@ const Constructor = ({ houseType }) => {
 
 
       <h4 className="house-description-title">Опис</h4>
-      <p className="house-description">{fromHousesData.getHouseDescription(house, "4")}</p>
+      <p className="house-description">
+        {
+          fromHousesData.getHouseDescription(house, "4")
+        }
+      </p>
       <h4 className="house-description-title">Деатали будинку</h4>
-      <p className="house-description">{fromHousesData.getHouseDescription(house, "5")}</p>
+      <p className="house-description">
+        {
+          fromHousesData.getHouseDescription(house, "5")
+        }
+      </p>
 
       <div style={{ display: "flex", justifyContent: "center" }}>
         <ToggleHouseBuilderButton
@@ -279,6 +379,104 @@ const Constructor = ({ houseType }) => {
           style={{ marginTop: "40px" }}
         />
       </div>
+
+      {
+        showConfirmHouseModal &&
+        <Modal
+          width="90%"
+          onClose={() => setShowConfirmHouseModal(false)}
+        >
+          <div className="confirm-house-modal">
+            <h2 className="confirm-house-modal__title">{house.houseType}</h2>
+            <div className="confirm-house-modal__main-data">
+              <div className="photo-block">
+                <PhotoForConstructor
+                  images={getImages()}
+                  title={house.houseType}
+                />
+                <p style={{color: "grey", fontSize: "14px", marginTop: "30px"}}><sup>*</sup>Обробка замовлення проводиться в робочі години</p>
+
+              </div>
+              <div className="confirm-house-modal__description">
+                <div className="confirm-house-modal__selected-options">
+                  <div>
+                    <div className="confirm-house-modal__option">
+                      <span>Complactation - </span>
+                      <span className="confirm-house-modal__option-value">
+                        {complectation}
+                      </span>
+                    </div>
+                    <div className="confirm-house-modal__option">
+                      <span>Exterior - </span>
+                      <span className="confirm-house-modal__option-value">
+                        {exterior_material}
+                      </span>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="confirm-house-modal__option">
+                      <span>Area - </span>
+                      <span className="confirm-house-modal__option-value">
+                        {house_area}
+                      </span>
+                    </div>
+                    <div className="confirm-house-modal__option">
+                      <span>Interior - </span>
+                      <span className="confirm-house-modal__option-value">
+                        {interior_style}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <p style={{ lineHeight: "27px" }}>Перевірте правильність обраного будинку та заповніть поля нижче. Наш менеджер зв'яжеться з Вами у найближчий час <sup>*</sup></p>
+
+                <ConfirmHouseForm />
+
+                <div className="confirm-house-modal__footer">
+                  <div>
+                    <p>Price</p>
+                    <p className="confirm-house-modal__price">{getHousePrice()}&euro;</p>
+                  </div>
+                  <Button
+                    onClick={() => {
+                      setShowConfirmedHouseModal(true);
+                      setShowConfirmHouseModal(false);
+                    }}
+                    text="Замовити"
+                    classList="btn-main"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </Modal>}
+      {showConfirmedHouseModal &&
+        <Modal
+          width="90%"
+          onClose={() => setShowConfirmedHouseModal(false)}
+        >
+          <div style={{ textAlign: "center", padding: "30px" }}>
+            <h3 style={{ fontWeight: "bold", textTransform: "uppercase" }}>Вітаємо!</h3>
+            <br />
+            <br />
+            <p style={{ width: "630px" }}>Менеджер зателефонує Вам найближчим часом. Можете поки ознайомитись з іншими продуктами MARKSEM</p>
+            <br />
+            <br />
+            <Link to={'/'}>
+              <Button
+                onClick={() => {
+                  setShowConfirmedHouseModal(false);
+                }}
+                text="На головну"
+                classList="btn-main"
+              />
+            </Link>
+
+          </div>
+        </Modal>
+      }
+
     </div>
   )
 }

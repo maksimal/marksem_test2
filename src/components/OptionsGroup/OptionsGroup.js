@@ -17,12 +17,11 @@ const OptionsGroup = ({
   const activeHouseType = useSelector(({ selectedOptions }) => selectedOptions[houseType]);
 
   function getActiveOptionValue(){
-    activeHouseType && console.log(activeHouseType[optionName])
+    // activeHouseType && console.log(activeHouseType[optionName])
     return activeHouseType && activeHouseType[optionName]
   }
 
   useEffect(() => {
-    console.log("Work!");
     dispatch(setOption(houseType, optionName, optionValues[0]))
   }, []);
 
