@@ -40,7 +40,7 @@
           "bathrooms": "1",
           "planning_price": "1000",
           "image_urls": [
-            "img/house-builder/houseboats/Planing/1.JPG"
+            "img/house-builder/houseboats/Planing/1.jpg"
           ]
         }
       ],
@@ -51,10 +51,10 @@
           "terrace": false,
           "exterior_price": "2000",
           "image_urls": [
-            "img/house-builder/houseboats/Exterior/1.JPG",
-            "img/house-builder/houseboats/Exterior/2.JPG",
-            "img/house-builder/houseboats/Exterior/3.JPG",
-            "img/house-builder/houseboats/Exterior/4.JPG"
+            "img/house-builder/houseboats/Exterior/1.jpg",
+            "img/house-builder/houseboats/Exterior/2.jpg",
+            "img/house-builder/houseboats/Exterior/3.jpg",
+            "img/house-builder/houseboats/Exterior/4.jpg"
           ]
         }
       ],
