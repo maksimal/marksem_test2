@@ -45,21 +45,21 @@ export default function Houses(props) {
         {housesInCategory.map((house, i) => {
 
           return (
-            <ScrollAnimation
-              key={i}
-              animateIn="fadeIn"
-              animateOnce={true}>
-              <SampleSliderNu
-                type="2"
-                title={house.houseType}
-                houseType={house.houseType}
-                text={house.description4}
-                img={house.exterior_variants[0].image_urls}
-              />
-              <div className="container">
-                <Constructor house = {house} />
-              </div>
-            </ScrollAnimation>
+              <ScrollAnimation
+                key={i}
+                animateIn="fadeIn"
+                animateOnce={true}>
+                <SampleSliderNu
+                  type="2"
+                  title={house.houseType}
+                  houseType={house.houseType}
+                  text={house.description4}
+                  images={house.exterior_variants[0].image_urls}
+                />
+                <div className="container">
+                  <Constructor house={house} />
+                </div>
+              </ScrollAnimation>
           )
         })}
       </div>
@@ -149,7 +149,7 @@ export default function Houses(props) {
               title="Houseboats"
               mediaType="img"
               mediaPosition="left"
-              imgUrl="./img/house-builder/houseboats/exterior/1.jpg"
+              imgUrl="./img/house-builder/houseboats/Exterior/1.jpg"
             >
               <StyledList
                 iconUrl="./icons-sprite.svg#check-mark"
