@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/marksem_test2/static/css/main.716bef80.chunk.css",
-    "main.js": "/marksem_test2/static/js/main.7584c996.chunk.js",
-    "main.js.map": "/marksem_test2/static/js/main.7584c996.chunk.js.map",
+    "main.js": "/marksem_test2/static/js/main.02041c6a.chunk.js",
+    "main.js.map": "/marksem_test2/static/js/main.02041c6a.chunk.js.map",
     "runtime-main.js": "/marksem_test2/static/js/runtime-main.5a95298b.js",
     "runtime-main.js.map": "/marksem_test2/static/js/runtime-main.5a95298b.js.map",
     "static/css/2.5089989d.chunk.css": "/marksem_test2/static/css/2.5089989d.chunk.css",
     "static/js/2.a4076b18.chunk.js": "/marksem_test2/static/js/2.a4076b18.chunk.js",
     "static/js/2.a4076b18.chunk.js.map": "/marksem_test2/static/js/2.a4076b18.chunk.js.map",
     "index.html": "/marksem_test2/index.html",
-    "precache-manifest.17d1990ee4abee4b95b89c25f0d73e45.js": "/marksem_test2/precache-manifest.17d1990ee4abee4b95b89c25f0d73e45.js",
+    "precache-manifest.36f7a8fc4915361c7643d8697e78fdcb.js": "/marksem_test2/precache-manifest.36f7a8fc4915361c7643d8697e78fdcb.js",
     "service-worker.js": "/marksem_test2/service-worker.js",
     "static/css/2.5089989d.chunk.css.map": "/marksem_test2/static/css/2.5089989d.chunk.css.map",
     "static/css/main.716bef80.chunk.css.map": "/marksem_test2/static/css/main.716bef80.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.5089989d.chunk.css",
     "static/js/2.a4076b18.chunk.js",
     "static/css/main.716bef80.chunk.css",
-    "static/js/main.7584c996.chunk.js"
+    "static/js/main.02041c6a.chunk.js"
   ]
 }
