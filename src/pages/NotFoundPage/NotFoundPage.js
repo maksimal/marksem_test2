@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Button from './../../components/shared/Button/Button'
 import './NotFoundPage.scss'
+import './media.scss'
 
 const NotFound = () => {
     useState( () => {

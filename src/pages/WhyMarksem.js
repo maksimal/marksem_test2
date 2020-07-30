@@ -90,7 +90,7 @@ export default function WhyMarksem(props) {
           actionOnClick={() => console.log("click")}
           actionElementType="button"
           actionElementText="Invest now"
-          actionElementAlign="left"
+          actionElementAlign="center"
         >
           <StyledList
             iconUrl="./icons-sprite.svg#investment-block-icon"

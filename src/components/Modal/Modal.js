@@ -18,15 +18,6 @@ const Modal = ({ children, onClose, width }) => {
       scrollHeight = window.pageYOffset
     }
 
-    // window.scrollTo(0, scrollHeight)
-
-    // console.log( document.body.scrollHeight )
-    // console.log( document.body.offsetHeight )
-    // console.log( document.body.clientHeight )
-    console.log(window.pageYOffset)
-    console.log(window)
-
-
     body.classList.toggle("modal-open");
     window.scrollTo(0, scrollHeight)
   }

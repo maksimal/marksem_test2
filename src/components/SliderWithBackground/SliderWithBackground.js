@@ -55,7 +55,6 @@ function SliderWithBackground({ slides }) {
               <svg>
                 <use href="./icons-sprite.svg#arrow-left" />
               </svg>
-            {/* <img src="./img/icons/arrow-left.svg" alt="next" /> */}
           </button>
         </div>
         <Swiper {...params} activeSlideKey={calcActiveSlide} getSwiper={setSwiper}>
@@ -69,7 +68,6 @@ function SliderWithBackground({ slides }) {
               <svg>
                 <use href="./icons-sprite.svg#arrow-right" />
               </svg>
-            {/* <img src="./img/icons/arrow-right.svg" alt="next" /> */}
           </button>
         </div>
       </div>

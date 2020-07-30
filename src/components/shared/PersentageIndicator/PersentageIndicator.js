@@ -1,30 +1,57 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './PersentageIndicator.scss';
-import {
-  BrowserView,
-  MobileView,
-  isBrowser,
-  isMobile
-} from "react-device-detect";
+
+function debounce(handler, ms) {
+  let timer;
+  return () => {
+    clearTimeout(timer);
+    
+    timer = setTimeout(() => {
+      handler();
+    }, ms)
+  };
+}
+
 
 function PersentageIndicator({ progress, ...args }) {
-  const outerRadiusMob = 50;
-  const innerRadiusMob = 41;
-  const strokeMob = 4;
+  const [clientWidth, setClientWidth] = useState(window.innerWidth);
+  const [outerRadius, setOuterRadius] = useState(0);
+  const [innerRadius, setInnerRadius] = useState(0);
+  const [stroke, setStroke] = useState(0);
 
-  const circumferenceMob = innerRadiusMob * 2 * Math.PI;
-  const strokeDashoffsetMob = circumferenceMob - progress / 100 * circumferenceMob;
-
+  const outerRadiusMob = 76;
+  const innerRadiusMob = 57;
+  const strokeMob = 38;
   const outerRadiusDesk = 135;
   const innerRadiusDesk = 108;
   const strokeDesk = 54;
 
-  const circumferenceDesk = innerRadiusDesk * 2 * Math.PI;
-  const strokeDashoffsetDesk = circumferenceDesk - progress / 100 * circumferenceDesk;
+  useEffect(() => {
+    const handleResize = debounce(() => {
+      setClientWidth(window.innerWidth);
+    }, 1000);
+    
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+
+  useEffect(() => {
+    if(clientWidth < 1200){
+      setOuterRadius(outerRadiusMob);
+      setInnerRadius(innerRadiusMob);
+      setStroke(strokeMob);
+    } else {
+      setOuterRadius(outerRadiusDesk);
+      setInnerRadius(innerRadiusDesk);
+      setStroke(strokeDesk);
+    }
+  }, [clientWidth]);
 
   return (
     <>
-    <BrowserView>
     <div className="indicator" {...args}>
     <div className="indicator__base-shadow"></div>
       <div className="indicator__base-outer">
@@ -34,46 +61,22 @@ function PersentageIndicator({ progress, ...args }) {
         <div className="indicator__base-dark"></div>
         <svg
           className="indicator__progress-layer"
-          height={outerRadiusDesk * 2}
-          width={outerRadiusDesk * 2}
+          height={outerRadius * 2}
+          width={outerRadius * 2}
         >
           <circle
             stroke="#254A93"
             fill="transparent"
-            strokeWidth={strokeDesk}
-            strokeDasharray={circumferenceDesk + ' ' + circumferenceDesk}
-            style={{ strokeDashoffset: strokeDashoffsetDesk }}
-            r={innerRadiusDesk}
-            cx={outerRadiusDesk}
-            cy={outerRadiusDesk}
+            strokeWidth={stroke}
+            strokeDasharray={innerRadius * 2 * Math.PI + ' ' + innerRadius * 2 * Math.PI}
+            style={{ strokeDashoffset: innerRadius * 2 * Math.PI - progress / 100 * innerRadius * 2 * Math.PI }}
+            r={innerRadius}
+            cx={outerRadius}
+            cy={outerRadius}
           />
         </svg>
       </div>
     </div>
-    </BrowserView>
-    <MobileView>
-    <div className="indicator">
-      <div className="indicator__cycle">
-        <span>{progress}%</span>
-        <svg
-          className="indicator__color-layer"
-          height={outerRadiusMob * 2}
-          width={outerRadiusMob * 2}
-        >
-          <circle
-            stroke="#061229"
-            fill="transparent"
-            strokeWidth={strokeMob}
-            strokeDasharray={circumferenceMob + ' ' + circumferenceMob}
-            style={{ strokeDashoffset: strokeDashoffsetMob }}
-            r={innerRadiusMob}
-            cx={outerRadiusMob}
-            cy={outerRadiusMob}
-          />
-        </svg>
-      </div>
-    </div>
-    </MobileView>
     </>
   );
 }

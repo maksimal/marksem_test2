@@ -174,7 +174,7 @@ const Constructor = ({ house }) => {
           </svg>
         </div>
       </div>
-      <div style={{ display: "flex" }}>
+      <div className="constructor-main" >
         <div className="selected-house-data">
           <PhotoForConstructor
             images={getImages()}
@@ -230,7 +230,7 @@ const Constructor = ({ house }) => {
             </div>
           </div>
         </div>
-        <div className="settings-block" style={{ maxWidth: "50%" }}>
+        <div className="settings-block">
 
           <Tabs onChangeTabAction={tabsActionsRedux.setActiveTab}>
 
@@ -264,7 +264,7 @@ const Constructor = ({ house }) => {
               </div>
 
               {fromHousesData.getIsTerraceOption(house) &&
-                <div style={{ display: "flex" }}>
+                <div className="terrace-setting">
                   <Checkbox
                     labelText="Терасса:"
                     checked={isTerrace}
@@ -344,16 +344,27 @@ const Constructor = ({ house }) => {
 
           </Tabs>
 
+          <div className="house-type-code__mobile">
+            {
+              house.code
+            }
+          </div>
+
+          <div className="house-price__mobile">
+            {`Price: ${getHousePrice()}`}
+            &euro;
+          </div>
+
+
           <div className="actions-block">
             <Button
               onClick={() => setShowConfirmHouseModal(true)}
               text="Купить"
-              classList="btn-main" />
+              classList="btn-main action-button-constructor" />
             <Button
               onClick={() => { }}
               text="Комплектация"
-              classList="btn-main"
-              style={{ backgroundColor: "white", color: "black", border: "1px solid #0A254C " }} />
+              classList="btn-main action-button-constructor btn-white" />
           </div>
         </div>
       </div>
@@ -376,7 +387,8 @@ const Constructor = ({ house }) => {
         <ToggleHouseBuilderButton
           text="Згорнути"
           buttonType="main"
-          style={{ marginTop: "40px" }}
+          buttonClasses="btn-white"
+          style={{ marginTop: "40px"}}
         />
       </div>
 
@@ -394,20 +406,21 @@ const Constructor = ({ house }) => {
                   images={getImages()}
                   title={house.houseType}
                 />
-                <p style={{color: "grey", fontSize: "14px", marginTop: "30px"}}><sup>*</sup>Обробка замовлення проводиться в робочі години</p>
-
+                <p className="confirm-house-modal__note"><sup>*</sup>Обробка замовлення проводиться в робочі години</p>
               </div>
               <div className="confirm-house-modal__description">
                 <div className="confirm-house-modal__selected-options">
                   <div>
                     <div className="confirm-house-modal__option">
-                      <span>Complactation - </span>
+                      <span>Complactation  </span>
+                      <span className="confirm-house-modal__option-dash">-</span>
                       <span className="confirm-house-modal__option-value">
                         {complectation}
                       </span>
                     </div>
                     <div className="confirm-house-modal__option">
-                      <span>Exterior - </span>
+                      <span>Exterior  </span>
+                      <span className="confirm-house-modal__option-dash">-</span>
                       <span className="confirm-house-modal__option-value">
                         {exterior_material}
                       </span>
@@ -415,27 +428,29 @@ const Constructor = ({ house }) => {
                   </div>
                   <div>
                     <div className="confirm-house-modal__option">
-                      <span>Area - </span>
+                      <span>Area  </span>
+                      <span className="confirm-house-modal__option-dash">-</span>
                       <span className="confirm-house-modal__option-value">
                         {house_area}
                       </span>
                     </div>
                     <div className="confirm-house-modal__option">
-                      <span>Interior - </span>
+                      <span>Interior  </span>
+                      <span className="confirm-house-modal__option-dash">-</span>
                       <span className="confirm-house-modal__option-value">
                         {interior_style}
                       </span>
                     </div>
                   </div>
                 </div>
-                <hr />
-                <p style={{ lineHeight: "27px" }}>Перевірте правильність обраного будинку та заповніть поля нижче. Наш менеджер зв'яжеться з Вами у найближчий час <sup>*</sup></p>
+                <hr className="confirm-house-modal__devider" />
+                <p className="confirm-house-modal__instruction">Перевірте правильність обраного будинку та заповніть поля нижче. Наш менеджер зв'яжеться з Вами у найближчий час <sup>*</sup></p>
 
                 <ConfirmHouseForm />
 
                 <div className="confirm-house-modal__footer">
-                  <div>
-                    <p>Price</p>
+                  <div className="confirm-house-modal__price-container">
+                    <p className="confirm-house-modal__price-label">Price</p>
                     <p className="confirm-house-modal__price">{getHousePrice()}&euro;</p>
                   </div>
                   <Button
@@ -457,10 +472,11 @@ const Constructor = ({ house }) => {
           onClose={() => setShowConfirmedHouseModal(false)}
         >
           <div style={{ textAlign: "center", padding: "30px" }}>
+            <img src="./img/gif/done.gif" alt="done animation"/>
             <h3 style={{ fontWeight: "bold", textTransform: "uppercase" }}>Вітаємо!</h3>
             <br />
             <br />
-            <p style={{ width: "630px" }}>Менеджер зателефонує Вам найближчим часом. Можете поки ознайомитись з іншими продуктами MARKSEM</p>
+            <p style={{ maxWidth: "630px" }}>Менеджер зателефонує Вам найближчим часом. Можете поки ознайомитись з іншими продуктами MARKSEM</p>
             <br />
             <br />
             <Link to={'/'}>

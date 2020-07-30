@@ -1,17 +1,12 @@
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 import InfoCardList from '../components/InfoCardList';
 import ImageTextBlock from './../components/ImageTextBlock/ImageTextBlock';
 import StyledList from './../components/shared/StyledList/StyledList';
 import InfoCard from '../components/InfoCard';
-import SampleSlider from '../components/SampleSlider';
 import SampleSliderNu from '../components/SampleSliderNu'
-import OptionsWithTabs from '../components/OptionsWithTabs';
-import BlocksForTabs from './../components/BlocksForTabs';
 import HouseWithKeysBlock from '../components/HouseWithKeysBlock/HouseWithKeysBlock';
-import InteriorDesignSamples from './../components/InteriorDesignSamples';
-import Button from './../components/shared/Button/Button';
 import LocationProposalForm from './../components/LocationProposalForm/LocationProposalForm';
 import ScrollToTop from './../components/shared/ScrollToTop';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -19,21 +14,16 @@ import Constructor from './../components/Constructor/Constructor';
 import { Tabs, TabsItem } from './../components/Tabs/Tabs';
 
 import { setActiveHouseCategoryTab } from "./../actions/activeHouseCategoryTabActions";
-// import { setHousesData } from './../actions/housesActions';
 
 export default function Houses(props) {
 
-  // const dispatch = useDispatch();
+
   const { houses } = useSelector(state => state.housesData);
   const activeHouseCategoryTab = useSelector(state => state.activeHouseCategoryTab);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  // useEffect(() => {
-  //   dispatch(setHousesData())
-  // }, [])
 
   const renderHousesNU = (houses) => {
 
@@ -45,21 +35,21 @@ export default function Houses(props) {
         {housesInCategory.map((house, i) => {
 
           return (
-              <ScrollAnimation
-                key={i}
-                animateIn="fadeIn"
-                animateOnce={true}>
-                <SampleSliderNu
-                  type="2"
-                  title={house.houseType}
-                  houseType={house.houseType}
-                  text={house.description4}
-                  images={house.exterior_variants[0].image_urls}
-                />
-                <div className="container">
-                  <Constructor house={house} />
-                </div>
-              </ScrollAnimation>
+            <ScrollAnimation
+              key={i}
+              animateIn="fadeIn"
+              animateOnce={true}>
+              <SampleSliderNu
+                type="2"
+                title={house.houseType}
+                houseType={house.houseType}
+                text={house.description4}
+                images={house.exterior_variants[0].image_urls}
+              />
+              <div className="container">
+                <Constructor house={house} />
+              </div>
+            </ScrollAnimation>
           )
         })}
       </div>
@@ -84,7 +74,9 @@ export default function Houses(props) {
         animateIn="fadeIn"
         animateOnce={true}>
 
-        <Tabs onChangeTabAction={setActiveHouseCategoryTab}>
+        <h2 style={{ fontWeight: "bold", textAlign: "center", marginBottom: "40px" }}>Choose a ready made one house</h2>
+
+        <Tabs onChangeTabAction={setActiveHouseCategoryTab} isResponsive>
           <TabsItem label="Mobile houses">
             <ImageTextBlock
               type="4"

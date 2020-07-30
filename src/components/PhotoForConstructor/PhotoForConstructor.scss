@@ -1,3 +1,5 @@
+@import "./../../variables.scss";
+
 .photoForConstructor {
     position: relative;
     // width: 635px;
@@ -126,4 +128,18 @@
             }
         }
     }
+}
+
+.photoForConstructor-mobile {
+  display: none;
+}
+
+@media screen and (max-width: $desktop-breakpoint) {
+  .photoForConstructor-desktop {
+    display: none;
+  }
+  .photoForConstructor-mobile {
+    display: block;
+    width: 100%;
+  }
 }

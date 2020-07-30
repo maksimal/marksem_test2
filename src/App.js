@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -9,10 +9,7 @@ import Investments from './pages/Investments';
 import WhyMarksem from './pages/WhyMarksem';
 import NotFound from './pages/NotFoundPage/NotFoundPage';
 import { setHousesData } from './actions/housesActions';
-// import './App.scss'
 
-//удали меня
-import Sandbox from "./pages/Sandbox"
 import { useDispatch, useSelector } from 'react-redux';
 
 
@@ -50,21 +47,11 @@ export default function App(props) {
           component={() => <Contacts />}
         />
 
-
-        //удали меня!
-        <Route exact
-          path="/sandbox"
-          component={() => <Sandbox />}
-        />
-
         <Route
           path="/404"
           component={() => <NotFound />}
         />
         <Redirect to="/404" />
-
-
-
       </Switch>
 
       <Footer />

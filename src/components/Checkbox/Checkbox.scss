@@ -1,3 +1,5 @@
+@import "./../../variables.scss";
+
 .checkbox {
   display: flex;
   justify-content: flex-start;
@@ -9,6 +11,9 @@
     padding-right: 15px;
     text-transform: uppercase;
     font-weight: bold;
+    @media screen and (max-width: $desktop-breakpoint) {
+      font-weight: normal;
+    }
   }
   &-container {
     position: relative;

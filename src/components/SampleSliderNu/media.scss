@@ -1,297 +1,96 @@
 @import "../../variables.scss";
 
-@media (max-width: 1444px) {
-    .sampleSliderNu {
-
-
-        &-text-content {
-
-        
-            &-title {
-
-                
-            }
-            &-text {
-
-                
-            }
-        }
-
-        &-text-content-type1 {
-            &-title {
-
-            }
-            &-text {
-
-            }
-        }
-
-        &-text-content-type2 {
-            &-title {
-
-            }
-            &-text {
-
-            }
-        }
-        &-text-content-type3 {
-            &-title {
-
-                
-            }
-            &-text {
-
-                
-            }
-        }
-
-        &-buttons-wrapper {
-
-            
-        }
-        &-buttons-wrapper-type1 {
-
-        }
-
-        &-buttons-wrapper-type2 {
-
-            
-        }
-
-        &-buttons-wrapper-type3 {
-
-            
-        }
-    }
-}
-
-
 @media (max-width: 1280px) {
-    .sampleSliderNu {
-        margin-top: 80px;
-        margin-bottom: 140px;
+  .sampleSliderNu {
+    margin-top: 70px;
+    margin-bottom: 100px;
 
-        &-text-content {
-            width: 95%;
-            &-title {
-                width: 100%;
-                font-size: 18px;
-            }
-            &-text {
-                width: 100%; 
-                font-size: 14px;
-            }
-        }
-
-        &-text-content-type1 {
-            &-title {
-
-            }
-            &-text {
-
-            }
-        }
-
-        &-text-content-type2 {
-            &-title {
-
-            }
-            &-text {
-
-            }
-        }
-        &-text-content-type3 {
-            &-title {
-                text-align: left;     
-            }
-            &-text {
-                text-align: left;
-            }
-        }
-
-        &-buttons-wrapper {
-            width: 95%;
-            
-        }
-        &-buttons-wrapper-type1 {
-
-        }
-
-        &-buttons-wrapper-type2 {
-
-            
-        }
-
-        &-buttons-wrapper-type3 {
-
-            
-        }
+    &-text-content {
+      width: 95%;
+      &-title {
+        width: 100%;
+        font-size: 18px;
+      }
+      &-text {
+        width: 100%;
+        font-size: 14px;
+        line-height: 21px;
+      }
     }
+
+    &-text-content-type3 {
+      &-title {
+        text-align: left;
+      }
+      &-text {
+        text-align: left;
+      }
+    }
+
+    &-buttons-wrapper {
+      width: 95%;
+    }
+  }
 }
-
-
 
 @media (max-width: $desktop-breakpoint) {
-    .sampleSliderNu {
+  .sampleSliderNu {
+    &-buttons-wrapper {
+      width: 100%;
+      flex-direction: column-reverse;
+      // padding-top: 50px;
+      // position: relative;
+      // top: 10vw;
 
-
-        &-text-content {
-
-        
-            &-title {
-
-                
-            }
-            &-text {
-
-                
-            }
+      .sampleSliderNu-button-wrapper {
+        .btn-main {
+          border: 1px solid #0a254c;
+          min-width: 251px;
+          font-size: 16px;
+          line-height: unset;
         }
+      }
 
-        &-text-content-type1 {
-            &-title {
-
-            }
-            &-text {
-
-            }
+      .sampleSliderNu-styledlink-content {
+        min-width: 251px;
+        padding: 14px 30px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 42px;
+        background-color: #fff;
+        border: 1px solid #0a254c;
+        margin-bottom: 20px;
+        .styled-link-container {
+          display: flex;
+          justify-content: center;
+          padding-left: 0;
+          .styled-link:before {
+            width: 0;
+            left: 0;
+          }
         }
-
-        &-text-content-type2 {
-            &-title {
-
-            }
-            &-text {
-
-            }
-        }
-        &-text-content-type3 {
-            &-title {
-
-                
-            }
-            &-text {
-
-                
-            }
-        }
-
-        &-buttons-wrapper {
-            width: 100%;
-            flex-direction: column-reverse;
-            // padding-top: 50px;
-            // position: relative;
-            // top: 10vw;
-            
-            .sampleSliderNu-button-wrapper {
-                .btn-main {
-                    border: 1px solid #0A254C;
-                    min-width: 251px;
-                    font-size: 16px;
-                    line-height: unset;
-                }
-            }
-
-            .sampleSliderNu-styledlink-content {
-                min-width: 251px;
-                padding: 14px 30px;
-                font-weight: 500;
-                font-size: 24px;
-                line-height: 42px;
-                background-color: #fff;
-                border: 1px solid #0A254C;
-                margin-bottom: 20px;
-                .styled-link-container {
-                    display: flex;
-                    justify-content: center;
-                    padding-left: 0;
-                    .styled-link:before {
-                        width: 0;
-                        left: 0;
-                    }
-                }
-            }
-        }
-        &-buttons-wrapper-type1 {
-
-        }
-
-        &-buttons-wrapper-type2 {
-
-            
-        }
-
-        &-buttons-wrapper-type3 {
-
-            
-        }
+      }
     }
+  }
 }
-
 
 @media (max-width: 980px) {
-    .sampleSliderNu {
-
-
-        &-text-content {
-
-        
-            &-title {
-
-                
-            }
-            &-text {
-
-                
-            }
-        }
-
-        &-text-content-type1 {
-            &-title {
-
-            }
-            &-text {
-
-            }
-        }
-
-        &-text-content-type2 {
-            &-title {
-
-            }
-            &-text {
-
-            }
-        }
-        &-text-content-type3 {
-            &-title {
-
-                
-            }
-            &-text {
-
-                
-            }
-        }
-
-        &-buttons-wrapper {
-
-            
-        }
-        &-buttons-wrapper-type1 {
-
-        }
-
-        &-buttons-wrapper-type2 {
-
-            
-        }
-
-        &-buttons-wrapper-type3 {
-
-            
-        }
+  .sampleSliderNu {
+    &-text-content {
+      &-text {
+        margin-bottom: 15px;
+      }
     }
+
+
+    &-slider-content {
+      width: 100%;
+      .swiper-container {
+        .swiper-button-next,
+        .swiper-button-prev {
+          display: none;
+        }
+      }
+    }
+  }
 }
-
-

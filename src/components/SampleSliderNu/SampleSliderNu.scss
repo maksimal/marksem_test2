@@ -65,7 +65,25 @@
                 content: '';
             }
         }
+        .swiper-container {
+            .swiper-pagination {
+                position: relative;
+                margin-top: 15px;
+                .swiper-pagination-bullet {
+                    width: 11px;
+                    height: 11px;
+                    background-color: #fff;
+                    border: 1px solid #3C4A64;
+                    opacity: 1;
+                }
+                .swiper-pagination-bullet-active {
+                    background-color: #3C4A64;
+                }
+            }
+        }
     }
+
+    
 
     &-slider-content-type2 {
         width: 90%;

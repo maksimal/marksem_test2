@@ -36,7 +36,7 @@ const StickerSlider = ({ children }) => {
   };
 
   return (
-    <div style={{ width: "400px", position: "relative" }}>
+    <div className="sticker-slider__container">
       <Swiper {...params} getSwiper={setSwiper}>
         {children.map((child, i) => {
           slidesNumber++;

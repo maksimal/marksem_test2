@@ -3,11 +3,10 @@ import Swiper from 'react-id-swiper';
 import StyledLink from './../shared/StyledLink';
 import ToggleHouseBuilderButton from './../ToggleHouseBuilderButton/ToggleHouseBuilderButton';
 import './SampleSliderNu.scss';
-import './SampleSliderNu.css';
 import './media.scss'
 
 const SampleSliderNu = (props) => {
-  const { type, title, text, images, houseType } = props;
+  const { type, title, text, images, houseType, showButtons = true, ...other } = props;
 
   const sliderParams = {
     loop: true,
@@ -40,7 +39,7 @@ const SampleSliderNu = (props) => {
   }
 
   return (
-    <div className="sampleSliderNu">
+    <div className="sampleSliderNu" {...other}>
       <div className="container">
         <div className={`sampleSliderNu-text-content sampleSliderNu-text-content-type${type}`}>
           <h2 className={'sampleSliderNu-text-content-title'}>{title}</h2>
@@ -52,22 +51,25 @@ const SampleSliderNu = (props) => {
           </Swiper>
         </div>
 
-        <div className={`sampleSliderNu-buttons-wrapper sampleSliderNu-buttons-wrapper-type${type}`}>
-          <div className="sampleSliderNu-button-wrapper">
-            <ToggleHouseBuilderButton
-              text="select"
-              buttonType="main"
-              houseType={houseType}
-            />
+        {showButtons &&
+          <div className={`sampleSliderNu-buttons-wrapper sampleSliderNu-buttons-wrapper-type${type}`}>
+            <div className="sampleSliderNu-button-wrapper">
+              <ToggleHouseBuilderButton
+                text="select"
+                buttonType="main"
+                houseType={houseType}
+              />
+            </div>
+            <div className="sampleSliderNu-styledlink-content">
+              <StyledLink
+                linkText="download catalog"
+                linkURL="#"
+                onClick={() => { console.log('click') }}
+              />
+            </div>
           </div>
-          <div className="sampleSliderNu-styledlink-content">
-            <StyledLink
-              linkText="download catalog"
-              linkURL="#"
-              onClick={() => { console.log('click') }}
-            />
-          </div>
-        </div>
+        }
+
       </div>
     </div>
   )

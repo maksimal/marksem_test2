@@ -65,53 +65,53 @@ export default function Investments(props) {
             <div className="slider-with-bg__slider-img">
               <img src="./img/1730.png" alt="slide" />
             </div>
-            <div className="slider-with-bg__slider-title">Інвестиційні плани</div>
+            <div className="slider-with-bg__slider-title">70% спочатку</div>
             <div className="slider-with-bg__slider-info">
-              <PersentageIndicator progress={75}/>
+              <PersentageIndicator progress={70}/>
                 <img className="slider-with-bg__img" src="./img/3690.png" alt="slide"/>
                 <div className="slider-with-bg__badge-container">
-                  <HexagonBadge style={{top: "30px", left: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
-                  <HexagonBadge style={{top: "30px", right: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
-                  <HexagonBadge style={{top: "142px", left: "-10px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
-                  <HexagonBadge style={{top: "142px", right: "-10px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
-                  <HexagonBadge style={{top: "250px", left: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
-                  <HexagonBadge style={{top: "250px", right: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
+                <HexagonBadge className="hexagon-badge slider-with-bg__badge1" text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
+                  <HexagonBadge className="hexagon-badge slider-with-bg__badge2" text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
+                  <HexagonBadge className="hexagon-badge slider-with-bg__badge3" text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
+                  <HexagonBadge className="hexagon-badge slider-with-bg__badge4" text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
+                  <HexagonBadge className="hexagon-badge slider-with-bg__badge5" text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
+                  <HexagonBadge className="hexagon-badge slider-with-bg__badge6" text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
                 </div>
             </div>
           </div>],
           [<div key={2}>
             <div className="slider-with-bg__slider-img">
-              <img src="./img/1730.png" alt="slide" />
+              <img src="./img/1586.png" alt="slide" />
             </div>
-            <div className="slider-with-bg__slider-title">Інвестиційні плани</div>
+            <div className="slider-with-bg__slider-title">75% спочатку</div>
             <div className="slider-with-bg__slider-info">
-              <PersentageIndicator progress={70}/>
+              <PersentageIndicator progress={75}/>
                 <img className="slider-with-bg__img" src="./img/3690.png" alt="slide"/>
                 <div className="slider-with-bg__badge-container">
-                  <HexagonBadge style={{top: "30px", left: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
-                  <HexagonBadge style={{top: "30px", right: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
-                  <HexagonBadge style={{top: "142px", left: "-10px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
-                  <HexagonBadge style={{top: "142px", right: "-10px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
-                  <HexagonBadge style={{top: "250px", left: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
-                  <HexagonBadge style={{top: "250px", right: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
+                  <HexagonBadge className="hexagon-badge slider-with-bg__badge1" text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
+                  <HexagonBadge className="hexagon-badge slider-with-bg__badge2" text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
+                  <HexagonBadge className="hexagon-badge slider-with-bg__badge3" text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
+                  <HexagonBadge className="hexagon-badge slider-with-bg__badge4" text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
+                  <HexagonBadge className="hexagon-badge slider-with-bg__badge5" text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
+                  <HexagonBadge className="hexagon-badge slider-with-bg__badge6" text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
                 </div>
             </div>
           </div>],
           [<div key={3}>
             <div className="slider-with-bg__slider-img">
-              <img src="./img/1730.png" alt="slide" />
+              <img src="./img/3054.png" alt="slide" />
             </div>
-            <div className="slider-with-bg__slider-title">Інвестиційні плани</div>
+            <div className="slider-with-bg__slider-title">ВСЕ МОЄ!</div>
             <div className="slider-with-bg__slider-info">
               <PersentageIndicator progress={100}/>
                 <img className="slider-with-bg__img" src="./img/3690.png" alt="slide"/>
                 <div className="slider-with-bg__badge-container">
-                  <HexagonBadge style={{top: "30px", left: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
-                  <HexagonBadge style={{top: "30px", right: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
-                  <HexagonBadge style={{top: "142px", left: "-10px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
-                  <HexagonBadge style={{top: "142px", right: "-10px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
-                  <HexagonBadge style={{top: "250px", left: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
-                  <HexagonBadge style={{top: "250px", right: "30px"}} text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
+                <HexagonBadge className="hexagon-badge slider-with-bg__badge1" text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
+                  <HexagonBadge className="hexagon-badge slider-with-bg__badge2" text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
+                  <HexagonBadge className="hexagon-badge slider-with-bg__badge3" text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
+                  <HexagonBadge className="hexagon-badge slider-with-bg__badge4" text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
+                  <HexagonBadge className="hexagon-badge slider-with-bg__badge5" text="Lorem ipsum dolor sit amet, consectetur" bg="right"/>
+                  <HexagonBadge className="hexagon-badge slider-with-bg__badge6" text="Lorem ipsum dolor sit amet, consectetur" bg="left"/>
                 </div>
             </div>
           </div>],

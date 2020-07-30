@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -57,6 +59,7 @@ ul {
 button {
   outline: none;
   border: none;
+  background-color: transparent;
 }
 
 .container {
@@ -110,3 +113,9 @@ button {
   }
 }
 
+@media screen and (max-width: $desktop-breakpoint) {
+  * {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}

@@ -30,7 +30,7 @@
 @media (max-width: 1199px) {
     .InfoCardList {
 
-        .InfoCardList-wrapper {
+        &-wrapper {
             margin-top: 0;
             margin-bottom: 0;
             .main-title {
@@ -56,9 +56,9 @@
                 display: none;
             }
 
-            .InfoCardList-background {
-                display: none;
-            }
+        }
+        &-background {
+            display: none;
         }
     }
 

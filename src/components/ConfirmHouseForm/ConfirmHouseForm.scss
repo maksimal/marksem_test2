@@ -1,10 +1,17 @@
+@import "./../../variables.scss";
+
 .confirm-house-form {
   .form {
     display: flex;
-    justify-content: space-between;
+    @media screen and (max-width: $desktop-breakpoint) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   .form-field {
     padding: 12px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     border: 1px solid grey;
     &__error {
       border: 1px solid red;

@@ -3,9 +3,10 @@ import Swiper from 'react-id-swiper'
 import './PhotoForConstructor.scss';
 import Modal from './../Modal/Modal';
 import { useEffect } from 'react';
+import SampleSliderNu from './../SampleSliderNu/index';
 
 const PhotoForConstructor = ({
-  images=[],
+  images = [],
   title
 }) => {
   const [mainPictureNumber, setMainPictureNumber] = useState(0);
@@ -75,7 +76,7 @@ const PhotoForConstructor = ({
 
   return (
     <>
-      <div className="photoForConstructor">
+      <div className="photoForConstructor photoForConstructor-desktop">
         <div className="photoForConstructor-photo-main">
           <img src={images[mainPictureNumber]} alt="Main constructor image" />
         </div>
@@ -86,6 +87,17 @@ const PhotoForConstructor = ({
           <p>{`+${images.length - 4}`}</p>
         </div> : null}
       </div>
+
+      <div className="photoForConstructor-mobile">
+        <SampleSliderNu
+          type="2"
+          showButtons={false}
+          images={images}
+          style ={{marginBottom: "0", marginTop: "0"}}
+        />
+      </div>
+
+
       {
         showPopup &&
         <Modal

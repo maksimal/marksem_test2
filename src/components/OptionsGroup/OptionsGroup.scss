@@ -1,3 +1,5 @@
+@import "./../../variables.scss";
+
 .constructor-options {
   display: block;
   margin-bottom: 30px;
@@ -10,6 +12,9 @@
 .options-wrapper {
   display: flex;
   flex-wrap: wrap;
+  @media screen and (max-width: $desktop-breakpoint) {
+    justify-content: center;
+  }
 }
 
 .constructor-option {

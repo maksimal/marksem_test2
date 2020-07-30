@@ -4,7 +4,7 @@
     margin-top: 160px;
     margin-bottom: 160px;
     position: relative;
-    .InfoCardList-wrapper {
+    &-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -31,7 +31,7 @@
             margin-bottom: 80px;
         }
     }
-    .InfoCardList-background {
+    &-background {
         width: 100%;
         height: 75%;
         // background-color: $primary-background-color;
@@ -42,10 +42,10 @@
 
     }
 
-    .InfoCardList-background-type1 {
+    // &-background-type1 {
         // transform: translate(80px);
-    }
-    .InfoCardList-background-type2 {
+    // }
+    &-background-type2 {
         width: 100%;
         top: 190px;
         bottom: 0;

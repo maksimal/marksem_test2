@@ -32,11 +32,13 @@ export const TabsNav = ({
   label,
   activeTab,
   onChangeActiveTab,
+  isResponsive,
   ...attrs
 }) => {
 
   const classes = clsx(
     "tabs-nav",
+    { "tabs-nav__responsive": isResponsive },
     { className },
     { "tabs-nav-active": label === activeTab }
   );
@@ -55,7 +57,8 @@ export const TabsNav = ({
 //Most parent component
 export const Tabs = ({
   children,
-  onChangeTabAction
+  onChangeTabAction,
+  isResponsive
 }) => {
 
   const [activeTab, setActiveTab] = useState(null);
@@ -75,7 +78,7 @@ export const Tabs = ({
     dispatch(onChangeTabAction(label));
   }
 
-  const renderTabsNav = () => {
+  const renderTabsNav = (isResponsive) => {
     return (
       getTabsLabels(children).map((label, i) => {
         return (
@@ -84,16 +87,22 @@ export const Tabs = ({
             key={i}
             activeTab={activeTab}
             onChangeActiveTab={handleChangeTab}
+            isResponsive={isResponsive}
           />
         )
       })
     )
   }
 
+  const tabsWrapperClasses = clsx(
+    "tabs-nav-wrapper",
+    { "tabs-nav-wrapper__responsive": isResponsive }
+  );
+
   return (
     <div>
-      <div className="tabs-nav-wrapper" style={{maxWidth: "1280px", margin: "0 auto"}}>
-        {renderTabsNav()}
+      <div className={tabsWrapperClasses} style={{ maxWidth: "1280px", margin: "0 auto" }}>
+        {renderTabsNav(isResponsive)}
       </div>
 
       {children.map((child, i) =>

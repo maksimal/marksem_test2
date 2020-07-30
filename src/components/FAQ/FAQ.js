@@ -27,7 +27,7 @@ const FAQ = ({
         <span className="question__text">{queston}</span>
       </button>
       <div className="collapsable">
-        {answer.map(p => <p className="answer">{p}</p>)}
+        {answer.map((p,i) => <p key={i} className="answer">{p}</p>)}
       </div>
 
     </div>

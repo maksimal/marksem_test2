@@ -1,3 +1,5 @@
+@import "./../../variables.scss";
+
 .constructor-colors {
   max-width: 290px;
   margin-bottom: 30px;
@@ -5,10 +7,21 @@
     font-size: 18px;
     margin-bottom: 10px;
     text-transform: uppercase;
+    @media screen and (max-width: $desktop-breakpoint) {
+      font-weight: normal;
+      font-size: 16px;
+    }
   }
   .colors-wrapper {
     display: flex;
     flex-wrap: wrap;
+    @media screen and (max-width: $desktop-breakpoint) {
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: $desktop-breakpoint) {
+    max-width: unset;
+    margin-bottom: 15px;
   }
 }
 

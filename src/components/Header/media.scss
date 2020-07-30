@@ -1,11 +1,35 @@
 @media (max-width: 980px) {
   header {
+    height: 80px;
     .logo {
       margin-left: 20px;
+    }
+    &.active {
+      background-color: #254a93;
+      .logo a {
+        color: white;
+      }
+      .menu-list {
+        display: flex;
+      }
     }
 
     .menu-list {
       display: none;
+      background-color: #254a93;
+      padding-bottom: 20px;
+      position: absolute;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      top: 80px;
+      li {
+        margin-bottom: 15px;
+        a {
+          color: white;
+          text-transform: capitalize;
+        }
+      }
     }
     .login-lang-items {
       display: none;
@@ -15,28 +39,6 @@
       margin-right: 20px;
     }
   }
-
-  //временное мобайл меню >>>>>>>>>
-  .menu-list-mobile.active {
-    display: block;
-    position: fixed;   
-    right: 0;
-    top: 100px;
-    background-color: white;
-    z-index: 2000;
-    box-shadow: 0 5px 2px 2px rgba(0, 0, 0, 0.123);
-    li {
-      padding: 20px;
-      a {
-        display: inline-block;
-        width: 100%;
-        text-transform: uppercase;
-        color: black;
-        text-align: right;
-      }
-    }
-  }
-  // временное мобайл меню <<<<<<<<
 }
 
 @media (max-width: 1279px) {

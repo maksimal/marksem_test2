@@ -11,6 +11,7 @@ export default function ({
     houseType,
     text,
     buttonType,
+    buttonClasses,
     ...attrs
   }) {
 
@@ -32,7 +33,7 @@ export default function ({
         <Button
           onClick={()=> handleClick(houseType)}
           text={text}
-          classList={`btn btn-${buttonType}`}
+          classList={`btn btn-${buttonType} ${buttonClasses}`}
           type={buttonType}
           ></Button>
       </div>
