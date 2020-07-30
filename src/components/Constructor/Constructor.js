@@ -240,10 +240,6 @@ const Constructor = ({ house }) => {
                   fromHousesData.getHouseDescription(house, "2")
                 }
 
-                {/* <Tip iconUrl="./img/icons/info-icon.png" position="bottom">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, aperiam.
-                </Tip> */}
-
                 <TipModal>
                   <p>Оберіть з даного конструктора деталі для обраного будинку. </p>
                   <p>У <span style={{ color: "#254A93" }}>ПЛАНУВАННІ</span>- оберіть комплектацію будинку та його площу.</p>
@@ -270,10 +266,6 @@ const Constructor = ({ house }) => {
                     checked={isTerrace}
                     onClick={(optionValue) => dispatch(setOption(house.houseType, "isTerraceOption", optionValue))}
                   />
-
-                  {/* <Tip iconUrl="./img/icons/info-icon.png" position="bottom">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, aperiam.
-                </Tip> */}
 
                   <TipModal>
                     <p>Оберіть будинок з терасою або без. </p>
@@ -472,7 +464,7 @@ const Constructor = ({ house }) => {
           onClose={() => setShowConfirmedHouseModal(false)}
         >
           <div style={{ textAlign: "center", padding: "30px" }}>
-            <img src="./img/gif/done.gif" alt="done animation"/>
+            <img src="./img/gif/done.gif" alt="done animation" style={{width: "100%", maxWidth: "320px"}}/>
             <h3 style={{ fontWeight: "bold", textTransform: "uppercase" }}>Вітаємо!</h3>
             <br />
             <br />
