@@ -80,14 +80,10 @@
     }
 }
 
-@media only screen and (max-width: 1199) {
-
-}
-
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 1199px) {
     .indicator {
-       top: 240px;
-       left: 31%;
+       top: 100px;
+       left: 36%;
 
        &__base-shadow {
             width: 151px;
@@ -129,5 +125,19 @@
             font-size: 14px;
             line-height: 17px;
         }
+    }
+}
+
+@media only screen and (max-width: 979px) {
+    .indicator {
+       top: 82px;
+       left: 39%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .indicator {
+       top: 240px;
+       left: 31%;
     }
 }

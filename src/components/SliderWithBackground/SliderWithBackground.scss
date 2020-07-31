@@ -178,6 +178,46 @@
     &__slider-text {
       font-size: 14px;
     }
+
+    &__img {
+      width: 82px;
+      top: 191px;
+      left: 42%;
+    }
+
+    &__badge-container {
+      min-height: 430px;
+    }
+
+    &__badge1 {
+      top: 175px;
+      left: 3%;
+    }
+  
+    &__badge2 {
+      top: 175px;
+      right: 3%;
+    }
+  
+    &__badge3 {
+      top: 270px;
+      left: 3%;
+    }
+  
+    &__badge4 {
+      top: 270px;
+      right: 3%;
+    }
+
+    &__badge5 {
+      top: 365px;
+      left: 3%;
+    }
+      
+    &__badge6 {
+      top: 365px;
+      right: 3%;
+    }
   }
 }
 
@@ -201,13 +241,81 @@
          height: 60px;
        }
     }
+
+    &__img {
+      top: 173px;
+      left: 44%;
+    }
+
+    &__badge1 {
+      top: 175px;
+      left: 1%;
+    }
+  
+    &__badge2 {
+      top: 175px;
+      right: 1%;
+    }
+  
+    &__badge3 {
+      top: 270px;
+      left: 1%;
+    }
+  
+    &__badge4 {
+      top: 270px;
+      right: 1%;
+    }
+
+    &__badge5 {
+      top: 365px;
+      left: 1%;
+    }
+      
+    &__badge6 {
+      top: 365px;
+      right: 1%;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .slider-with-bg {
+
+    &__badge-container {
+      min-height: 530px;
+    }
+
+    &__badge1 {
+      top: 185px;
+      left: 30%;
+    }
+  
+    &__badge2 {
+      top: 280px;
+      left: 30%;
+    }
+  
+    &__badge3 {
+      top: 375px;
+      left: 30%;
+    }
+  
+    &__badge4 {
+      top: 470px;
+      left: 30%;
+    }
+
+    &__badge5,  &__badge6{
+      display: none;
+    }
+    
   }
 }
 
 @media only screen and (max-width: 640px) {
   .slider-with-bg {
-   
-
+  
     & .swiper-container {
       width: 70%;
       margin: 0 auto;
@@ -247,6 +355,7 @@
     &__img {
       width: 82px;
       top: 327px;
+      left: 38%;
     }
 
     &__slider-info {

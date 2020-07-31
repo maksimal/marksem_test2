@@ -4,7 +4,6 @@ import "./ProfitCalc.scss";
 import Range from "../shared/Range";
 import Button from "../shared/Button/Button";
 import * as action from "../../actions/calcActions";
-import { setHousesData } from "../../actions/housesActions";
 import Modal from "../Modal/Modal";
 
 function ProfitCalc({ currency }) {
@@ -12,6 +11,7 @@ function ProfitCalc({ currency }) {
   const [tab, setTab] = useState("shared");
   const [profit, setProfit] = useState(null);
   const [showResult, setShowResult] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
 
   const dispatch = useDispatch();
   const data = useSelector((state) => state.calculation);
@@ -45,34 +45,37 @@ function ProfitCalc({ currency }) {
     return priceRange;
   }, [dataPrice]);
 
-  const getHouseInRange = useCallback(value => {
-    let result;
+  const getHouseInRange = useCallback(
+    (value) => {
+      let result;
 
-    try {
-      result = getPriceRange()
-        .find(item => value >= item.range[0] && value <= item.range[1])
-        .type;
+      try {
+        result = getPriceRange().find(
+          (item) => value >= item.range[0] && value <= item.range[1]
+        ).type;
+      } catch (error) {
+        console.info("No house in this range");
+      }
 
-    } catch (error) {
-      console.info("No house in this range");
-    }
-
-    return result;
-
-  }, [getPriceRange]);
+      return result;
+    },
+    [getPriceRange]
+  );
 
   const setHouseInRange = useCallback(() => {
-    // debugger;
     const price = getHouseInRange(data.typePrice);
     dispatch(action.setType(price));
-    if(price){
+    if (price) {
       tempType.current = price;
     }
-    
   }, [data.typePrice]);
 
   const togglePopup = () => {
     setShowResult(!showResult);
+  };
+
+  const toggleInfoPopup = () => {
+    setShowInfo(!showInfo);
   };
 
   const handlePriceTypeClick = (type) => {
@@ -143,6 +146,9 @@ function ProfitCalc({ currency }) {
         </div>
         <div className="profit-calc__info">
           Виберіть відповідний варіант з зазначених даних:
+          <div className="profit-calc__info-badge" onClick={toggleInfoPopup}>
+            i
+          </div>
         </div>
         <div className="profit-calc__wrapper">
           <div className="profit-calc__block">
@@ -274,51 +280,78 @@ function ProfitCalc({ currency }) {
           />
         </div>
       </div>
-      {showResult &&
-        <Modal
-          width="721px"
-          onClose={() => setShowResult(false)}>
-            <div className="profit-calc__result">
-              {/* <button className="btn-close" onClick={togglePopup}>
-                <svg width="16" height="16px">
-                  <use href="icons-sprite.svg#constructor-modal-close-icon"></use>
-                </svg>
-              </button> */}
-              {profit > 0 && (
-                <>
-                  <div className="profit-calc__info">
-                    <div className="profit-calc__month-result">
-                      дохід в місяць
+      {showResult && (
+        <Modal width="600px" onClose={() => setShowResult(false)}>
+          <div className="profit-calc__result">
+            <img
+              className="profit-calc__animation"
+              src="./img/gif/chart.gif"
+              alt="calculation"
+            />
+            {profit > 0 && (
+              <>
+                <div className="profit-calc__result-info">
+                  <div className="profit-calc__month-result">
+                    дохід в місяць
                     <br />
-                      <strong>
-                        {currency}
-                        {profit}+
+                    <strong>
+                      {currency}
+                      {profit}+
                     </strong>
-                    </div>
-                    <div className="profit-calc__year-result">
-                      дохід в рік
-                    <br />
-                      <strong>
-                        {currency}
-                        {profit * 12}+
-                    </strong>
-                    </div>
                   </div>
-                  <Button
-                    classList="btn btn-main result-action"
-                    onClick={togglePopup}
-                    text="інвестувати"
-                  />
-                </>
-              )}
-              {profit <= 0 && (
-                <div className="profit-calc__notify">
-                  * за поточних умов дохід не передбачено
+                  <div className="profit-calc__year-result">
+                    дохід в рік
+                    <br />
+                    <strong>
+                      {currency}
+                      {profit * 12}+
+                    </strong>
+                  </div>
                 </div>
-              )}
+                <Button
+                  classList="btn btn-main result-action"
+                  onClick={togglePopup}
+                  text="інвестувати"
+                />
+              </>
+            )}
+            {profit <= 0 && (
+              <div className="profit-calc__notify">
+                * за поточних умов дохід не передбачено
+              </div>
+            )}
           </div>
-      </Modal>
-      }
+        </Modal>
+      )}
+      {showInfo && (
+        <Modal onClose={() => setShowInfo(false)}>
+          <div className="profit-calc__info-popup">
+            <div className="profit-calc__info-text">
+              <p>
+                Калькулятор дохідності допоможе Вам розрахувати можливий
+                прибуток с компанією MARKSEM. Обираючи будинок та комплектацію
+                Ви обираєте суму фінансування.
+              </p>
+              <p>
+                Оберіть суму, яку хочете отримувати від сдачі будинку в оренду*
+                та орієнтовну кількість днів у місяць, в які Ви плануєте сдавати
+                будинок в оренду.
+              </p>
+              <p>
+                За тим, оберіть суму, яку плануєте витрачати на комунальні
+                послуги та сервіс.
+              </p>
+              <p>
+                Витратьте лише хвилину і калькулятор розрахує орієнтовний
+                прибуток, що Ви можете отримати інвестуючи у MARKSEM
+              </p>
+            </div>
+            <div className="profit-calc__info-notify">
+            * Обрана сума оренди будинку за добу буде пропорційна вартості оренди землі на ділянці MARKSEM за місяць
+            </div>
+          </div>
+        </Modal>
+      )}
     </section>
   );
 }

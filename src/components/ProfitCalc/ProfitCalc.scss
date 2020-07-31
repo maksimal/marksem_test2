@@ -1,6 +1,7 @@
 @import '../../variables.scss';
 
 .profit-calc {
+    display: block;
     margin-top: 150px;
     margin-bottom: 100px;
     position: relative;
@@ -9,6 +10,7 @@
 
     &__tabs {
         display: flex;
+        flex-direction: row;
         justify-content: center;
         margin: 40px 0 28px 0;
     }
@@ -44,6 +46,39 @@
         text-align: center;
     }
 
+    &__info-badge {
+        margin-left: 10px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid $primary-color;
+        line-height: 20px;
+        font-size: 14px;
+        color: $primary-color;
+        cursor: pointer;
+    }
+
+    &__info-popup {
+        width: 625px;
+        margin: 75px 90px;
+    }
+
+    &__info-text {
+        padding-bottom: 63px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    &__info-text p {
+        padding-bottom: 20px;
+
+    }
+
+    &__info-notify {
+        font-size: 14px;
+    }
+
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -53,6 +88,7 @@
 
     &__block {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: baseline;
         margin-bottom: 20px;
@@ -89,6 +125,7 @@
     }
 
     &__result {
+        width: 600px;
         height: 497px;
         margin: 0 auto;
         display: flex;
@@ -96,27 +133,22 @@
         background: #FFFFFF;
         text-align: center;
 
-        .btn-close {
-            padding: 20px;
-            background: transparent;
-            cursor: pointer;
-            align-self: flex-end;
-
-            &:hover {
-                font-weight: bold;
-            }
-        }
-
         .result-action {
             align-self: center;
         }
     }
 
-    &__info {
-        height: 60%;
+    &__animation {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    &__result-info {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
+        margin-bottom: 50px;
+        margin-top: -30px;
     }
 
     &__month-result, &__year-result {
@@ -130,5 +162,120 @@
 
     .calc-action {
         margin: 70px auto 0;
+    }
+}
+
+@media only screen and (max-width: $desktop-breakpoint) {
+    .profit-calc {
+        &__block>div {
+            width: 400px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 870px) {
+    .profit-calc {
+        &__tabs {
+            flex-direction: column;
+            align-items: center;
+            margin: 20px auto 20px auto;
+        }
+
+        &__title {
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #171A27;
+        }
+
+        &__block {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        &__block>div {
+            width: 100%;
+        }
+
+        &__rent, &__counter {
+            margin-bottom: 20px;
+        }
+
+        &__counter {
+            margin-top: -10px;
+        }
+
+        &__style {
+            width: 290px !important;
+            height: 90px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        &__info-badge {
+            margin-left: 10px;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid $primary-color;
+            line-height: 20px;
+            font-size: 14px;
+            color: $primary-color;
+            cursor: pointer;
+        }
+    
+        &__info-popup {
+            width: 400px;
+            margin: 30px 30px;
+        }
+    
+        &__info-text {
+            padding-bottom: 30px;
+            font-size: 16px;
+            text-align: center;
+        }
+    
+        &__info-text p {
+            padding-bottom: 15px;
+    
+        }
+    
+        &__info-notify {
+            font-size: 14px;
+        }
+
+        &__result {
+            width: 400px;
+            height: 400px;
+        }
+    
+        &__animation {
+            width: 200px;
+        }
+    
+        &__result-info {
+            margin-bottom: 20px;
+            margin-top: -10px;
+        }
+    
+        &__month-result, &__year-result {
+            font-size: 18px;
+            text-transform: uppercase;
+    
+            & strong {
+                font-size: 20px;
+            }
+        }
+    
+        .calc-action {
+            margin: 70px auto 0;
+        }
     }
 }

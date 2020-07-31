@@ -87,6 +87,17 @@
 
 }
 
+@media only screen and (max-width: 800px) {
+    .hexagon-badge {
+        &__bg-layer--left,  &__bg-layer--right{
+            position: absolute;
+            bottom: -15px;
+            left: 25px;
+        }
+    }
+
+}
+
 @media only screen and (max-width: 640px) {
     .hexagon-badge {
         height: 50px;
